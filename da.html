@@ -1,0 +1,630 @@
+﻿<!DOCTYPE html>
+<html lang="da" data-theme="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CalcaTools — Gratis Online Beregnere til Finans, Sundhed &amp; Matematik</title>
+  <meta name="description" content="Over 460 gratis online beregnere: BMI beregner, huslåns beregner, renteberegner og meget mere. Ingen tilmelding, 100% privat, direkte i din browser.">
+  <meta name="keywords" content="gratis online beregner, BMI beregner, huslåns beregner, renteberegner, beregner online, lommeregner online">
+  <link rel="canonical" href="https://calcatools.github.io/calcatools/da.html">
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "CalcaTools",
+    "url": "https://calcatools.github.io/calcatools/da.html",
+    "description": "Over 460 gratis online beregnere og vaerktoejer",
+    "inLanguage": "da",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://calcatools.com/all-calculators/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  <style>
+    :root{--primary:#c0392b;--primary-dark:#a93226;--primary-light:#e74c3c;--bg:#f8f9fa;--card-bg:#fff;--text:#2c3e50;--text-light:#6c757d;--border:#dee2e6;--accent:#c0392b;--nav-bg:#fff;--hero-gradient:linear-gradient(135deg,#c0392b 0%,#e74c3c 50%,#c0392b 100%)}
+    body.layout-da{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;background:var(--bg);color:var(--text);margin:0;padding:0;line-height:1.6}
+    body.layout-da *{box-sizing:border-box}body.layout-da a{text-decoration:none;color:inherit}
+    body.layout-da .nav{background:var(--nav-bg);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
+    body.layout-da .nav-inner{max-width:1200px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+    body.layout-da .nav-logo img{display:block}body.layout-da .nav-links{display:flex;gap:24px;list-style:none;margin:0;padding:0}
+    body.layout-da .nav-links a{font-size:15px;font-weight:500;color:var(--text);transition:color .2s}body.layout-da .nav-links a:hover{color:var(--primary)}
+    body.layout-da .lang-selector{position:relative}body.layout-da .lang-btn{background:none;border:1px solid var(--border);border-radius:8px;padding:6px 14px;cursor:pointer;font-size:14px;color:var(--text)}
+    body.layout-da .lang-dropdown{display:none;position:absolute;right:0;top:100%;background:var(--card-bg);border:1px solid var(--border);border-radius:10px;padding:8px 0;min-width:180px;box-shadow:0 8px 24px rgba(0,0,0,.12);z-index:200}
+    body.layout-da .lang-dropdown.open{display:block}body.layout-da .lang-dropdown a{display:block;padding:8px 16px;font-size:14px;color:var(--text);transition:background .15s}
+    body.layout-da .lang-dropdown a:hover,body.layout-da .lang-dropdown a.active{background:#f0f0f0;color:var(--primary)}
+    body.layout-da .hero{background:var(--hero-gradient);color:#fff;padding:80px 20px 60px;text-align:center}
+    body.layout-da .hero-content{max-width:800px;margin:0 auto}body.layout-da .hero h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:800;margin:0 0 16px;letter-spacing:-.5px}
+    body.layout-da .hero p{font-size:1.15rem;opacity:.92;margin:0 auto 32px;max-width:640px}
+    body.layout-da .hero-stats{display:flex;justify-content:center;gap:40px;margin:40px 0 36px;flex-wrap:wrap}
+    body.layout-da .hero-stat{text-align:center}body.layout-da .hero-stat .number{display:block;font-size:2.2rem;font-weight:800}body.layout-da .hero-stat .label{font-size:.9rem;opacity:.85}
+    body.layout-da .hero-cta{display:inline-block;background:#fff;color:var(--primary);padding:14px 36px;border-radius:10px;font-weight:700;font-size:1.05rem;transition:transform .2s,box-shadow .2s}
+    body.layout-da .hero-cta:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.2)}
+    body.layout-da .section{max-width:1200px;margin:0 auto;padding:60px 20px}body.layout-da .section-header{text-align:center;margin-bottom:40px}
+    body.layout-da .section-header h2{font-size:1.9rem;font-weight:700;margin:0 0 12px;color:var(--text)}
+    body.layout-da .section-header p{color:var(--text-light);font-size:1.05rem;margin:0 auto;max-width:600px}
+    body.layout-da .categories-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px}
+    body.layout-da .category-card{background:var(--card-bg);border:1px solid var(--border);border-radius:14px;padding:28px 24px;transition:transform .2s,box-shadow .2s,border-color .2s;display:block}
+    body.layout-da .category-card:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(0,0,0,.08);border-color:var(--primary)}
+    body.layout-da .category-card .icon{font-size:2rem;margin-bottom:12px}body.layout-da .category-card h3{font-size:1.15rem;font-weight:700;margin:0 0 8px;color:var(--text)}
+    body.layout-da .category-card p{font-size:.9rem;color:var(--text-light);margin:0 0 12px}body.layout-da .category-card .count{font-size:.85rem;font-weight:600;color:var(--primary)}
+    body.layout-da .tools-section{padding-top:40px}body.layout-da .tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+    body.layout-da .tool-card{background:var(--card-bg);border:1px solid var(--border);border-radius:12px;padding:20px;transition:transform .2s,box-shadow .2s,border-color .2s;display:block}
+    body.layout-da .tool-card:hover{transform:translateY(-3px);box-shadow:0 6px 18px rgba(0,0,0,.07);border-color:var(--primary)}
+    body.layout-da .tool-card h4{font-size:1rem;font-weight:700;margin:0 0 6px;color:var(--text)}body.layout-da .tool-card p{font-size:.85rem;color:var(--text-light);margin:0;line-height:1.5}
+    body.layout-da .trust-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:20px}
+    body.layout-da .trust-card{background:var(--card-bg);border:1px solid var(--border);border-radius:14px;padding:28px 24px;text-align:center}
+    body.layout-da .trust-card .icon{font-size:2.2rem;margin-bottom:12px}body.layout-da .trust-card h4{font-size:1.05rem;font-weight:700;margin:0 0 8px;color:var(--text)}
+    body.layout-da .trust-card p{font-size:.9rem;color:var(--text-light);margin:0}
+    body.layout-da .faq-list{max-width:800px;margin:0 auto}body.layout-da .faq-item{border:1px solid var(--border);border-radius:12px;margin-bottom:12px;background:var(--card-bg);overflow:hidden}
+    body.layout-da .faq-question{width:100%;background:none;border:none;padding:18px 20px;text-align:left;font-size:1rem;font-weight:600;cursor:pointer;display:flex;justify-content:space-between;align-items:center;color:var(--text)}
+    body.layout-da .faq-icon{font-size:1.3rem;color:var(--primary);transition:transform .3s}body.layout-da .faq-item.open .faq-icon{transform:rotate(45deg)}
+    body.layout-da .faq-answer{padding:0 20px 18px;font-size:.95rem;color:var(--text-light);line-height:1.7;display:none}body.layout-da .faq-item.open .faq-answer{display:block}
+    body.layout-da .ad-container{max-width:728px;margin:20px auto;text-align:center;padding:0 20px}body.layout-da .ad-label{font-size:11px;color:#999;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px}
+    body.layout-da .footer{background:#1a1a2e;color:#ccc;padding:60px 20px 30px}body.layout-da .footer-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px}
+    body.layout-da .footer-brand strong{color:#fff;font-size:1.2rem}body.layout-da .footer-brand p{font-size:.9rem;line-height:1.7;margin-top:10px}
+    body.layout-da .footer-col h5{color:#fff;font-size:.95rem;margin:0 0 12px}body.layout-da .footer-col a{display:block;font-size:.9rem;color:#aaa;margin-bottom:8px;transition:color .2s}
+    body.layout-da .footer-col a:hover{color:var(--primary-light)}body.layout-da .footer-bottom{max-width:1200px;margin:40px auto 0;padding-top:20px;border-top:1px solid #333;text-align:center;font-size:.85rem;color:#777}
+    @media(max-width:768px){body.layout-da .footer-grid{grid-template-columns:1fr;gap:24px}body.layout-da .hero-stats{gap:20px}body.layout-da .hero-stat .number{font-size:1.6rem}body.layout-da .tools-grid{grid-template-columns:1fr}body.layout-da .categories-grid{grid-template-columns:1fr 1fr}body.layout-da .nav-links{display:none}}
+    @media(max-width:480px){body.layout-da .categories-grid{grid-template-columns:1fr}}
+  </style>
+</head><body class="layout-da">
+  <nav class="nav"><div class="nav-inner">
+    <a href="da.html" class="nav-logo"><img src="https://calcatools.com/wp-content/themes/toolexpert/assets/img/calcatools-logo.png" alt="CalcaTools" width="180" height="36"></a>
+    <ul class="nav-links"><li><a href="#finans">Finans</a></li><li><a href="#sundhed">Sundhed</a></li><li><a href="#matematik">Matematik</a></li><li><a href="#vaerktoejer">Vaerktoejer</a></li></ul>
+    <div class="lang-selector">
+      <button class="lang-btn" onclick="document.querySelector('.lang-dropdown').classList.toggle('open')">&#127760; Sprog &#9662;</button>
+      <div class="lang-dropdown">
+        <a href="da.html" class="active">&#127465;&#127472; Dansk</a><a href="de.html">&#127465;&#127466; Deutsch</a><a href="es.html">&#127466;&#127480; Espa&ntilde;ol</a><a href="fi.html">&#127467;&#127470; Suomi</a><a href="fr.html">&#127467;&#127479; Fran&ccedil;ais</a><a href="it.html">&#127470;&#127481; Italiano</a><a href="ja.html">&#127471;&#127477; &#26085;&#26412;&#35486;</a><a href="ko.html">&#127472;&#127479; &#54620;&#44397;&#50612;</a><a href="nl.html">&#127475;&#127473; Nederlands</a><a href="no.html">&#127475;&#127476; Norsk</a><a href="sv.html">&#127480;&#127466; Svenska</a>
+      </div>
+    </div>
+  </div></nav>
+
+  <section class="hero"><div class="hero-content">
+    <h1>Gratis Online Beregnere</h1>
+    <p>Over 300 professionelle beregnere til finans, sundhed, matematik og mere &mdash; direkte i din browser</p>
+    <a href="#kategorien" class="hero-cta">Se Alle Beregnere &#8595;</a>
+    <div class="hero-stats">
+      <div class="hero-stat"><span class="number">300+</span><span class="label">Beregnere</span></div>
+      <div class="hero-stat"><span class="number">100%</span><span class="label">Privat</span></div>
+      <div class="hero-stat"><span class="number">0</span><span class="label">Tilmelding</span></div>
+      <div class="hero-stat"><span class="number">7+</span><span class="label">Kategorier</span></div>
+    </div>
+  </div></section>
+
+  <div class="ad-container"><div class="ad-label">Annonce</div>
+    <script>atOptions={key:'ab1cb612774c283fc86a70d151cf0088',format:'iframe',height:90,width:728,params:{}};</script>
+    <script src="https://archbishopaluminiumcountenance.com/ab1cb612774c283fc86a70d151cf0088/invoke.js"></script>
+  </div>
+
+  <section class="section" id="kategorien"><div class="section-header">
+    <h2>Gennemse Kategorier</h2>
+    <p>Beregnere til ethvert omraade i livet &mdash; fra finansplanlaegning over sundhed til hverdagsvaerktoejer.</p>
+  </div>
+  <div class="categories-grid">
+    <a href="#finans" class="category-card"><div class="icon">&#128176;</div><h3>Finansberegner</h3><p>Realkreditlaan, kreditter, renter, opsparing og pension.</p><span class="count">24 Beregnere</span></a>
+    <a href="#sundhed" class="category-card"><div class="icon">&#10084;&#65039;</div><h3>Sundhed &amp; Fitness</h3><p>BMI, kalorier, kropsfedt, puls og graviditet.</p><span class="count">32 Beregnere</span></a>
+    <a href="#matematik" class="category-card"><div class="icon">&#128290;</div><h3>Matematik</h3><p>Procenter, broekdele, algebra, statistik, trigonometri.</p><span class="count">39 Beregnere</span></a>
+    <a href="#hverdag" class="category-card"><div class="icon">&#128197;</div><h3>Hverdagsberegner</h3><p>Alder, databeregning, tidszoner, drikkepenge og meget mere.</p><span class="count">54 Beregnere</span></a>
+    <a href="#islamisk" class="category-card"><div class="icon">&#128332;</div><h3>Islamiske Beregnere</h3><p>Zakat, bedetider, hijri-dato, qibla-retning.</p><span class="count">37 Beregnere</span></a>
+    <a href="#hindu" class="category-card"><div class="icon">&#128330;</div><h3>Hinduiske Beregnere</h3><p>Kundali, Panchang, Nakshatra, Tithi og vedisk astrologi.</p><span class="count">74 Beregnere</span></a>
+    <a href="#jul" class="category-card"><div class="icon">&#127876;</div><h3>Julsberegnere</h3><p>Dage til jul, gavebudget og festplanlaegning.</p><span class="count">35 Beregnere</span></a>
+    <a href="#vaerktoejer" class="category-card"><div class="icon">&#128295;</div><h3>Vaerktoejer</h3><p>Tekst, billede, PDF, udvikler, farve, generatorer og omformere.</p><span class="count">57 Vaerktoejer</span></a>
+  </div></section>
+
+  <div class="ad-container"><div class="ad-label">Annonce</div>
+    <script>atOptions={key:'4baeebda9815a745027b5b83beb81cf1',format:'iframe',height:250,width:300,params:{}};</script>
+    <script src="https://archbishopaluminiumcountenance.com/4baeebda9815a745027b5b83beb81cf1/invoke.js"></script>
+  </div>
+  <section class="section tools-section" id="finans"><div class="section-header"><h2>Finansberegner</h2><p>Sammenlaan laan, planlaeg opsparing og hold styr paa din oekonomi.</p></div>
+  <div class="tools-grid">
+    <a href="https://calcatools.com/finance/finance-calculator/" class="tool-card"><h4>Finansberegner</h4><p>Grundlaeggende ligninger for pengevaerdi over tid.</p></a>
+    <a href="https://calcatools.com/finance/401k-calculator/" class="tool-card"><h4>401k-beregner</h4><p>Forudsig dit 401k-saldo med bidrag og arbejdsgivermatch.</p></a>
+    <a href="https://calcatools.com/finance/amortization-calculator/" class="tool-card"><h4>Amortiseringsberegner</h4><p>Opret en fuld afdragsplan for dit laan.</p></a>
+    <a href="https://calcatools.com/finance/auto-loan-calculator/" class="tool-card"><h4>Billaans-beregner</h4><p>Estimer maanedlig ydelse og samlede renter for dit billaan.</p></a>
+    <a href="https://calcatools.com/finance/compound-interest-calculator/" class="tool-card"><h4>Renteberegner</h4><p>Beregn renters rente og se, hvordan din formue vokser.</p></a>
+    <a href="https://calcatools.com/finance/currency-calculator/" class="tool-card"><h4>Valutaberegner</h4><p>Omv valutaer med din egen vekselkurs.</p></a>
+    <a href="https://calcatools.com/finance/day-rate-calculator/" class="tool-card"><h4>Dagsatsberegner</h4><p>Omv dagloen og aarsloen indbyrdes.</p></a>
+    <a href="https://calcatools.com/finance/debt-payoff-calculator/" class="tool-card"><h4>Gaeldsberegner</h4><p>Sammenlign snebold- og lavinemetoden til gaeldevikling.</p></a>
+    <a href="https://calcatools.com/finance/discount-off-calculator/" class="tool-card"><h4>Rabatberegner</h4><p>Find slutprisen efter rabat ud fra pris og procentdel.</p></a>
+    <a href="https://calcatools.com/finance/free-cash-flow-calculator/" class="tool-card"><h4>Free Cash Flow-beregner</h4><p>Beregn den frie pengestroem fra driftspengestroem og investeringer.</p></a>
+    <a href="https://calcatools.com/finance/future-worth-calculator/" class="tool-card"><h4>Fremtidsvaerdi-beregner</h4><p>Beregn fremtidsvaerdien af en investering.</p></a>
+    <a href="https://calcatools.com/finance/income-tax-calculator/" class="tool-card"><h4>Indkomstskatteberegner</h4><p>Estimer din bundfradragsskat og skattesats.</p></a>
+    <a href="https://calcatools.com/finance/inflation-calculator/" class="tool-card"><h4>Inflationsberegner</h4><p>Forudsig den reelle koekraft af dine penge.</p></a>
+    <a href="https://calcatools.com/finance/interest-calculator/" class="tool-card"><h4>Renteberegner</h4><p>Sammenlign enkle renter og renters rente for din opsparing.</p></a>
+    <a href="https://calcatools.com/finance/investment-calculator/" class="tool-card"><h4>Investeringsberegner</h4><p>Forudsig fremtidsvaerdi og aarlig vaekstrate.</p></a>
+    <a href="https://calcatools.com/finance/loan-calculator/" class="tool-card"><h4>Laaneberegner</h4><p>Estimer maanedlig ydelse og samlede renter for ethvert laan.</p></a>
+    <a href="https://calcatools.com/finance/mortgage-calculator/" class="tool-card"><h4>Realkreditlaansberegner</h4><p>Estimer realkredtbetalinger inkl. skatter og forsikring.</p></a>
+    <a href="https://calcatools.com/finance/net-worth-calculator/" class="tool-card"><h4>Formueberegner</h4><p>Beregn din nettovaerdi ved at traekke alle forpligtelser fra.</p></a>
+    <a href="https://calcatools.com/finance/paycheck-calculator/" class="tool-card"><h4>Loenseddelberegner</h4><p>Estimer din nettoloen efter skatter og bidrag.</p></a>
+    <a href="https://calcatools.com/finance/payment-calculator/" class="tool-card"><h4>Betalingsberegner</h4><p>Beregn maanedlig ydelse og afdragsplan for dit laan.</p></a>
+    <a href="https://calcatools.com/finance/percent-markup-calculator/" class="tool-card"><h4>Tillaegsberegner</h4><p>Find den procentvise tillaeag ud fra omkostninger og salgspris.</p></a>
+    <a href="https://calcatools.com/finance/price-comparison-calculator/" class="tool-card"><h4>Prissammenligningsberegner</h4><p>Find det bedste vaerdi-for-pengene pr. enhed.</p></a>
+    <a href="https://calcatools.com/finance/refinance-calculator/" class="tool-card"><h4>Omlaegningsberegner</h4><p>Beregn break-even-tid og maanedlig besparelse ved omlaegning.</p></a>
+    <a href="https://calcatools.com/finance/retirement-calculator/" class="tool-card"><h4>Pensionsberegner</h4><p>Forudsig opsparing, indkomst og underskud i pensionisttilvaerelsen.</p></a>
+    <a href="https://calcatools.com/finance/roic-calculator/" class="tool-card"><h4>ROIC-beregner</h4><p>Beregn afkastet paa investeret kapital.</p></a>
+    <a href="https://calcatools.com/finance/roth-ira-calculator/" class="tool-card"><h4>Roth IRA-beregner</h4><p>Forudsig den skattefri vaekst af din Roth IRA.</p></a>
+    <a href="https://calcatools.com/finance/salary-calculator/" class="tool-card"><h4>Loensberegner</h4><p>Omv mellem forskellige loenperioder.</p></a>
+    <a href="https://calcatools.com/finance/sales-tax-calculator/" class="tool-card"><h4>Momsberegner</h4><p>Beregn momsen eller nettobeloebet foer skat.</p></a>
+    <a href="https://calcatools.com/finance/savings-goal-calculator/" class="tool-card"><h4>Sparingsmaalberegner</h4><p>Find den maanedlige opsparingsrate for at naa dit maal.</p></a>
+    <a href="https://calcatools.com/finance/tip-calculator/" class="tool-card"><h4>Drikkepengesberegner</h4><p>Beregn drikkepenge, del regningen og find totalbeloebet.</p></a>
+  </div></section>
+  <section class="section tools-section" id="sundhed"><div class="section-header"><h2>Sundhed &amp; Fitness</h2><p>Beregn kropsvaerdier, estimér kalorier og optimer traeningsplaner.</p></div>
+  <div class="tools-grid">
+    <a href="https://calcatools.com/health/army-body-fat-calculator/" class="tool-card"><h4>Kropsfedtberegner (Militaer)</h4><p>Estimer kropsfedtprocenten efter den amerikanske militaermethode.</p></a>
+    <a href="https://calcatools.com/health/bac-calculator/" class="tool-card"><h4>BAC-beregner</h4><p>Estimer din blodalkoholkoncentration og tid til aedruelighed.</p></a>
+    <a href="https://calcatools.com/health/bmi-calculator/" class="tool-card"><h4>BMI-beregner</h4><p>Mael dit Body Mass Index og se din vaegtkategori.</p></a>
+    <a href="https://calcatools.com/health/bmr-calculator/" class="tool-card"><h4>BMR-beregner</h4><p>Beregn din hvilestofskifte med Mifflin-St-Jeor-ligningen.</p></a>
+    <a href="https://calcatools.com/health/body-fat-calculator/" class="tool-card"><h4>Kropsfedtberegner</h4><p>Estimer din kropsfedtprocent efter Navy-maalemetoden.</p></a>
+    <a href="https://calcatools.com/health/body-surface-area-calculator/" class="tool-card"><h4>Kropsoverfladeberegner</h4><p>Beregn din kropsoverflade efter Du Bois-formlen.</p></a>
+    <a href="https://calcatools.com/health/body-type-calculator/" class="tool-card"><h4>Kropstypeberegner</h4><p>Bestem din kropsform ud fra bryst-, talje- og hoftemael.</p></a>
+    <a href="https://calcatools.com/health/calorie-calculator/" class="tool-card"><h4>Kalorieberegner</h4><p>Find det daglige kaloriebehov for dine vaegtmaal.</p></a>
+    <a href="https://calcatools.com/health/calories-burned-calculator/" class="tool-card"><h4>Forbraendte kalorier</h4><p>Estimer forbraendte kalorier for over 100 aktiviteter.</p></a>
+    <a href="https://calcatools.com/health/carbohydrate-calculator/" class="tool-card"><h4>Kulhydratberegner</h4><p>Beregn det daglige kulhydratbehov i gram.</p></a>
+    <a href="https://calcatools.com/health/conception-calculator/" class="tool-card"><h4>Befrugtningsberegner</h4><p>Estimer undfangelses- og aeggloesningsdato ud fra din termin.</p></a>
+    <a href="https://calcatools.com/health/fat-intake-calculator/" class="tool-card"><h4>Fedtberegner</h4><p>Beregn dit daglige fedtmaal i gram og det sunde omraade.</p></a>
+    <a href="https://calcatools.com/health/gfr-calculator/" class="tool-card"><h4>GFR-beregner</h4><p>Estimer din nyrefunktion og klassificer CKD-stadiet.</p></a>
+    <a href="https://calcatools.com/health/healthy-weight-calculator/" class="tool-card"><h4>Sund vaegt</h4><p>Beregn det BMI-kompatible vaegtomraade for din hojde.</p></a>
+    <a href="https://calcatools.com/health/lean-body-mass-calculator/" class="tool-card"><h4>Magermasse-beregner</h4><p>Estimer din fedtfri kropsmasse efter Boer-formlen.</p></a>
+    <a href="https://calcatools.com/health/macro-calculator/" class="tool-card"><h4>Makronaeringsstofberegner</h4><p>Opdel dine kalorier i protein, kulhydrater og fedt.</p></a>
+    <a href="https://calcatools.com/health/one-rep-max-calculator/" class="tool-card"><h4>1RM-beregner</h4><p>Estimer din maaksimalvaegt og traeningsprocenter.</p></a>
+    <a href="https://calcatools.com/health/ovulation-calculator/" class="tool-card"><h4>Aeggloesningsberegner</h4><p>Forudsig din aeggloesningsdag og frugtbare periode.</p></a>
+    <a href="https://calcatools.com/health/pace-calculator/" class="tool-card"><h4>Tempoberegner</h4><p>Beregn tempo, fart og forventede loebetider.</p></a>
+    <a href="https://calcatools.com/health/period-calculator/" class="tool-card"><h4>Menstruationsberegner</h4><p>Forudsig dine naeste menstruationsdatoer.</p></a>
+    <a href="https://calcatools.com/health/pregnancy-calculator/" class="tool-card"><h4>Graviditetsberegner</h4><p>Foelg din graviditetsuge, termin og milepael.</p></a>
+    <a href="https://calcatools.com/health/protein-calculator/" class="tool-card"><h4>Proteinberegner</h4><p>Beregn dit daglige proteinmaal efter kropsvaegt.</p></a>
+    <a href="https://calcatools.com/health/rir-calculator/" class="tool-card"><h4>RIR-beregner</h4><p>Estimer dit 1RM og anbefalede traeningsvaegte.</p></a>
+    <a href="https://calcatools.com/health/sleep-cycle-calculator/" class="tool-card"><h4>Soevncyklusberegner</h4><p>Find den ideelle sengetid med 90-minutters cykler.</p></a>
+    <a href="https://calcatools.com/health/steps-to-miles-calculator/" class="tool-card"><h4>Skridt-til-km-beregner</h4><p>Omv skridtantal til afstand i kilometer eller miles.</p></a>
+    <a href="https://calcatools.com/health/target-heart-rate-calculator/" class="tool-card"><h4>Maalpuls-beregner</h4><p>Find dine traeningszoner med Karvonen-formlen.</p></a>
+    <a href="https://calcatools.com/health/tdee-calculator/" class="tool-card"><h4>TDEE-beregner</h4><p>Beregn dit daglige samlede energiforbrug.</p></a>
+    <a href="https://calcatools.com/health/waist-to-hip-ratio-calculator/" class="tool-card"><h4>Talje-hofte-forhold</h4><p>Beregn dit talje-hofte-forhold og sundhedsrisikoen.</p></a>
+    <a href="https://calcatools.com/health/water-intake-calculator/" class="tool-card"><h4>Vandberegner</h4><p>Estimer dit daglige vandbehov efter vaegt og aktivitet.</p></a>
+  </div></section>
+
+  <div class="ad-container" style="max-width:300px;margin:24px auto;text-align:center;"><div class="ad-label">Annonce</div>
+    <script>atOptions={key:'4baeebda9815a745027b5b83beb81cf1',format:'iframe',height:250,width:300,params:{}};</script>
+    <script src="https://archbishopaluminiumcountenance.com/4baeebda9815a745027b5b83beb81cf1/invoke.js"></script>
+  </div>
+  <section class="section tools-section" id="matematik"><div class="section-header"><h2>Matematikberegnere</h2><p>Algebra, geometri, statistik og trigonometri &mdash; enhver opgave loest paa et oejeblik.</p></div>
+  <div class="tools-grid">
+    <a href="https://calcatools.com/math/percentage-calculator/" class="tool-card"><h4>Procentberegner</h4><p>Loes enhver procentberegning: X% af Y.</p></a>
+    <a href="https://calcatools.com/math/ratio-calculator/" class="tool-card"><h4>Forholdsberegner</h4><p>Forenk forhold og omv dem til broekdele og procent.</p></a>
+    <a href="https://calcatools.com/math/fraction-calculator/" class="tool-card"><h4>Broekberegner</h4><p>Addér, subtrahér, multiplicér og divider broekdele.</p></a>
+    <a href="https://calcatools.com/math/fraction-to-decimal-calculator/" class="tool-card"><h4>Broek-til-decimalberegner</h4><p>Omv broekdele til decimaltal.</p></a>
+    <a href="https://calcatools.com/math/fraction-to-percent-calculator/" class="tool-card"><h4>Broek-til-procentberegner</h4><p>Omv broekdele til procentvaerdier og omvendt.</p></a>
+    <a href="https://calcatools.com/math/area-calculator/" class="tool-card"><h4>Arealberegner</h4><p>Beregn arealer for rektangler, trekanter, cirkler og mere.</p></a>
+    <a href="https://calcatools.com/math/circle-calculator/" class="tool-card"><h4>Cirkelberegner</h4><p>Udled alle cirkelmaael ud fra en enkelt vaerdi.</p></a>
+    <a href="https://calcatools.com/math/quadratic-formula-calculator/" class="tool-card"><h4>Kvadratiskberegner</h4><p>Loes kvadratiske ligninger med Mitternachtsformlen.</p></a>
+    <a href="https://calcatools.com/math/pythagorean-calculator/" class="tool-card"><h4>Pythagoras-beregner</h4><p>Loes retvinklede trekanter med Pythagoras' saetning.</p></a>
+    <a href="https://calcatools.com/math/matrix-calculator/" class="tool-card"><h4>Matriksberegner</h4><p>Addér, multiplicér og inverter matricer.</p></a>
+    <a href="https://calcatools.com/math/scientific-calculator/" class="tool-card"><h4>Lommeregner</h4><p>Fuld videnskabelig lommeregner med trigonometri.</p></a>
+    <a href="https://calcatools.com/math/root-calculator/" class="tool-card"><h4>Rodberegner</h4><p>Beregn kvadratroder, kubikroder og vilkaarlige rodder.</p></a>
+    <a href="https://calcatools.com/math/gcf-calculator/" class="tool-card"><h4>STF-beregner</h4><p>Find den stoerste faelles faktor.</p></a>
+    <a href="https://calcatools.com/math/lcm-calculator/" class="tool-card"><h4>VFF-beregner</h4><p>Find det mindste faelles multiplum.</p></a>
+    <a href="https://calcatools.com/math/mean-median-mode-calculator/" class="tool-card"><h4>Gennemsnitsberegner</h4><p>Beregn gennemsnit, median og tilstand.</p></a>
+    <a href="https://calcatools.com/math/standard-deviation-calculator/" class="tool-card"><h4>Standardafvigelse</h4><p>Beregn standardafvigelse og varians.</p></a>
+    <a href="https://calcatools.com/math/probability-calculator/" class="tool-card"><h4>Sandsynlighedsberegner</h4><p>Beregn enkelt- og kombinationssandsynligheder.</p></a>
+    <a href="https://calcatools.com/math/confidence-interval-calculator/" class="tool-card"><h4>Konfidensinterval</h4><p>Opret konfidensintervaller for gennemsnit.</p></a>
+    <a href="https://calcatools.com/math/slope-calculator/" class="tool-card"><h4>Haeldningsberegner</h4><p>Beregn haelldning ud fra to punkter.</p></a>
+    <a href="https://calcatools.com/math/chi-square-calculator/" class="tool-card"><h4>Chi-2-beregner</h4><p>Beregn Chi-2-statistikken.</p></a>
+    <a href="https://calcatools.com/math/normal-distribution-calculator/" class="tool-card"><h4>Normalfordeling</h4><p>Find sandsynligheder og z-vaelrdier.</p></a>
+    <a href="https://calcatools.com/math/exponent-calculator/" class="tool-card"><h4>Potentseberegner</h4><p>Ophøj ethvert tal til en vilkaarlig eksponent.</p></a>
+    <a href="https://calcatools.com/math/factor-calculator/" class="tool-card"><h4>Faktorberegner</h4><p>List alle faktorer og primfaktoriseringen.</p></a>
+    <a href="https://calcatools.com/math/log-calculator/" class="tool-card"><h4>Logaritmeberegner</h4><p>Beregn logaritmer i vilkaarlig basis.</p></a>
+    <a href="https://calcatools.com/math/binomial-formula-calculator/" class="tool-card"><h4>Binomialberegner</h4><p>Beregn binomialsandsynligheder.</p></a>
+    <a href="https://calcatools.com/math/sample-size-calculator/" class="tool-card"><h4>Stikproevestoerrelsesberegner</h4><p>Beregn noedvendig stikproevestoerrelse.</p></a>
+    <a href="https://calcatools.com/math/npv-calculator/" class="tool-card"><h4>NV-beregner</h4><p>Beregn nettonutidsvaerdien.</p></a>
+    <a href="https://calcatools.com/math/permutation-combination-calculator/" class="tool-card"><h4>Permutationsberegner</h4><p>Beregn permutationer og kombinationer.</p></a>
+    <a href="https://calcatools.com/math/cross-product-calculator/" class="tool-card"><h4>Krydsproduktberegner</h4><p>Beregn krydsproduktet af to 3D-vektorer.</p></a>
+    <a href="https://calcatools.com/math/distance-calculator/" class="tool-card"><h4>Afstandsberegner</h4><p>Beregn afstanden mellem to punkter.</p></a>
+    <a href="https://calcatools.com/math/midpoint-formula-calculator/" class="tool-card"><h4>Midtpunktsberegner</h4><p>Find midtpunktet af et linjestykke.</p></a>
+    <a href="https://calcatools.com/math/scientific-notation-calculator/" class="tool-card"><h4>Videnskabelig notation</h4><p>Omv til og fra videnskabelig skrivemaade.</p></a>
+    <a href="https://calcatools.com/math/hex-calculator/" class="tool-card"><h4>Hex-beregner</h4><p>Udfoer heksadesimal aritmetik.</p></a>
+    <a href="https://calcatools.com/math/binary-calculator/" class="tool-card"><h4>Binaerberegner</h4><p>Omv mellem binaer og decimal.</p></a>
+    <a href="https://calcatools.com/math/rounding-calculator/" class="tool-card"><h4>Afrundingsberegner</h4><p>Afrund tal til decimaler.</p></a>
+    <a href="https://calcatools.com/math/ideal-gas-calculator/" class="tool-card"><h4>Idealgasberegner</h4><p>Loes PV = nRT.</p></a>
+    <a href="https://calcatools.com/math/half-life-calculator/" class="tool-card"><h4>Halveringstidsberegner</h4><p>Loes henfaldsproblemer.</p></a>
+    <a href="https://calcatools.com/math/boyles-law-calculator/" class="tool-card"><h4>Boyles lov-beregner</h4><p>Loes tryk-volumen-relationer.</p></a>
+    <a href="https://calcatools.com/math/leap-year-calculator/" class="tool-card"><h4>Schudtidsberegner</h4><p>Kontrollér om et aar er skudaar.</p></a>
+    <a href="https://calcatools.com/math/error-function-calculator/" class="tool-card"><h4>Fejlfunktionsberegner</h4><p>Beregn fejlfunktionen erf(x).</p></a>
+    <a href="https://calcatools.com/math/modulo-calculator/" class="tool-card"><h4>Moduloberegner</h4><p>Beregn resten af en division.</p></a>
+    <a href="https://calcatools.com/math/p-value-calculator/" class="tool-card"><h4>P-vaelrdi-beregner</h4><p>Beregn P-vaelrdier for t-test.</p></a>
+    <a href="https://calcatools.com/math/skewed-distribution-calculator/" class="tool-card"><h4>Skraaforecasting</h4><p>Maal skævhed og kurtosis.</p></a>
+    <a href="https://calcatools.com/math/sigma-level-calculator/" class="tool-card"><h4>Sigmaniveau-beregner</h4><p>Omv DPMO til sigmaniveau.</p></a>
+    <a href="https://calcatools.com/math/right-triangle-calculator/" class="tool-card"><h4>Retvinklet trekant</h4><p>Loes retvinklede trekanter.</p></a>
+    <a href="https://calcatools.com/math/sin-cos-converter/" class="tool-card"><h4>Sin-cos-omformer</h4><p>Omv mellem sinus og cosinus.</p></a>
+    <a href="https://calcatools.com/math/inverse-sin-calculator/" class="tool-card"><h4>Arcus sinus-beregner</h4><p>Beregn arcsinus.</p></a>
+    <a href="https://calcatools.com/math/inverse-cos-calculator/" class="tool-card"><h4>Arcus cosinus-beregner</h4><p>Beregn arccosinus.</p></a>
+    <a href="https://calcatools.com/math/g-force-calculator/" class="tool-card"><h4>G-kraft-beregner</h4><p>Omv acceleration til G-kraefter.</p></a>
+    <a href="https://calcatools.com/math/ke-calculator/" class="tool-card"><h4>Kinetisk energi-beregner</h4><p>Beregn kinetisk energi.</p></a>
+    <a href="https://calcatools.com/math/newton-calculator/" class="tool-card"><h4>Kraftberegner</h4><p>Beregn kraft i Newton.</p></a>
+    <a href="https://calcatools.com/math/energy-foot-pounds-calculator/" class="tool-card"><h4>Energi-fod-pund-beregner</h4><p>Beregn mekanisk arbejde.</p></a>
+    <a href="https://calcatools.com/math/pool-volume-calculator/" class="tool-card"><h4>Puljevolumenberegner</h4><p>Beregn dit puljevolumen.</p></a>
+    <a href="https://calcatools.com/math/aquarium-capacity-calculator/" class="tool-card"><h4>Akvarieberegner</h4><p>Beregn vandvolumen i dit akvarium.</p></a>
+    <a href="https://calcatools.com/math/fill-dirt-calculator/" class="tool-card"><h4>Udgravningberegner</h4><p>Estimer noedvendig jord.</p></a>
+    <a href="https://calcatools.com/math/geographic-midpoint-calculator/" class="tool-card"><h4>Geografisk midtpunkt</h4><p>Find det geografiske midtpunkt.</p></a>
+    <a href="https://calcatools.com/math/coefficient-of-variation-calculator/" class="tool-card"><h4>Variationskoefficient</h4><p>Maal den relative spredning.</p></a>
+    <a href="https://calcatools.com/math/coefficient-of-determination-calculator/" class="tool-card"><h4>Bestemmelses-koefficient</h4><p>Maal R-kvadrat.</p></a>
+    <a href="https://calcatools.com/math/mean-squared-error-calculator/" class="tool-card"><h4>Kvadratisk fejlmiddel</h4><p>Beregn MSE, RMSE og MAE.</p></a>
+    <a href="https://calcatools.com/math/percentile-range-calculator/" class="tool-card"><h4>Percentilomraade</h4><p>Beregn spoendet mellem to percentiler.</p></a>
+    <a href="https://calcatools.com/math/percent-deviation-calculator/" class="tool-card"><h4>Procentafvigelse</h4><p>Maal afvigelsen som procentdel.</p></a>
+    <a href="https://calcatools.com/math/percent-error-calculator/" class="tool-card"><h4>Procentfejlberegner</h4><p>Beregn den procentvise fejl.</p></a>
+    <a href="https://calcatools.com/math/drop-chance-calculator/" class="tool-card"><h4>Drop-chanceberegner</h4><p>Beregn drop-sandsynligheden.</p></a>
+    <a href="https://calcatools.com/math/antilog-calculator/" class="tool-card"><h4>Antilogaritmeberegner</h4><p>Find antilogaritmen.</p></a>
+    <a href="https://calcatools.com/math/limiting-reactant-calculator/" class="tool-card"><h4>Bestemmende reagens</h4><p>Find det bestemmende reagens.</p></a>
+    <a href="https://calcatools.com/math/log-base-2-calculator/" class="tool-card"><h4>Log-basis-2-beregner</h4><p>Beregn logaritmen til basis 2.</p></a>
+    <a href="https://calcatools.com/math/dimensional-analysis-calculator/" class="tool-card"><h4>Dimensionsanalyse</h4><p>Omv enheder ved kaedning.</p></a>
+    <a href="https://calcatools.com/math/combined-gas-calculator/" class="tool-card"><h4>Kombineret gasberegner</h4><p>Loes kombinerede gaslove.</p></a>
+    <a href="https://calcatools.com/math/apr-to-apy-converter/" class="tool-card"><h4>APR-til-APY-omformer</h4><p>Omv mellem APR og APY.</p></a>
+    <a href="https://calcatools.com/math/nautical-mile-converter/" class="tool-card"><h4>Somil-omformer</h4><p>Omv somil til kilometer.</p></a>
+    <a href="https://calcatools.com/math/lbs-to-liters-converter/" class="tool-card"><h4>Pund-til-liter-omformer</h4><p>Omv pund til liter.</p></a>
+    <a href="https://calcatools.com/math/big-number-calculator/" class="tool-card"><h4>Stortal-beregner</h4><p>Regn med heltal med hundredvis af cifre.</p></a>
+    <a href="https://calcatools.com/math/diamond-problem-calculator/" class="tool-card"><h4>Diamantproblem-beregner</h4><p>Loes diamantproblemer.</p></a>
+    <a href="https://calcatools.com/math/absolute-deviation-calculator/" class="tool-card"><h4>Absolut afvigelse</h4><p>Beregn absolut afvigelse.</p></a>
+    <a href="https://calcatools.com/math/arithmetic-sequence-calculator/" class="tool-card"><h4>Aritmetisk raekkefoelge</h4><p>Beregn det n-te led.</p></a>
+    <a href="https://calcatools.com/math/average-rate-of-change-calculator/" class="tool-card"><h4>Gennemsnitlig aendringsrate</h4><p>Beregn aendringsraten.</p></a>
+    <a href="https://calcatools.com/math/geometric-mean-rate-of-return-calculator/" class="tool-card"><h4>Geometrisk gennemsnitlig afkast</h4><p>Beregn det gennemsnitlige aarlige afkast.</p></a>
+    <a href="https://calcatools.com/math/lcd-of-fractions-calculator/" class="tool-card"><h4>FGF for broekdele</h4><p>Find den mindste faelles naevner.</p></a>
+    <a href="https://calcatools.com/math/multiples-calculator/" class="tool-card"><h4>Multiplumberegner</h4><p>Generer multipla af ethvert tal.</p></a>
+    <a href="https://calcatools.com/math/multiply-recipe-calculator/" class="tool-card"><h4>Opskriftsberegner</h4><p>Skaler opskrifter.</p></a>
+    <a href="https://calcatools.com/math/net-terms-calculator/" class="tool-card"><h4>Netto-forfaldsberegner</h4><p>Find forfaldsdatoen.</p></a>
+    <a href="https://calcatools.com/math/pallet-cube-calculator/" class="tool-card"><h4>Palllevolumen</h4><p>Beregn kubikfod og kubikmeter.</p></a>
+    <a href="https://calcatools.com/math/population-proportion-calculator/" class="tool-card"><h4>Befolkningsandel</h4><p>Estimer en befolkningsandel.</p></a>
+    <a href="https://calcatools.com/math/population-rate-calculator/" class="tool-card"><h4>Befolkningsrate</h4><p>Beregn hyppigheder pr. 1.000.</p></a>
+    <a href="https://calcatools.com/math/right-trapezoid-calculator/" class="tool-card"><h4>Hoejtrapezberegner</h4><p>Beregn areal og diagonalen.</p></a>
+    <a href="https://calcatools.com/math/rng-simulator/" class="tool-card"><h4>Tilfaeldigtalssimulator</h4><p>Simulér sikre tilfaeldige tal.</p></a>
+    <a href="https://calcatools.com/math/sector-calculator/" class="tool-card"><h4>Cirkel-sektorberegner</h4><p>Beregn areal og buelaengde.</p></a>
+    <a href="https://calcatools.com/math/sine-bar-calculator/" class="tool-card"><h4>Sinusbaelke-beregner</h4><p>Beregn praecisionshoejden.</p></a>
+    <a href="https://calcatools.com/math/polygon-perimeter-calculator/" class="tool-card"><h4>Polygon-omkredsberegner</h4><p>Beregn omkredsen.</p></a>
+    <a href="https://calcatools.com/math/foundation-squaring-calculator/" class="tool-card"><h4>Fundamentberegner</h4><p>Kontrollér fundamentets form.</p></a>
+    <a href="https://calcatools.com/math/flow-capacity-calculator/" class="tool-card"><h4>Gennestroemningsberegner</h4><p>Beregn roerets kapacitet.</p></a>
+  </div></section>
+  <section class="section tools-section" id="hverdag"><div class="section-header"><h2>Hverdagsberegner</h2><p>Nyttige beregnere til alder, dato, tidszoner og dagligt brug.</p></div>
+  <div class="tools-grid">
+    <a href="https://calcatools.com/everyday/age-calculator/" class="tool-card"><h4>Aldersberegner</h4><p>Beregn din noyagtige alder i aar, maaneder, dage og sekunder.</p></a>
+    <a href="https://calcatools.com/everyday/age-difference-calculator/" class="tool-card"><h4>Aldersforskel-beregner</h4><p>Beregn aldersforskellen mellem to personer.</p></a>
+    <a href="https://calcatools.com/everyday/date-calculator/" class="tool-card"><h4>Datoberegner</h4><p>Tael dage, uger og maaneder mellem to datoer.</p></a>
+    <a href="https://calcatools.com/everyday/days-alive-calculator/" class="tool-card"><h4>Levedagsberegner</h4><p>Beregn hvor mange dage du har levet.</p></a>
+    <a href="https://calcatools.com/everyday/days-from-today-calculator/" class="tool-card"><h4>Dage fra i dag</h4><p>Find datoen for en dag i fremtiden eller fortiden.</p></a>
+    <a href="https://calcatools.com/everyday/birthday-countdown-calculator/" class="tool-card"><h4>Foedselsdags-nedtaelling</h4><p>Tael dagene ned til din naeste foedselsdag.</p></a>
+    <a href="https://calcatools.com/everyday/time-zone-meeting-planner/" class="tool-card"><h4>Tidszone-moedeplanlaegger</h4><p>Find en moedetid der fungerer i alle tidszoner.</p></a>
+    <a href="https://calcatools.com/everyday/sleep-calculator/" class="tool-card"><h4>Soevnberegner</h4><p>Find den ideelle sengetid med 90-minutters cykler.</p></a>
+    <a href="https://calcatools.com/everyday/gpa-calculator/" class="tool-card"><h4>GPA-beregner</h4><p>Beregn dit karaktergennemsnit med vaegtning.</p></a>
+    <a href="https://calcatools.com/everyday/gpa-planner-calculator/" class="tool-card"><h4>GPA-planlaegger</h4><p>Forudsig dit afgangs-GPA.</p></a>
+    <a href="https://calcatools.com/everyday/grade-calculator/" class="tool-card"><h4>Karakterberegner</h4><p>Find din aktuelle karakter.</p></a>
+    <a href="https://calcatools.com/everyday/grade-goal-calculator/" class="tool-card"><h4>Karaktermaalberegner</h4><p>Find den noedvendige karakter.</p></a>
+    <a href="https://calcatools.com/everyday/hours-calculator/" class="tool-card"><h4>Timetaeller</h4><p>Beregn forloebne timer og decimale timer.</p></a>
+    <a href="https://calcatools.com/everyday/time-card-calculator/" class="tool-card"><h4>Tidskortberegner</h4><p>Addér arbejdstimer og skel mellem typer.</p></a>
+    <a href="https://calcatools.com/everyday/time-to-decimal/" class="tool-card"><h4>Tid-til-decimal</h4><p>Omv timer og minutter til decimale timer.</p></a>
+    <a href="https://calcatools.com/everyday/time-from-now-calculator/" class="tool-card"><h4>Tid-fra-nu-beregner</h4><p>Beregn klokkeslaettet efter en varighed.</p></a>
+    <a href="https://calcatools.com/everyday/time-until-calculator/" class="tool-card"><h4>Nedtaellingsberegner</h4><p>Vis en live-nedtaelling.</p></a>
+    <a href="https://calcatools.com/everyday/years-ago-calculator/" class="tool-card"><h4>Aar-tilbage-beregner</h4><p>Find datoen for et tidspunkt i fortiden.</p></a>
+    <a href="https://calcatools.com/everyday/weight-calculator/" class="tool-card"><h4>Vaegtberegner</h4><p>Omv vaegt mellem pund, kilogram og ounces.</p></a>
+    <a href="https://calcatools.com/everyday/height-calculator/" class="tool-card"><h4>Hoejdeberegner</h4><p>Omv hoejdeangivelser og forudsig voksenhoejden.</p></a>
+    <a href="https://calcatools.com/everyday/speed-calculator/" class="tool-card"><h4>Hastighedsberegner</h4><p>Beregn hastighed, afstand eller tid.</p></a>
+    <a href="https://calcatools.com/everyday/fuel-cost-calculator/" class="tool-card"><h4>Braendstofomkostningsberegner</h4><p>Estimer braendstofomkostningerne.</p></a>
+    <a href="https://calcatools.com/everyday/mpg-calculator/" class="tool-card"><h4>Braendstofoekonomiberegner</h4><p>Beregn dit braendstofforbrug.</p></a>
+    <a href="https://calcatools.com/everyday/mileage-calculator/" class="tool-card"><h4>Kilometertaeler</h4><p>Foelg braendstofforbrug og omkostninger.</p></a>
+    <a href="https://calcatools.com/everyday/density-calculator/" class="tool-card"><h4>taethedsberegner</h4><p>Loes taetheds- og volumenproblemer.</p></a>
+    <a href="https://calcatools.com/everyday/dew-point-calculator/" class="tool-card"><h4>Dugpunkt-beregner</h4><p>Beregn dugpunktet.</p></a>
+    <a href="https://calcatools.com/everyday/heat-index-calculator/" class="tool-card"><h4>Varmeindeks-beregner</h4><p>Beregn den foelte temperatur.</p></a>
+    <a href="https://calcatools.com/everyday/wind-chill-calculator/" class="tool-card"><h4>Vindaafkoelingsberegner</h4><p>Beregn den foelte kulde.</p></a>
+    <a href="https://calcatools.com/everyday/btu-calculator/" class="tool-card"><h4>BTU-beregner</h4><p>Anbefal kapacitet for rum i BTU.</p></a>
+    <a href="https://calcatools.com/everyday/concrete-calculator/" class="tool-card"><h4>Betonberegner</h4><p>Estimer betonvolumen.</p></a>
+    <a href="https://calcatools.com/everyday/gravel-calculator/" class="tool-card"><h4>Grus- og stenberegner</h4><p>Beregn grusvolumen.</p></a>
+    <a href="https://calcatools.com/everyday/paint-calculator/" class="tool-card"><h4>Malingberegner</h4><p>Estimer malingmaengde og omkostninger.</p></a>
+    <a href="https://calcatools.com/everyday/tile-calculator/" class="tool-card"><h4>Fliseberegner</h4><p>Beregn noedvendige fliser.</p></a>
+    <a href="https://calcatools.com/everyday/roofing-calculator/" class="tool-card"><h4>Tagberegner</h4><p>Estimer tagareal og materialer.</p></a>
+    <a href="https://calcatools.com/everyday/pizza-calculator/" class="tool-card"><h4>Pizzaberegner</h4><p>Beregn antal pizzaer til gaelster.</p></a>
+    <a href="https://calcatools.com/everyday/travel-budget-calculator/" class="tool-card"><h4>Rejsebudgetberegner</h4><p>Planlaeg dit rejsebudget.</p></a>
+    <a href="https://calcatools.com/everyday/subscription-cost-calculator/" class="tool-card"><h4>Abonnementsberegner</h4><p>Addér alle abonnementsomkostninger.</p></a>
+    <a href="https://calcatools.com/everyday/square-footage-calculator/" class="tool-card"><h4>Kvadratmeterberegner</h4><p>Mal rumarealer.</p></a>
+    <a href="https://calcatools.com/everyday/carbon-footprint-calculator/" class="tool-card"><h4>CO2-fodaaftryk</h4><p>Estimer dit CO2-udslip.</p></a>
+    <a href="https://calcatools.com/everyday/electricity-calculator/" class="tool-card"><h4>Elberegner</h4><p>Beregn elomkostninger.</p></a>
+    <a href="https://calcatools.com/everyday/solar-panel-savings-calculator/" class="tool-card"><h4>Solcelleberegner</h4><p>Estimer solcellebesparelsen.</p></a>
+    <a href="https://calcatools.com/everyday/ev-charging-cost-calculator/" class="tool-card"><h4>Elbils-ladeberegner</h4><p>Sammenlaegn opladningsomkostninger.</p></a>
+    <a href="https://calcatools.com/everyday/freelance-rate-calculator/" class="tool-card"><h4>Timeprisberegner</h4><p>Beregn din timepris.</p></a>
+    <a href="https://calcatools.com/everyday/etsy-fee-calculator/" class="tool-card"><h4>Etsy-gebyrberegner</h4><p>Beregn nettogevinsten.</p></a>
+    <a href="https://calcatools.com/everyday/ohms-law-calculator/" class="tool-card"><h4>Ohms lov-beregner</h4><p>Loes elektriske beregninger.</p></a>
+    <a href="https://calcatools.com/everyday/resistor-calculator/" class="tool-card"><h4>Modstandsberegner</h4><p>Afkod farvekoderne.</p></a>
+    <a href="https://calcatools.com/everyday/shoe-size-conversion/" class="tool-card"><h4>Skoestroerrelses-omformer</h4><p>Omv skostoerrelser.</p></a>
+    <a href="https://calcatools.com/everyday/tire-size-calculator/" class="tool-card"><h4>Daekstoerrelsesberegner</h4><p>Afkod daekkoder.</p></a>
+    <a href="https://calcatools.com/everyday/stair-calculator/" class="tool-card"><h4>Trappeberegner</h4><p>Design en trappe.</p></a>
+    <a href="https://calcatools.com/everyday/engine-horsepower-calculator/" class="tool-card"><h4>Motorstyrkeberegner</h4><p>Omv drejningsmoment til HK.</p></a>
+    <a href="https://calcatools.com/everyday/horsepower-calculator/" class="tool-card"><h4>Hestekraefter-beregner</h4><p>Estimer HK.</p></a>
+    <a href="https://calcatools.com/everyday/golf-handicap-calculator/" class="tool-card"><h4>Golf-handicap-beregner</h4><p>Beregn dit handicap.</p></a>
+    <a href="https://calcatools.com/everyday/gdp-calculator/" class="tool-card"><h4>BNP-beregner</h4><p>Beregn BNP.</p></a>
+    <a href="https://calcatools.com/everyday/saas-mrr-calculator/" class="tool-card"><h4>SaaS-MRR-beregner</h4><p>Modeller MRR og ARR.</p></a>
+    <a href="https://calcatools.com/everyday/home-energy-usage-calculator/" class="tool-card"><h4>Husholdningsenergi-beregner</h4><p>Beregn energiforbrug.</p></a>
+    <a href="https://calcatools.com/everyday/heat-pump-savings-calculator/" class="tool-card"><h4>Varmepumpeberegner</h4><p>Sammenlaegn opvarmningsomkostninger.</p></a>
+    <a href="https://calcatools.com/everyday/solar-battery-payback-calculator/" class="tool-card"><h4>Solcellebatteri-beregner</h4><p>Beregn tilbagebetalingstid.</p></a>
+    <a href="https://calcatools.com/everyday/molarity-calculator/" class="tool-card"><h4>Molaritetsberegner</h4><p>Loes koncentrationsproblemer.</p></a>
+    <a href="https://calcatools.com/everyday/molecular-weight-calculator/" class="tool-card"><h4>Molekylvaelrdi</h4><p>Beregn molarmasse.</p></a>
+    <a href="https://calcatools.com/everyday/mass-calculator/" class="tool-card"><h4>Masseberegner</h4><p>Beregn masse ud fra taethed.</p></a>
+    <a href="https://calcatools.com/everyday/average-time-calculator/" class="tool-card"><h4>Gennemsnitstidsberegner</h4><p>Find gennemsnittet af tidsvaerdier.</p></a>
+    <a href="https://calcatools.com/everyday/how-old-am-i-calculator/" class="tool-card"><h4>Hvor gammel er jeg?</h4><p>Beregn din alder noyagtigt.</p></a>
+    <a href="https://calcatools.com/everyday/how-long-have-we-been-together-calculator/" class="tool-card"><h4>Hvor laenge sammen?</h4><p>Beregn hvor laenge I har vaeret sammen.</p></a>
+    <a href="https://calcatools.com/everyday/septic-tank-size-calculator/" class="tool-card"><h4>Septiktank-beregner</h4><p>Beregn septiktanksstoerrelsen.</p></a>
+    <a href="https://calcatools.com/everyday/mulled-wine-quantity-calculator/" class="tool-card"><h4>Gloegg-beregner</h4><p>Beregn ingredienser til gloegg.</p></a>
+    <a href="https://calcatools.com/everyday/voltage-drop-calculator/" class="tool-card"><h4>Spoendingsfald-beregner</h4><p>Estimer spoendingsfaldet.</p></a>
+    <a href="https://calcatools.com/everyday/json-yaml-xml-formatter/" class="tool-card"><h4>JSON/YAML/XML-formater</h4><p>Formater dataformater.</p></a>
+    <a href="https://calcatools.com/everyday/regex-tester/" class="tool-card"><h4>Regex-tester</h4><p>Test regulære udtryk.</p></a>
+    <a href="https://calcatools.com/everyday/ai-api-cost-calculator/" class="tool-card"><h4>AI API-omkostningsberegner</h4><p>Forudsig AI API-udgifter.</p></a>
+    <a href="https://calcatools.com/everyday/cron-expression-builder/" class="tool-card"><h4>Cron-udtryksbygger</h4><p>Opret cron-udtryk.</p></a>
+    <a href="https://calcatools.com/everyday/bra-size-calculator/" class="tool-card"><h4>BH-stoerrelsesberegner</h4><p>Find din BH-stoerrelse.</p></a>
+  </div></section>
+  <section class="section tools-section" id="islamisk"><div class="section-header"><h2>Islamiske Beregnere</h2><p>Zakat, bedetider, hijri-dato og alle vaerktoejer til den muslimske hverdag.</p></div>
+  <div class="tools-grid">
+    <a href="https://calcatools.com/islamic/zakat-calculator/" class="tool-card"><h4>Zakat-beregner</h4><p>Beregn din zakat med 2,5%.</p></a>
+    <a href="https://calcatools.com/islamic/nisab-calculator/" class="tool-card"><h4>Nisab-beregner</h4><p>Sammenlaegn din formue med nisab.</p></a>
+    <a href="https://calcatools.com/islamic/zakat-on-savings-calculator/" class="tool-card"><h4>Zakat paa opsparing</h4><p>Beregn 2,5% zakat paa opsparing.</p></a>
+    <a href="https://calcatools.com/islamic/zakat-on-stocks-calculator/" class="tool-card"><h4>Zakat paa aktier</h4><p>Beregn zakat for aktier.</p></a>
+    <a href="https://calcatools.com/islamic/sadaqah-impact-calculator/" class="tool-card"><h4>Sadaqah-virkningsberegner</h4><p>Vis sadaqah som maaltider og vand.</p></a>
+    <a href="https://calcatools.com/islamic/sadaqah-jariyah-calculator/" class="tool-card"><h4>Sadaqah jariyah-beregner</h4><p>Forudsig den langsigtede virkning.</p></a>
+    <a href="https://calcatools.com/islamic/fidya-calculator/" class="tool-card"><h4>Fidya-beregner</h4><p>Beregn fidya for forsÃ¸mte faste.</p></a>
+    <a href="https://calcatools.com/islamic/kaffarah-calculator/" class="tool-card"><h4>Kaffarah-beregner</h4><p>Beregn soningsmuligheder.</p></a>
+    <a href="https://calcatools.com/islamic/waqf-endowment-calculator/" class="tool-card"><h4>Waqf-beregner</h4><p>Forudsig udbetalinger og kapitalvaekst.</p></a>
+    <a href="https://calcatools.com/islamic/prayer-times-calculator/" class="tool-card"><h4>Bedetidsberegner</h4><p>Find bedetiderne for din placering.</p></a>
+    <a href="https://calcatools.com/islamic/qibla-direction/" class="tool-card"><h4>Qibla-retning</h4><p>Find retningen til Kaaba.</p></a>
+    <a href="https://calcatools.com/islamic/tahajjud-time/" class="tool-card"><h4>Tahajjud-tid</h4><p>Find den sidste nat-tredjedel.</p></a>
+    <a href="https://calcatools.com/islamic/tarawih-rakat-calculator/" class="tool-card"><h4>Tarawih-rakat-taeler</h4><p>Tael de bedte rakats.</p></a>
+    <a href="https://calcatools.com/islamic/tasbih-dhikr-counter/" class="tool-card"><h4>Tasbih-dhikr-taeler</h4><p>Tael dhikr med 33, 99 eller 100.</p></a>
+    <a href="https://calcatools.com/islamic/quran-completion-calculator/" class="tool-card"><h4>Koran-afslutningsberegner</h4><p>Find afslutningsdatoen.</p></a>
+    <a href="https://calcatools.com/islamic/99-names-of-allah-quiz/" class="tool-card"><h4>99 navne paa Allah-quiz</h4><p>Oev de 99 navne paa Allah.</p></a>
+    <a href="https://calcatools.com/islamic/hijri-date-converter/" class="tool-card"><h4>Hijri-omformer</h4><p>Omv datoer mellem kalendere.</p></a>
+    <a href="https://calcatools.com/islamic/islamic-calendar-calculator/" class="tool-card"><h4>Islamisk kalender</h4><p>Vis hijri- og gregorianske datoer.</p></a>
+    <a href="https://calcatools.com/islamic/moon-sighting-hilal-calculator/" class="tool-card"><h4>Maaneobservationsberegner</h4><p>Forudsig hilal-maanens synlighed.</p></a>
+    <a href="https://calcatools.com/islamic/ramadan-date-calculator/" class="tool-card"><h4>Ramadan-datoberegner</h4><p>Vis ramadan-start og -slutning.</p></a>
+    <a href="https://calcatools.com/islamic/ramadan-sehri-iftar-time-calculator/" class="tool-card"><h4>Sehri-iftar-tidsberegner</h4><p>Find sehri- og iftar-tider.</p></a>
+    <a href="https://calcatools.com/islamic/eid-al-fitr-date-calculator/" class="tool-card"><h4>Eid al-Fitr-dato</h4><p>Omv 1. Shawwal.</p></a>
+    <a href="https://calcatools.com/islamic/laylatul-qadr-date-calculator/" class="tool-card"><h4>Laylatul Qadr-dato</h4><p>List de ulige naetter.</p></a>
+    <a href="https://calcatools.com/islamic/islamic-mortgage-calculator/" class="tool-card"><h4>Islamisk realkreditberegner</h4><p>Sammenlaegn sharia-kompatible betalinger.</p></a>
+    <a href="https://calcatools.com/islamic/murabaha-calculator/" class="tool-card"><h4>Murabaha-beregner</h4><p>Estimer maanedlige betalinger.</p></a>
+    <a href="https://calcatools.com/islamic/ijara-calculator/" class="tool-card"><h4>Ijara-beregner</h4><p>Estimer lejebetalinger.</p></a>
+    <a href="https://calcatools.com/islamic/diminishing-musharakah/" class="tool-card"><h4>Diminishing Musharakah</h4><p>Estimer udbetalingsbetalinger.</p></a>
+    <a href="https://calcatools.com/islamic/hajj-cost-calculator/" class="tool-card"><h4>Hajj-omkostningsberegner</h4><p>Estimer pilgrimsomkostningerne.</p></a>
+    <a href="https://calcatools.com/islamic/hajj-savings/" class="tool-card"><h4>Hajj-opsparingsberegner</h4><p>Beregn noedvendige opsparinger.</p></a>
+    <a href="https://calcatools.com/islamic/umrah-cost/" class="tool-card"><h4>Umrah-omkostningsberegner</h4><p>Estimer samlede omkostninger.</p></a>
+    <a href="https://calcatools.com/islamic/islamic-inheritance-calculator/" class="tool-card"><h4>Arvsberegner (Faraid)</h4><p>Del boet efter islamiske regler.</p></a>
+    <a href="https://calcatools.com/islamic/mahr-calculator/" class="tool-card"><h4>Mahr-beregner</h4><p>Foreslaa kompatibel mahr.</p></a>
+    <a href="https://calcatools.com/islamic/islamic-baby-names/" class="tool-card"><h4>Islamiske fornavne</h4><p>Find koranske fornavne med betydninger.</p></a>
+    <a href="https://calcatools.com/islamic/halal-food-checker/" class="tool-card"><h4>Halal-madcheck</h4><p>Klassificer mad som haram eller halal.</p></a>
+    <a href="https://calcatools.com/islamic/eid-al-adha-date-calculator/" class="tool-card"><h4>Eid al-Adha-dato</h4><p>Omv 10. Dhul Hijjah.</p></a>
+    <a href="https://calcatools.com/islamic/halal-investment-return-calculator/" class="tool-card"><h4>Halal-investeringsoptionsberegner</h4><p>Forudsig portefoeljens vaekst.</p></a>
+    <a href="https://calcatools.com/islamic/iddah-period-calculator/" class="tool-card"><h4>Iddah-beregner</h4><p>Beregn ventetiden.</p></a>
+    <a href="https://calcatools.com/islamic/islamic-car-finance-calculator/" class="tool-card"><h4>Islamisk bilfinansiering</h4><p>Sammenlaegn billaansbetalinger.</p></a>
+    <a href="https://calcatools.com/islamic/ramadan-fasting-hours-calculator/" class="tool-card"><h4>Ramadan-fastende timer</h4><p>Beregn fastetimerne.</p></a>
+  </div></section>
+
+  <section class="section tools-section" id="hindu"><div class="section-header"><h2>Hinduiske Beregnere</h2><p>Kundali, Panchang, Nakshatra, Tithi og alle vediske beregninger.</p></div>
+  <div class="tools-grid">
+    <a href="https://calcatools.com/hindu/kundali-calculator/" class="tool-card"><h4>Kundali-beregner</h4><p>Opret dit vediske Janma Kundali.</p></a>
+    <a href="https://calcatools.com/hindu/kundali-matching-calculator/" class="tool-card"><h4>Kundali-matchning</h4><p>Kontroller kundali-kompatibiliteten.</p></a>
+    <a href="https://calcatools.com/hindu/kundali-for-newborn-calculator/" class="tool-card"><h4>Kundali til nyfoedte</h4><p>Opret en kundali til nyfoedte.</p></a>
+    <a href="https://calcatools.com/hindu/navamsa-chart-calculator/" class="tool-card"><h4>Navamsa-diagram</h4><p>Generer Navamsa-diagrammet.</p></a>
+    <a href="https://calcatools.com/hindu/lagna-calculator/" class="tool-card"><h4>Lagna-beregner</h4><p>Beregn ascendanten.</p></a>
+    <a href="https://calcatools.com/hindu/rashi-calculator/" class="tool-card"><h4>Rashi-beregner</h4><p>Find dit maanetegn.</p></a>
+    <a href="https://calcatools.com/hindu/nakshatra-calculator/" class="tool-card"><h4>Nakshatra-beregner</h4><p>Find din foedselsstjerne.</p></a>
+    <a href="https://calcatools.com/hindu/divisional-charts-calculator/" class="tool-card"><h4>Divisionale diagrammer</h4><p>Generer divisionale diagrammer.</p></a>
+    <a href="https://calcatools.com/hindu/ashtakavarga-calculator/" class="tool-card"><h4>Ashtakavarga-beregner</h4><p>Beregn Ashtakavarga-point.</p></a>
+    <a href="https://calcatools.com/hindu/shadbala-calculator/" class="tool-card"><h4>Shadbala-beregner</h4><p>Beregn Shadbala-styrkerne.</p></a>
+    <a href="https://calcatools.com/hindu/planetary-position-calculator/" class="tool-card"><h4>Planetariske positioner</h4><p>Beregn planetariske positioner.</p></a>
+    <a href="https://calcatools.com/hindu/sun-sign-calculator/" class="tool-card"><h4>Soltegnberegner</h4><p>Bestem dit vediske soltegn.</p></a>
+    <a href="https://calcatools.com/hindu/navgraha-transit-calculator/" class="tool-card"><h4>Navgraha-transit-beregner</h4><p>Foelg planetariske transitter.</p></a>
+    <a href="https://calcatools.com/hindu/atmakaraka-calculator/" class="tool-card"><h4>Atmakaraka-beregner</h4><p>Identificer din Atmakaraka-planet.</p></a>
+    <a href="https://calcatools.com/hindu/hora-calculator/" class="tool-card"><h4>Hora-beregner</h4><p>Beregn Hora-tidsintervaller.</p></a>
+    <a href="https://calcatools.com/hindu/vimshottari-dasha-calculator/" class="tool-card"><h4>Vimshottari Dasha-beregner</h4><p>Beregn Dasha-perioderne.</p></a>
+    <a href="https://calcatools.com/hindu/mahadasha-calculator/" class="tool-card"><h4>Mahadasha-beregner</h4><p>Find Mahadasha-perioderne.</p></a>
+    <a href="https://calcatools.com/hindu/pratyantar-dasha-calculator/" class="tool-card"><h4>Pratyantar Dasha-beregner</h4><p>Beregn Pratyantar-perioderne.</p></a>
+    <a href="https://calcatools.com/hindu/yogini-dasha-calculator/" class="tool-card"><h4>Yogini Dasha-beregner</h4><p>Beregn Yogini Dasha-perioderne.</p></a>
+    <a href="https://calcatools.com/hindu/mangal-dosha-calculator/" class="tool-card"><h4>Mangal Dosha-beregner</h4><p>Kontroller din Manglik-status.</p></a>
+    <a href="https://calcatools.com/hindu/kaal-sarp-dosha-calculator/" class="tool-card"><h4>Kaal Sarp Dosha</h4><p>Genkend Kaal Sarp Dosha.</p></a>
+    <a href="https://calcatools.com/hindu/nadi-dosha-calculator/" class="tool-card"><h4>Nadi Dosha-beregner</h4><p>Vurder Nadi Dosha.</p></a>
+    <a href="https://calcatools.com/hindu/pitra-dosha-calculator/" class="tool-card"><h4>Pitra Dosha-beregner</h4><p>Vurder Pitra Dosha.</p></a>
+    <a href="https://calcatools.com/hindu/grahan-dosha-calculator/" class="tool-card"><h4>Grahan Dosha-beregner</h4><p>Identificer doshas i dit diagram.</p></a>
+    <a href="https://calcatools.com/hindu/kemdrum-dosha-calculator/" class="tool-card"><h4>Kemdrum Dosha</h4><p>Kontroller Kemdrum Dosha.</p></a>
+    <a href="https://calcatools.com/hindu/shani-sade-sati-calculator/" class="tool-card"><h4>Shani Sade Sati-beregner</h4><p>Bestem Sade Sati-faserne.</p></a>
+    <a href="https://calcatools.com/hindu/shani-dhaiya-calculator/" class="tool-card"><h4>Shani Dhaiya-beregner</h4><p>Kontroller Dhaiya-perioderne.</p></a>
+    <a href="https://calcatools.com/hindu/gemstone-calculator/" class="tool-card"><h4>Aeddelstensberegner</h4><p>Anbefal aeddelsten.</p></a>
+    <a href="https://calcatools.com/hindu/rudraksha-calculator/" class="tool-card"><h4>Rudraksha-beregner</h4><p>Find passende Rudraksha-perler.</p></a>
+    <a href="https://calcatools.com/hindu/yantra-calculator/" class="tool-card"><h4>Yantra-beregner</h4><p>Find anbefalede Yantras.</p></a>
+    <a href="https://calcatools.com/hindu/mantra-chanting-counter/" class="tool-card"><h4>Mantra-taeler</h4><p>Foelg mantra-gentagelser.</p></a>
+    <a href="https://calcatools.com/hindu/ishta-devata-calculator/" class="tool-card"><h4>Ishta Devata-beregner</h4><p>Identificer din Ishta Devata.</p></a>
+    <a href="https://calcatools.com/hindu/daily-panchang-calculator/" class="tool-card"><h4>Daglig Panchang</h4><p>Generer den daglige Panchang.</p></a>
+    <a href="https://calcatools.com/hindu/tithi-calculator/" class="tool-card"><h4>Tithi-beregner</h4><p>Bestem den maanebaserede Tithi.</p></a>
+    <a href="https://calcatools.com/hindu/rahu-kaal-calculator/" class="tool-card"><h4>Rahu Kaal-beregner</h4><p>Find Rahu Kaal-tiden.</p></a>
+    <a href="https://calcatools.com/hindu/gulika-kaal-calculator/" class="tool-card"><h4>Gulika Kaal-beregner</h4><p>Beregn Gulika Kaal-tiden.</p></a>
+    <a href="https://calcatools.com/hindu/yamaganda-calculator/" class="tool-card"><h4>Yamaganda-beregner</h4><p>Beregn Yamaganda-perioderne.</p></a>
+    <a href="https://calcatools.com/hindu/choghadiya-calculator/" class="tool-card"><h4>Choghadiya-beregner</h4><p>Bestem gunstige tidsvinduer.</p></a>
+    <a href="https://calcatools.com/hindu/shubh-muhurat-calculator/" class="tool-card"><h4>Shubh Muhurat-beregner</h4><p>Find gunstige Muhurat-tider.</p></a>
+    <a href="https://calcatools.com/hindu/vivah-muhurat-calculator/" class="tool-card"><h4>Bryllups-Muhurat</h4><p>Find gunstige brylluppetider.</p></a>
+    <a href="https://calcatools.com/hindu/griha-pravesh-muhurat-calculator/" class="tool-card"><h4>Indflytning-Muhurat</h4><p>Find gunstige tider til indflytning.</p></a>
+    <a href="https://calcatools.com/hindu/namkaran-muhurat-calculator/" class="tool-card"><h4>Namkaran-Muhurat</h4><p>Find gunstige tider til navngivning.</p></a>
+    <a href="https://calcatools.com/hindu/sunrise-sunset-calculator/" class="tool-card"><h4>Solopgang-solnedgang-beregner</h4><p>Find vediske solop- og nedgangstider.</p></a>
+    <a href="https://calcatools.com/hindu/diwali-date-calculator/" class="tool-card"><h4>Diwali-dato</h4><p>Find Diwali-datoen.</p></a>
+    <a href="https://calcatools.com/hindu/navratri-date-calculator/" class="tool-card"><h4>Navratri-dato</h4><p>Find Navratri-datoerne.</p></a>
+    <a href="https://calcatools.com/hindu/janmashtami-date-calculator/" class="tool-card"><h4>Janmashtami-dato</h4><p>Find Janmashtami-datoen.</p></a>
+    <a href="https://calcatools.com/hindu/ganesh-chaturthi-date-calculator/" class="tool-card"><h4>Ganesh Chaturthi-dato</h4><p>Find Ganesh Chaturthi-datoen.</p></a>
+    <a href="https://calcatools.com/hindu/ekadashi-date-calculator/" class="tool-card"><h4>Ekadashi-dato</h4><p>Find Ekadashi-datoerne.</p></a>
+    <a href="https://calcatools.com/hindu/purnima-date-calculator/" class="tool-card"><h4>Purnima-dato</h4><p>Find Purnima-datoerne.</p></a>
+    <a href="https://calcatools.com/hindu/pradosh-vrat-date-calculator/" class="tool-card"><h4>Pradosh Vrat-dato</h4><p>Find Pradosh Vrat-datoerne.</p></a>
+    <a href="https://calcatools.com/hindu/sankashti-chaturthi-calculator/" class="tool-card"><h4>Sankashti Chaturthi</h4><p>Find Sankashti-datoerne.</p></a>
+    <a href="https://calcatools.com/hindu/hindu-calendar-converter/" class="tool-card"><h4>Hindu-kalenderomformer</h4><p>Omv mellem kalendere.</p></a>
+    <a href="https://calcatools.com/hindu/saka-samvat-calendar-converter/" class="tool-card"><h4>Saka Samvat-omformer</h4><p>Omv mellem kalendere.</p></a>
+    <a href="https://calcatools.com/hindu/regional-hindu-calendar-converter/" class="tool-card"><h4>Regionale hindukalender</h4><p>Omv regionale Panchang-data.</p></a>
+    <a href="https://calcatools.com/hindu/kali-yuga-date-calculator/" class="tool-card"><h4>Kali Yuga-dato</h4><p>Find Kali Yuga-datoerne.</p></a>
+    <a href="https://calcatools.com/hindu/vastu-score-calculator/" class="tool-card"><h4>Vastu-scoreberegner</h4><p>Vurder Vastu-kvaliteten.</p></a>
+    <a href="https://calcatools.com/hindu/vastu-dosh-calculator/" class="tool-card"><h4>Vastu Dosh-beregner</h4><p>Identificer Vastu Dosh.</p></a>
+    <a href="https://calcatools.com/hindu/vastu-room-direction-calculator/" class="tool-card"><h4>Vastu-rumsretning</h4><p>Find de rigtige rumretninger.</p></a>
+    <a href="https://calcatools.com/hindu/hindu-baby-name-calculator/" class="tool-card"><h4>Hindu-babynavne</h4><p>Generer nakshatra-baserede navne.</p></a>
+    <a href="https://calcatools.com/hindu/lucky-number-calculator/" class="tool-card"><h4>Heldtalberegner</h4><p>Find dit vediske heldtal.</p></a>
+    <a href="https://calcatools.com/hindu/lucky-colour-calculator/" class="tool-card"><h4>Heldfarveberegner</h4><p>Find din vediske heldfarve.</p></a>
+    <a href="https://calcatools.com/hindu/hindu-age-calculator/" class="tool-card"><h4>Hindu-aldersberegner</h4><p>Beregn din alder efter Tithi.</p></a>
+    <a href="https://calcatools.com/hindu/abhijit-muhurat-calculator/" class="tool-card"><h4>Abhijit Muhurat</h4><p>Find dagens gunstige vindue.</p></a>
+    <a href="https://calcatools.com/hindu/amavasya-date-calculator/" class="tool-card"><h4>Amavasya-dato</h4><p>Find nymaaenedage.</p></a>
+    <a href="https://calcatools.com/hindu/annaprashan-muhurat-calculator/" class="tool-card"><h4>Annaprashan Muhurat</h4><p>Find gunstige tider.</p></a>
+    <a href="https://calcatools.com/hindu/antardasha-calculator/" class="tool-card"><h4>Antardasha-beregner</h4><p>Beregn Bhukti-perioderne.</p></a>
+    <a href="https://calcatools.com/hindu/guru-chandal-dosha-calculator/" class="tool-card"><h4>Guru Chandal Dosha</h4><p>Identificer konjunktionen.</p></a>
+    <a href="https://calcatools.com/hindu/holi-date-calculator/" class="tool-card"><h4>Holi-dato</h4><p>Find Holi-datoerne.</p></a>
+    <a href="https://calcatools.com/hindu/ram-navami-date-calculator/" class="tool-card"><h4>Ram Navami-dato</h4><p>Find Chaitra Navami.</p></a>
+    <a href="https://calcatools.com/hindu/shraddha-tithi-calculator/" class="tool-card"><h4>Shraddha Tithi-beregner</h4><p>Find datoerne til mindeceremonier.</p></a>
+    <a href="https://calcatools.com/hindu/tithi-birthday-calculator/" class="tool-card"><h4>Tithi-foedselsdag</h4><p>Find maanebaserede aarsdage.</p></a>
+    <a href="https://calcatools.com/hindu/upanayana-muhurat-calculator/" class="tool-card"><h4>Upanayana Muhurat</h4><p>Find gunstige tider.</p></a>
+    <a href="https://calcatools.com/hindu/vastu-colour-calculator/" class="tool-card"><h4>Vastu-farveberegner</h4><p>Find de rigtige rumfarver.</p></a>
+    <a href="https://calcatools.com/hindu/vastu-direction-calculator/" class="tool-card"><h4>Vastu-retningberegner</h4><p>Find den rigtige rumplacering.</p></a>
+  </div></section>
+
+  <section class="section tools-section" id="jul"><div class="section-header"><h2>Julsberegnere</h2><p>Dage til jul, gavebudget og den perfekte festplanlaegning.</p></div>
+  <div class="tools-grid">
+    <a href="https://calcatools.com/christmas/how-many-days-until-christmas/" class="tool-card"><h4>Dage til jul</h4><p>Se live-nedtaellingen til den 24. december.</p></a>
+    <a href="https://calcatools.com/christmas/christmas-gift-budget-calculator/" class="tool-card"><h4>Gavebudgetberegner</h4><p>Planlaeg dit budget pr. modtager.</p></a>
+    <a href="https://calcatools.com/christmas/gift-cost-per-person-calculator/" class="tool-card"><h4>Gaveomkostninger pr. person</h4><p>Beregn budgettet pr. person.</p></a>
+    <a href="https://calcatools.com/christmas/christmas-party-cost-calculator/" class="tool-card"><h4>Julefrokost-omkostninger</h4><p>Beregn festomkostningerne.</p></a>
+    <a href="https://calcatools.com/christmas/christmas-dinner-cost-calculator/" class="tool-card"><h4>Juleaftensmad-omkostninger</h4><p>Beregn budgettet pr. gaest.</p></a>
+    <a href="https://calcatools.com/christmas/christmas-cookie-batch-calculator/" class="tool-card"><h4>Julesmaakage-beregner</h4><p>Beregn antal bageportioner.</p></a>
+    <a href="https://calcatools.com/christmas/turkey-cooking-time-calculator/" class="tool-card"><h4>Kalkun-stegningstid</h4><p>Beregn stegetiden.</p></a>
+    <a href="https://calcatools.com/christmas/christmas-tree-size-calculator/" class="tool-card"><h4>Jultrae-stoerrelse</h4><p>Find den maksimale hoejde.</p></a>
+    <a href="https://calcatools.com/christmas/christmas-tree-lights-calculator/" class="tool-card"><h4>Jultrae-lys</h4><p>Beregn antal lyskaeder.</p></a>
+    <a href="https://calcatools.com/christmas/christmas-tree-garland-calculator/" class="tool-card"><h4>Jultrae-guirlande</h4><p>Beregn guirlangelaeengden.</p></a>
+    <a href="https://calcatools.com/christmas/christmas-outdoor-lights-calculator/" class="tool-card"><h4>Uendoersbelysning</h4><p>Beregn antal udendoers lyskaeder.</p></a>
+    <a href="https://calcatools.com/christmas/christmas-wrapping-paper-calculator/" class="tool-card"><h4>Gavepapirberegner</h4><p>Beregn gavepapirareal og ruller.</p></a>
+    <a href="https://calcatools.com/christmas/christmas-holiday-savings-calculator/" class="tool-card"><h4>Julebesparelser</h4><p>Beregn maanedlige opsparinger.</p></a>
+    <a href="https://calcatools.com/christmas/christmas-debt-payoff-calculator/" class="tool-card"><h4>Julegaeldsberegner</h4><p>Beregn tilbagebetalingstid.</p></a>
+    <a href="https://calcatools.com/christmas/christmas-bonus-tax-calculator/" class="tool-card"><h4>Julebonusskat</h4><p>Estimer skatten paa din bonus.</p></a>
+    <a href="https://calcatools.com/christmas/christmas-postage-deadline-calculator/" class="tool-card"><h4>Julpost-frist</h4><p>Find den sidste afsendelsesdato.</p></a>
+    <a href="https://calcatools.com/christmas/holiday-tipping-calculator/" class="tool-card"><h4>Drikkepengesberegner</h4><p>Beregn drikkepenge til helligdage.</p></a>
+    <a href="https://calcatools.com/christmas/holiday-road-trip-fuel-calculator/" class="tool-card"><h4>Roadtrip-braendstofberegner</h4><p>Estimer braendstofomkostningerne.</p></a>
+    <a href="https://calcatools.com/christmas/mulled-wine-quantity-calculator/" class="tool-card"><h4>Gloegg-maengdeberegner</h4><p>Beregn ingredienser til gloegg.</p></a>
+    <a href="https://calcatools.com/christmas/naughty-or-nice-calculator/" class="tool-card"><h4>Artig eller uartig?</h4><p>Vurder dit festlige opfoersel.</p></a>
+    <a href="https://calcatools.com/christmas/secret-santa-generator/" class="tool-card"><h4>Hemmelig Julemand-generator</h4><p>Generer gavefordelinger.</p></a>
+    <a href="https://calcatools.com/christmas/days-until-new-year-calculator/" class="tool-card"><h4>Dage til nyttaar</h4><p>Tael dagene ned til nyttaar.</p></a>
+  </div></section>
+  <section class="section tools-section" id="vaerktoejer"><div class="section-header"><h2>Online Vaerktoejer</h2><p>Tekst, billede, PDF, udvikler, farve, generatorer og omformere &mdash; alt i browseren.</p></div>
+    <h3 style="margin-bottom:16px;color:var(--primary)">Tekstvaerktoejer</h3>
+    <div class="tools-grid" style="margin-bottom:32px">
+      <a href="https://calcatools.com/tools/text/word-counter/" class="tool-card"><h4>Ordtaeler</h4><p>Tael ord, tegn, saetning og laesetid.</p></a>
+      <a href="https://calcatools.com/tools/text/character-counter/" class="tool-card"><h4>Tegntaeler</h4><p>Tael tegn med og uden mellemrum.</p></a>
+      <a href="https://calcatools.com/tools/text/text-case-converter/" class="tool-card"><h4>Tekstformateringsomformer</h4><p>Omv tekst mellem STORE, smaa og mere.</p></a>
+      <a href="https://calcatools.com/tools/text/reading-time-calculator/" class="tool-card"><h4>Laesetidsberegner</h4><p>Estimer laese- eller taletiden.</p></a>
+      <a href="https://calcatools.com/tools/text/word-frequency-counter/" class="tool-card"><h4>Ordfrekvenstaeler</h4><p>Tael frekvensen af hvert ord.</p></a>
+      <a href="https://calcatools.com/tools/text/sentence-counter/" class="tool-card"><h4>Saetningstaeler</h4><p>Tael saetninger og afsnit.</p></a>
+      <a href="https://calcatools.com/tools/text/lorem-ipsum-generator/" class="tool-card"><h4>Lorem Ipsum-generator</h4><p>Generer pladsholdertekst.</p></a>
+    </div>
+    <h3 style="margin-bottom:16px;color:var(--primary)">Billedvaerktoejer</h3>
+    <div class="tools-grid" style="margin-bottom:32px">
+      <a href="https://calcatools.com/tools/image/qr-code-generator/" class="tool-card"><h4>QR-kode-generator</h4><p>Opret QR-koder til URL'er og WiFi.</p></a>
+      <a href="https://calcatools.com/tools/image/image-compressor/" class="tool-card"><h4>Billedkompressor</h4><p>Komprimer billeder direkte i browseren.</p></a>
+      <a href="https://calcatools.com/tools/image/image-resizer/" class="tool-card"><h4>Billedstoerrelses-tilpasser</h4><p>Tilpas billedstoerrelser lokalt.</p></a>
+      <a href="https://calcatools.com/tools/image/background-remover/" class="tool-card"><h4>Baggrundsfjerner</h4><p>Fjern billedbaggrunde efter farve.</p></a>
+      <a href="https://calcatools.com/tools/image/favicon-generator/" class="tool-card"><h4>Favicon-generator</h4><p>Opret favicon-pakker lokalt.</p></a>
+      <a href="https://calcatools.com/tools/image/png-to-jpg-converter/" class="tool-card"><h4>PNG-til-JPG-omformer</h4><p>Omv PNG til JPG.</p></a>
+    </div>
+    <h3 style="margin-bottom:16px;color:var(--primary)">PDF-vaerktoejer</h3>
+    <div class="tools-grid" style="margin-bottom:32px">
+      <a href="https://calcatools.com/tools/pdf/pdf-compressor/" class="tool-card"><h4>PDF-kompressor</h4><p>Reducer PDF-stoerrelsen lokalt.</p></a>
+      <a href="https://calcatools.com/tools/pdf/merge-pdf/" class="tool-card"><h4>PDF-sammenfoejning</h4><p>Kombiner PDF'er til Ã©n fil.</p></a>
+      <a href="https://calcatools.com/tools/pdf/pdf-to-text/" class="tool-card"><h4>PDF-til-tekst</h4><p>UdtrÃ¦k tekst fra PDF'er.</p></a>
+      <a href="https://calcatools.com/tools/pdf/pdf-to-word/" class="tool-card"><h4>PDF-til-Word</h4><p>Omv PDF'er til DOCX.</p></a>
+    </div>
+    <h3 style="margin-bottom:16px;color:var(--primary)">Udviklervaerktoejer</h3>
+    <div class="tools-grid" style="margin-bottom:32px">
+      <a href="https://calcatools.com/tools/developer/json-formatter/" class="tool-card"><h4>JSON-formater</h4><p>Formater og valider JSON.</p></a>
+      <a href="https://calcatools.com/tools/developer/regex-tester/" class="tool-card"><h4>Regex-tester</h4><p>Test regulÃ¦re udtryk.</p></a>
+      <a href="https://calcatools.com/tools/developer/ai-api-cost-calculator/" class="tool-card"><h4>AI API-omkostningsberegner</h4><p>Forudsig AI API-udgifter.</p></a>
+      <a href="https://calcatools.com/tools/developer/code-explainer/" class="tool-card"><h4>Kode-forklarer</h4><p>Forklar kodelinjer.</p></a>
+      <a href="https://calcatools.com/tools/developer/base64-encoder/" class="tool-card"><h4>Base64-koder</h4><p>Koder og afkoder Base64.</p></a>
+      <a href="https://calcatools.com/tools/developer/url-encoder/" class="tool-card"><h4>URL-koder</h4><p>Koder og afkoder URL'er.</p></a>
+      <a href="https://calcatools.com/tools/developer/hash-generator/" class="tool-card"><h4>Hash-generator</h4><p>Generer MD5 og SHA hashes.</p></a>
+      <a href="https://calcatools.com/tools/developer/uuid-generator/" class="tool-card"><h4>UUID-generator</h4><p>Generer unikke UUIDs v4.</p></a>
+      <a href="https://calcatools.com/tools/developer/html-entity-encoder/" class="tool-card"><h4>HTML-entitetskoder</h4><p>Koder HTML-entiteter.</p></a>
+      <a href="https://calcatools.com/tools/developer/json-yaml-xml-formatter/" class="tool-card"><h4>JSON/YAML/XML-formater</h4><p>Formater dataformater.</p></a>
+      <a href="https://calcatools.com/tools/developer/csv-viewer/" class="tool-card"><h4>CSV-fremviser</h4><p>Vis og filtrer CSV-filer.</p></a>
+      <a href="https://calcatools.com/tools/developer/markdown-preview/" class="tool-card"><h4>Markdown-forhaandsvisning</h4><p>Vis Markdown som HTML.</p></a>
+      <a href="https://calcatools.com/tools/developer/color-converter/" class="tool-card"><h4>Farveomformer</h4><p>Omv farvekoder mellem HEX, RGB, HSL.</p></a>
+      <a href="https://calcatools.com/tools/developer/lorem-ipsum-generator/" class="tool-card"><h4>Lorem Ipsum-generator</h4><p>Generer pladsholdertekst.</p></a>
+      <a href="https://calcatools.com/tools/developer/cron-expression-builder/" class="tool-card"><h4>Cron-udtryksbygger</h4><p>Opret cron-udtryk.</p></a>
+    </div>
+    <h3 style="margin-bottom:16px;color:var(--primary)">Farve- &amp; CSS-vaerktoejer</h3>
+    <div class="tools-grid" style="margin-bottom:32px">
+      <a href="https://calcatools.com/tools/color/color-picker/" class="tool-card"><h4>Farvevalger</h4><p>Vaelg farver og kopier koder.</p></a>
+      <a href="https://calcatools.com/tools/color/hex-to-rgb-converter/" class="tool-card"><h4>HEX-til-RGB-omformer</h4><p>Omv HEX til RGB.</p></a>
+      <a href="https://calcatools.com/tools/color/css-gradient-generator/" class="tool-card"><h4>CSS-gradientgenerator</h4><p>Opret gradienter.</p></a>
+      <a href="https://calcatools.com/tools/color/box-shadow-generator/" class="tool-card"><h4>Box-shadow-generator</h4><p>Opret CSS box-shadow.</p></a>
+      <a href="https://calcatools.com/tools/color/border-radius-generator/" class="tool-card"><h4>Border-radius-generator</h4><p>Generer border-radius-vaelrdier.</p></a>
+    </div>
+    <h3 style="margin-bottom:16px;color:var(--primary)">Generatorer</h3>
+    <div class="tools-grid" style="margin-bottom:32px">
+      <a href="https://calcatools.com/tools/random/password-generator/" class="tool-card"><h4>Adgangskodegenerator</h4><p>Opret staerke adgangskoder.</p></a>
+      <a href="https://calcatools.com/tools/random/random-number-generator/" class="tool-card"><h4>Tilfaeldigtals-generator</h4><p>Generer sikre tilfaeldige tal.</p></a>
+      <a href="https://calcatools.com/tools/random/random-decimal-generator/" class="tool-card"><h4>Tilfaeldig decimalgenerator</h4><p>Generer decimaltal.</p></a>
+      <a href="https://calcatools.com/tools/random/coin-flip-simulator/" class="tool-card"><h4>Moentkast-simulator</h4><p>Kast en virtuel moent.</p></a>
+      <a href="https://calcatools.com/tools/random/dice-roller/" class="tool-card"><h4>Terningkast</h4><p>Kast 1 til 10 terninger.</p></a>
+      <a href="https://calcatools.com/tools/random/love-calculator/" class="tool-card"><h4>Kaerlighedsberegner</h4><p>Generer kompatibilitetsprocenter.</p></a>
+      <a href="https://calcatools.com/tools/random/name-picker-wheel/" class="tool-card"><h4>Navnehjul</h4><p>Drej hjulet for en tilfaeldig vinder.</p></a>
+      <a href="https://calcatools.com/tools/random/number-and-letter-generator/" class="tool-card"><h4>Tal- og bogstavgenerator</h4><p>Generer alfanumeriske id'er.</p></a>
+      <a href="https://calcatools.com/tools/random/online-timer/" class="tool-card"><h4>Online-timer</h4><p>Nedtaelling eller stopur.</p></a>
+      <a href="https://calcatools.com/tools/random/pomodoro-timer/" class="tool-card"><h4>Pomodoro-timer</h4><p>Arbejd i 25-minutters sprint.</p></a>
+      <a href="https://calcatools.com/tools/random/random-sample-generator/" class="tool-card"><h4>Tilfaeldig stikproeve</h4><p>TrÃ¦k en stikproeve fra en liste.</p></a>
+      <a href="https://calcatools.com/tools/random/ai-excel-formula-generator/" class="tool-card"><h4>AI Excel-formelgenerator</h4><p>Generer Excel-formler.</p></a>
+    </div>
+    <h3 style="margin-bottom:16px;color:var(--primary)">Omformere</h3>
+    <div class="tools-grid">
+      <a href="https://calcatools.com/tools/converter/unit-converter/" class="tool-card"><h4>Enhedsomformer</h4><p>Omv laengde, vaegt, volumen.</p></a>
+      <a href="https://calcatools.com/tools/converter/temperature-converter/" class="tool-card"><h4>Temperaturomformer</h4><p>Omv celsius, fahrenheit, kelvin.</p></a>
+      <a href="https://calcatools.com/tools/converter/time-zone-converter/" class="tool-card"><h4>Tidszoneomformer</h4><p>Omv mellem tidszoner.</p></a>
+      <a href="https://calcatools.com/tools/converter/timestamp-converter/" class="tool-card"><h4>Tidsstempelomformer</h4><p>Omv Unix-epoch.</p></a>
+      <a href="https://calcatools.com/tools/converter/military-time-converter/" class="tool-card"><h4>Militaertid-omformer</h4><p>Omv mellem 24- og 12-timersformat.</p></a>
+      <a href="https://calcatools.com/tools/converter/roman-numeral-converter/" class="tool-card"><h4>Romerske tal-omformer</h4><p>Omv tal og romerske cifre.</p></a>
+      <a href="https://calcatools.com/tools/converter/joules-converter/" class="tool-card"><h4>Joule-omformer</h4><p>Omv energi mellem joule og andre.</p></a>
+      <a href="https://calcatools.com/tools/converter/bits-calculator/" class="tool-card"><h4>Bits-beregner</h4><p>Omv bits og bytes.</p></a>
+    </div>
+  </section>
+
+  <div class="ad-container"><div class="ad-label">Annonce</div>
+    <script>atOptions={key:'ab1cb612774c283fc86a70d151cf0088',format:'iframe',height:90,width:728,params:{}};</script>
+    <script src="https://archbishopaluminiumcountenance.com/ab1cb612774c283fc86a70d151cf0088/invoke.js"></script>
+  </div>
+
+  <section class="section"><div class="section-header"><h2>Hvorfor CalcaTools?</h2><p>Hvert vaerktoej bygger paa fire grundprincipper &mdash; noyagtighed, privatliv, hastighed og tillid.</p></div>
+    <div class="trust-grid">
+      <div class="trust-card"><div class="icon">&#128300;</div><h4>Ekspertgodkendte formler</h4><p>Sundheds-, finans- og religioese formler gennemgaas og revideres kvartalsvis.</p></div>
+      <div class="trust-card"><div class="icon">&#128274;</div><h4>100% privat &amp; browserbaseret</h4><p>Alle beregninger kraeber paa klientsiden. Ingen konti, ingen logs.</p></div>
+      <div class="trust-card"><div class="icon">&#9889;</div><h4>Hurtig &amp; responsiv</h4><p>Kompileret CSS og lazy fonts &mdash; hver side laedser paa under et sekund.</p></div>
+      <div class="trust-card"><div class="icon">&#128218;</div><h4>Citerede kilder</h4><p>Links til CFPB, WHO, NIST, ISKCON og flere.</p></div>
+    </div>
+  </section>
+
+  <section class="section faq-section"><div class="section-header"><h2>Ofte stillede spoergsmaal</h2></div>
+    <div class="faq-list">
+      <div class="faq-item"><button class="faq-question">Hvad er CalcaTools?<span class="faq-icon">+</span></button><div class="faq-answer"><p>CalcaTools er en gratis samling af over 460 online beregnere og vaerktoejer til finans, sundhed, matematik, den islamiske og hinduiske kalender, jul, tekst, billeder, PDF'er, udvikling og mere. Alle vaerktoejer kraeber direkte i din browser &mdash; uden tilmelding.</p></div></div>
+      <div class="faq-item"><button class="faq-question">Skal jeg tilmelde mig?<span class="faq-icon">+</span></button><div class="faq-answer"><p>Nej, alle vores vaerktoejer er helt gratis og anonyme. Du behoever ingen konto, ingen e-mailadresse og ingen personlige data. Aaben blot siden og begynd at beregne.</p></div></div>
+      <div class="faq-item"><button class="faq-question">Er mine data sikre?<span class="faq-icon">+</span></button><div class="faq-answer"><p>Ja, alle beregninger kraeber direkte i din browser. Dine input sendes aldrig til vores server, gemmes eller deles med tredjeparter. Luk fanen, og dine data forsvinder helt.</p></div></div>
+      <div class="faq-item"><button class="faq-question">Hvilke beregnere tilbyder CalcaTools?<span class="faq-icon">+</span></button><div class="faq-answer"><p>Vi tilbyder beregnere til finans (realkredit, lÃ¥n, renter), sundhed (BMI, kalorier, kropsfedt), matematik (procenter, broekdele, statistik), den islamiske og hinduiske kalender, jul samt online vaerktoejer til tekst, billeder, PDF'er, udvikling og design. Over 460 gratis vaerktoejer.</p></div></div>
+      <div class="faq-item"><button class="faq-question">Kan jeg bruge CalcaTools paa min mobil?<span class="faq-icon">+</span></button><div class="faq-answer"><p>Ja, alle vores vaerktoejer er mobilvenlige og fungerer paa ethvert apparat &mdash; smartphone, tablet eller computer. Du behoever ingen app, aaben blot hjemmesiden i din browser.</p></div></div>
+    </div>
+  </section>
+
+  <div class="ad-container"><div class="ad-label">Annonce</div>
+    <script>atOptions={key:'82f5778ed13f4ba48c8ddd37fb99bdfb',format:'iframe',height:50,width:320,params:{}};</script>
+    <script src="https://archbishopaluminiumcountenance.com/82f5778ed13f4ba48c8ddd37fb99bdfb/invoke.js"></script>
+  </div>
+
+  <div class="ad-container"><div class="ad-label">Annonce</div>
+    <div id="container-1f272d0dae141de91ab74bde29b6ba5b"></div>
+  </div>
+
+  <footer class="footer"><div class="footer-grid">
+    <div class="footer-brand"><strong>CalcaTools</strong><p>Gratis, hurtige, browserbaserede beregnere og online vaerktoejer. Ingen tilmelding, ingen dataindsamling. Ekspertgodkendte formler til finans, sundhed, matematik, islam, hinduisme og mere.</p></div>
+    <div class="footer-col"><h5>Sprog</h5><a href="da.html">Dansk</a><a href="de.html">Deutsch</a><a href="es.html">Espa&ntilde;ol</a><a href="fi.html">Suomi</a><a href="fr.html">Fran&ccedil;ais</a><a href="it.html">Italiano</a></div>
+    <div class="footer-col"><h5>Flere sprog</h5><a href="ja.html">&#26085;&#26412;&#35486;</a><a href="ko.html">&#54620;&#44397;&#50612;</a><a href="nl.html">Nederlands</a><a href="no.html">Norsk</a><a href="sv.html">Svenska</a></div>
+    <div class="footer-col"><h5>CalcaTools</h5><a href="https://calcatools.com">Hjemmeside</a><a href="https://calcatools.com/all-calculators/">Alle beregnere</a><a href="https://calcatools.com/about/">Om os</a><a href="https://calcatools.com/privacy-policy/">Privatlivspolitik</a></div>
+  </div><div class="footer-bottom">&copy; 2026 CalcaTools. Alle rettigheder forbeholdt. Beregninger kraeber 100% i din browser.</div></footer>
+
+  <script>
+    document.addEventListener('click',function(e){if(!e.target.closest('.lang-selector')){document.querySelector('.lang-dropdown').classList.remove('open')}});
+    document.querySelectorAll('.faq-question').forEach(function(btn){btn.addEventListener('click',function(){this.closest('.faq-item').classList.toggle('open')})});
+  </script>
+</body></html>

@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadoras Online Gratis | Calculadora de Porcentaje, IMC, Hipoteca | CalcaTools</title>
+<meta name="description" content="Calculadoras online gratis: calculadora de porcentaje, calculadora de IMC, calculadora de hipoteca, calculadora de intereses. Sin registro, 100% privado.">
+<meta name="keywords" content="calculadora online gratis, calculadora de porcentaje, calculadora de IMC, calculadora de hipoteca, calculadora de intereses, calculadora online, calculadora gratis">
+<link rel="canonical" href="https://calcatools.com/es.html">
+<meta property="og:title" content="Calculadoras Online Gratis | CalcaTools">
+<meta property="og:description" content="Mas de 300 calculadoras profesionales para finanzas, salud, matematicas y mas. Gratis, privado, sin registro.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://calcatools.com/es.html">
+<meta property="og:locale" content="es_ES">
+<style>
+:root{--primary:#E65100;--primary-light:#FF8A65;--primary-dark:#BF360C;--secondary:#4E342E;--accent:#FF6D00;--accent-light:#FFAB40;--bg:#FFF8F0;--bg-alt:#FFF3E0;--bg-card:#fff;--text:#3E2723;--text-light:#6D4C41;--text-muted:#8D6E63;--border:#FFCCBC;--border-light:#FBE9E7;--shadow:rgba(230,81,0,.15);--shadow-lg:rgba(230,81,0,.25);--gradient-hero:linear-gradient(135deg,#E65100 0%,#FF6D00 50%,#FF8A65 100%);--radius:12px;--radius-lg:20px;--transition:all .3s cubic-bezier(.4,0,.2,1)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+.layout-es{background:var(--bg)}
+.container{max-width:1200px;margin:0 auto;padding:0 20px}
+.navbar{position:sticky;top:0;z-index:1000;background:rgba(255,248,240,.95);backdrop-filter:blur(20px);border-bottom:2px solid var(--border);box-shadow:0 4px 30px var(--shadow)}
+.nav-container{max-width:1200px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo{font-size:1.8rem;font-weight:800;color:var(--primary);text-decoration:none;display:flex;align-items:center;gap:8px}
+.logo-icon{width:40px;height:40px;background:var(--gradient-hero);border-radius:10px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.2rem;box-shadow:0 4px 15px var(--shadow)}
+.nav-links{display:flex;gap:8px;list-style:none}
+.nav-links a{text-decoration:none;color:var(--text);font-weight:600;padding:8px 16px;border-radius:8px;transition:var(--transition);font-size:.95rem}
+.nav-links a:hover{background:var(--bg-alt);color:var(--primary)}
+.lang-dropdown{position:relative}
+.lang-btn{display:flex;align-items:center;gap:6px;background:var(--bg-alt);border:2px solid var(--border);padding:8px 14px;border-radius:8px;cursor:pointer;font-weight:600;color:var(--text);transition:var(--transition);font-size:1rem}
+.lang-btn:hover{border-color:var(--primary);background:#fff}
+.lang-menu{position:absolute;top:100%;right:0;background:#fff;border:2px solid var(--border);border-radius:var(--radius);box-shadow:0 10px 40px var(--shadow-lg);min-width:200px;display:none;z-index:1001;overflow:hidden}
+.lang-menu.active{display:block}
+.lang-menu a{display:flex;align-items:center;gap:10px;padding:12px 16px;text-decoration:none;color:var(--text);font-weight:500;transition:var(--transition)}
+.lang-menu a:hover{background:var(--bg-alt);color:var(--primary)}
+.lang-menu a.current{background:var(--bg-alt);color:var(--primary);font-weight:700}
+.mobile-menu-btn{display:none;background:none;border:none;font-size:1.5rem;cursor:pointer;color:var(--text)}
+.nav-mobile{display:none;background:#fff;border-top:2px solid var(--border);padding:20px}
+.nav-mobile.active{display:block}
+.nav-mobile a{display:block;padding:12px 0;color:var(--text);text-decoration:none;font-weight:600;border-bottom:1px solid var(--border-light)}
+.hero{background:var(--gradient-hero);padding:80px 20px 60px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle,rgba(255,255,255,.1) 0%,transparent 70%);animation:shimmer 8s infinite linear}
+@keyframes shimmer{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.hero-content{position:relative;z-index:1;max-width:800px;margin:0 auto}
+.hero h1{font-size:3rem;font-weight:900;color:#fff;margin-bottom:20px;line-height:1.1;text-shadow:0 4px 20px rgba(0,0,0,.2)}
+.hero-subtitle{font-size:1.2rem;color:rgba(255,255,255,.95);margin-bottom:30px;max-width:600px;margin-left:auto;margin-right:auto}
+.hero-stats{display:flex;justify-content:center;gap:30px;margin-bottom:30px;flex-wrap:wrap}
+.stat-item{background:rgba(255,255,255,.2);backdrop-filter:blur(10px);padding:15px 25px;border-radius:var(--radius);border:1px solid rgba(255,255,255,.3)}
+.stat-number{font-size:1.8rem;font-weight:900;color:#fff;display:block}
+.stat-label{font-size:.85rem;color:rgba(255,255,255,.9)}
+.hero-cta{display:inline-block;background:#fff;color:var(--primary);padding:16px 40px;border-radius:50px;font-weight:800;font-size:1.1rem;text-decoration:none;box-shadow:0 8px 30px rgba(0,0,0,.2);transition:var(--transition)}
+.hero-cta:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(0,0,0,.3)}
+.ad-container{text-align:center;padding:20px 0;background:var(--bg-alt);border-top:1px solid var(--border-light);border-bottom:1px solid var(--border-light)}
+.ad-label{font-size:.7rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
+.content-with-sidebar{display:grid;grid-template-columns:1fr 300px;gap:30px;max-width:1200px;margin:0 auto;padding:30px 20px}
+.sidebar{position:sticky;top:90px;height:fit-content}
+.sidebar-ad{background:var(--bg-card);border:2px solid var(--border-light);border-radius:var(--radius);padding:20px;text-align:center;margin-bottom:20px}
+.category-section{padding:50px 0;border-bottom:2px solid var(--border-light)}
+.category-header{display:flex;align-items:center;gap:15px;margin-bottom:25px}
+.category-icon{width:50px;height:50px;background:var(--gradient-hero);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;font-size:1.5rem;color:#fff;box-shadow:0 4px 15px var(--shadow)}
+.category-title{font-size:1.8rem;font-weight:800;color:var(--text)}
+.category-count{background:var(--primary);color:#fff;padding:4px 12px;border-radius:20px;font-size:.85rem;font-weight:700}
+.category-description{color:var(--text-light);margin-bottom:25px;font-size:1.05rem}
+.tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px}
+.tool-card{background:var(--bg-card);border:2px solid var(--border-light);border-radius:var(--radius);padding:20px;text-decoration:none;color:var(--text);transition:var(--transition);box-shadow:0 2px 10px var(--shadow)}
+.tool-card:hover{border-color:var(--primary);transform:translateY(-4px);box-shadow:0 8px 30px var(--shadow-lg)}
+.tool-name{font-weight:700;font-size:1rem;margin-bottom:6px;color:var(--text)}
+.tool-description{font-size:.85rem;color:var(--text-muted);line-height:1.4}
+.faq-section{padding:60px 0;background:var(--bg-alt)}
+.faq-container{max-width:800px;margin:0 auto}
+.section-header{text-align:center;margin-bottom:40px}
+.section-title{font-size:2.2rem;font-weight:800;color:var(--text);margin-bottom:10px}
+.section-subtitle{color:var(--text-light);font-size:1.1rem}
+.faq-item{background:#fff;border:2px solid var(--border-light);border-radius:var(--radius);margin-bottom:15px;overflow:hidden}
+.faq-question{padding:20px 25px;font-weight:700;cursor:pointer;display:flex;justify-content:space-between;align-items:center;transition:var(--transition);list-style:none;font-size:1rem}
+.faq-question:hover{background:var(--bg-alt);color:var(--primary)}
+.faq-question::after{content:'+';font-size:1.3rem;color:var(--primary);transition:var(--transition)}
+.faq-item.active .faq-question::after{transform:rotate(45deg)}
+.faq-answer{padding:0 25px;max-height:0;overflow:hidden;transition:all .3s ease;color:var(--text-light);line-height:1.7}
+.faq-item.active .faq-answer{padding:0 25px 20px;max-height:500px}
+.faq-item.active .faq-question{color:var(--primary)}
+.trust-section{padding:60px 0;background:#fff;border-top:2px solid var(--border-light)}
+.trust-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px}
+.trust-item{text-align:center;padding:30px;background:var(--bg-alt);border-radius:var(--radius);border:2px solid var(--border-light)}
+.trust-icon{font-size:2.5rem;margin-bottom:15px}
+.trust-title{font-size:1.2rem;font-weight:700;margin-bottom:10px;color:var(--text)}
+.trust-text{color:var(--text-light);font-size:.95rem}
+.footer{background:var(--secondary);color:#fff;padding:60px 0 30px}
+.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:40px;margin-bottom:40px}
+.footer-title{font-size:1.1rem;font-weight:700;margin-bottom:20px;color:var(--accent-light)}
+.footer-links{list-style:none}
+.footer-links a{color:rgba(255,255,255,.8);text-decoration:none;display:block;padding:5px 0;transition:var(--transition);font-size:.9rem}
+.footer-links a:hover{color:#fff;padding-left:5px}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.2);padding-top:30px;text-align:center;color:rgba(255,255,255,.7);font-size:.9rem}
+.footer-lang-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-top:15px}
+.footer-lang-grid a{display:block;padding:8px 12px;background:rgba(255,255,255,.1);border-radius:6px;color:rgba(255,255,255,.8);text-decoration:none;font-size:.85rem;transition:var(--transition)}
+.footer-lang-grid a:hover{background:rgba(255,255,255,.2);color:#fff}
+.footer-lang-grid a.current-lang{background:var(--primary);color:#fff}
+@media(max-width:900px){.content-with-sidebar{grid-template-columns:1fr}.sidebar{position:static;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}.hero h1{font-size:2.2rem}.nav-links{display:none}.mobile-menu-btn{display:block}.hero-stats{gap:15px}.stat-item{padding:12px 18px}.stat-number{font-size:1.4rem}}
+@media(max-width:600px){.hero{padding:50px 15px 40px}.hero h1{font-size:1.8rem}.hero-subtitle{font-size:1rem}.hero-stats{flex-direction:column;align-items:center}.tools-grid{grid-template-columns:1fr}.category-title{font-size:1.4rem}.section-title{font-size:1.6rem}}
+</style>
+</head>
+<body class="layout-es">
+<nav class="navbar">
+<div class="nav-container">
+<a href="https://calcatools.com/es.html" class="logo"><img src="https://calcatools.com/wp-content/themes/toolexpert/assets/img/calcatools-logo.png" alt="CalcaTools" width="180" height="36"></a>
+<ul class="nav-links">
+<li><a href="#finanzas">Finanzas</a></li>
+<li><a href="#salud">Salud</a></li>
+<li><a href="#matematicas">Matematicas</a></li>
+<li><a href="#herramientas">Herramientas</a></li>
+</ul>
+<div class="lang-dropdown">
+<button class="lang-btn" onclick="toggleLangMenu()">&#127760; ES &#9662;</button>
+<div class="lang-menu" id="langMenu">
+<a href="https://calcatools.com/">English</a>
+<a href="https://calcatools.com/es.html" class="current">Espanol</a>
+<a href="https://calcatools.com/pt.html">Portugues</a>
+<a href="https://calcatools.com/fr.html">Francais</a>
+<a href="https://calcatools.com/de.html">Deutsch</a>
+<a href="https://calcatools.com/it.html">Italiano</a>
+<a href="https://calcatools.com/ja.html">&#26085;&#26412;&#35486;</a>
+<a href="https://calcatools.com/ko.html">&#54620;&#44397;&#50612;</a>
+<a href="https://calcatools.com/zh.html">&#20013;&#25991;</a>
+<a href="https://calcatools.com/ar.html">&#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1577;</a>
+<a href="https://calcatools.com/hi.html">&#2361;&#2367;&#2306;&#2342;&#2368;</a>
+<a href="https://calcatools.com/tr.html">Turkce</a>
+</div>
+</div>
+<button class="mobile-menu-btn" onclick="toggleMobileMenu()">&#9776;</button>
+</div>
+<div class="nav-mobile" id="mobileMenu">
+<a href="#finanzas">Finanzas</a>
+<a href="#salud">Salud</a>
+<a href="#matematicas">Matematicas</a>
+<a href="#herramientas">Herramientas</a>
+</div>
+</nav>
+
+<section class="hero">
+<div class="hero-content">
+<h1>Calculadoras Online Gratuitas</h1>
+<p class="hero-subtitle">Mas de 300 calculadoras profesionales para finanzas, salud, matematicas y mas &mdash; directamente en tu navegador</p>
+<div class="hero-stats">
+<div class="stat-item"><span class="stat-number">300+</span><span class="stat-label">Calculadoras</span></div>
+<div class="stat-item"><span class="stat-number">100%</span><span class="stat-label">Privado</span></div>
+<div class="stat-item"><span class="stat-number">0</span><span class="stat-label">Registro</span></div>
+<div class="stat-item"><span class="stat-number">7+</span><span class="stat-label">Categorias</span></div>
+</div>
+<a href="#finanzas" class="hero-cta">Ver Todas las Calculadoras</a>
+</div>
+</section>
+
+<div class="ad-container"><div class="ad-label">Publicidad</div><ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-6528943535760514" data-ad-slot="421bcca51c5cfb9f98ed5f3f69cf2938"></ins></div>
+
+<div class="content-with-sidebar">
+<main class="main-content">
+
+<section class="category-section" id="finanzas">
+<div class="category-header"><div class="category-icon">&#128176;</div><div><h2 class="category-title">Calculadoras de Finanzas</h2><span class="category-count">24 calculadoras</span></div></div>
+<p class="category-description">Hipotecas, prestamos, interes compuesto, ahorros y jubilacion</p>
+<div class="tools-grid">
+<a href="https://calcatools.com/finanzas/calculadora-de-hipoteca" class="tool-card"><div class="tool-name">Calculadora de Hipoteca</div><div class="tool-description">Calcula tu cuota mensual, intereses totales y amortizacion de hipoteca</div></a>
+<a href="https://calcatools.com/finanzas/calculadora-de-intereses" class="tool-card"><div class="tool-name">Calculadora de Intereses</div><div class="tool-description">Interes simple y compuesto con proyecciones detalladas</div></a>
+<a href="https://calcatools.com/finanzas/calculadora-de-prestamos" class="tool-card"><div class="tool-name">Calculadora de Prestamos</div><div class="tool-description">Calcula pagos mensuales, tasa de interes y plazos de prestamos</div></a>
+<a href="https://calcatools.com/finanzas/calculadora-de-amortizacion" class="tool-card"><div class="tool-name">Calculadora de Amortizacion</div><div class="tool-description">Tabla de amortizacion completa para tu prestamo o hipoteca</div></a>
+<a href="https://calcatools.com/finanzas/calculadora-de-ahorro" class="tool-card"><div class="tool-name">Calculadora de Ahorro</div><div class="tool-description">Planifica tus ahorros y alcanza tus metas financieras</div></a>
+<a href="https://calcatools.com/finanzas/calculadora-de-jubilacion" class="tool-card"><div class="tool-name">Calculadora de Jubilacion</div><div class="tool-description">Estima cuanto necesitas ahorrar para tu jubilacion</div></a>
+<a href="https://calcatools.com/finanzas/calculadora-de-inversion" class="tool-card"><div class="tool-name">Calculadora de Inversion</div><div class="tool-description">Calcula rendimientos de inversiones a largo y corto plazo</div></a>
+<a href="https://calcatools.com/finanzas/calculadora-de-compuesto" class="tool-card"><div class="tool-name">Calculadora de Interes Compuesto</div><div class="tool-description">Visualiza como crece tu dinero con el interes compuesto</div></a>
+<a href="https://calcatools.com/finanzas/calculadora-de-impuestos" class="tool-card"><div class="tool-name">Calculadora de Impuestos</div><div class="tool-description">Estima tus impuestos sobre la renta y deducciones</div></a>
+<a href="https://calcatools.com/finanzas/calculadora-de-iva" class="tool-card"><div class="tool-name">Calculadora de IVA</div><div class="tool-description">Calcula el IVA de productos y servicios rapidamente</div></a>
+<a href="https://calcatools.com/finanzas/calculadora-de-descuento" class="tool-card"><div class="tool-name">Calculadora de Descuento</div><div class="tool-description">Calcula el precio final con descuentos porcentuales</div></a>
+<a href="https://calcatools.com/finanzas/calculadora-de-comision" class="tool-card"><div class="tool-name">Calculadora de Comision</div><div class="tool-description">Calcula comisiones de ventas y servicios profesionales</div></a>
+<a href="https://calcatools.com/finanzas/calculadora-de-dividendos" class="tool-card"><div class="tool-name">Calculadora de Dividendos</div><div class="tool-description">Estima ingresos por dividendos de tus inversiones</div></a>
+<a href="https://calcatools.com/finanzas/calculadora-de-tasa-de-cambio" class="tool-card"><div class="tool-name">Calculadora de Tipo de Cambio</div><div class="tool-description">Convierte monedas con tasas de cambio actualizadas</div></a>
+<a href="https://calcatools.com/finanzas/calculadora-de-presupuesto" class="tool-card"><div class="tool-name">Calculadora de Presupuesto</div><div class="tool-description">Organiza tus gastos e ingresos mensuales facilmente</div></a>
+<a href="https://calcatools.com/finanzas/calculadora-de-deuda" class="tool-card"><div class="tool-name">Calculadora de Deuda</div><div class="tool-description">Planifica la eliminacion de tus deudas con estrategias efectivas</div></a>
+<a href="https://calcatools.com/finanzas/calculadora-de-leasing" class="tool-card"><div class="tool-name">Calculadora de Leasing</div><div class="tool-description">Compara opciones de leasing para vehiculos y equipos</div></a>
+<a href="https://calcatools.com/finanzas/calculadora-de-rentabilidad" class="tool-card"><div class="tool-name">Calculadora de Rentabilidad</div><div class="tool-description">Mide la rentabilidad de inversiones y negocios</div></a>
+<a href="https://calcatools.com/finanzas/calculadora-de-flujo-de-caja" class="tool-card"><div class="tool-name">Calculadora de Flujo de Caja</div><div class="tool-description">Proyecta el flujo de caja de tu negocio o proyectos</div></a>
+<a href="https://calcatools.com/finanzas/calculadora-de-vpn" class="tool-card"><div class="tool-name">Calculadora VPN (Valor Presente Neto)</div><div class="tool-description">Evalua inversiones calculando el valor presente neto</div></a>
+<a href="https://calcatools.com/finanzas/calculadora-de-tir" class="tool-card"><div class="tool-name">Calculadora TIR</div><div class="tool-description">Calcula la Tasa Interna de Retorno de proyectos</div></a>
+<a href="https://calcatools.com/finanzas/calculadora-de-punto-de-equilibrio" class="tool-card"><div class="tool-name">Calculadora de Punto de Equilibrio</div><div class="tool-description">Determina cuando tu negocio empieza a ser rentable</div></a>
+<a href="https://calcatools.com/finanzas/calculadora-de-uf" class="tool-card"><div class="tool-name">Calculadora de UF (Chile)</div><div class="tool-description">Convierte y calcula valores en Unidades de Fomento</div></a>
+<a href="https://calcatools.com/finanzas/calculadora-de-dolar-blue" class="tool-card"><div class="tool-name">Calculadora de Dolar Blue (Argentina)</div><div class="tool-description">Convierte entre dolar oficial y dolar blue</div></a>
+</div>
+</section>
+
+<div class="ad-container"><div class="ad-label">Publicidad</div><ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-6528943535760514" data-ad-slot="875ee96ad5bb1c8e8b6ffdbbc2d9f35d"></ins></div>
+
+<section class="category-section" id="salud">
+<div class="category-header"><div class="category-icon">&#10084;&#65039;</div><div><h2 class="category-title">Salud y Fitness</h2><span class="category-count">32 calculadoras</span></div></div>
+<p class="category-description">IMC, calorias, grasa corporal, frecuencia cardiaca y embarazo</p>
+<div class="tools-grid">
+<a href="https://calcatools.com/salud/calculadora-de-imc" class="tool-card"><div class="tool-name">Calculadora de IMC</div><div class="tool-description">Calcula tu Indice de Masa Corporal y conoce tu peso ideal</div></a>
+<a href="https://calcatools.com/salud/calculadora-de-calorias" class="tool-card"><div class="tool-name">Calculadora de Calorias</div><div class="tool-description">Descubre cuantas calorias necesitas al dia</div></a>
+<a href="https://calcatools.com/salud/calculadora-de-grasa-corporal" class="tool-card"><div class="tool-name">Calculadora de Grasa Corporal</div><div class="tool-description">Mide tu porcentaje de grasa corporal con precision</div></a>
+<a href="https://calcatools.com/salud/calculadora-de-frecuencia-cardiaca" class="tool-card"><div class="tool-name">Calculadora de Frecuencia Cardiaca</div><div class="tool-description">Calcula tu zona optima de entrenamiento cardiaco</div></a>
+<a href="https://calcatools.com/salud/calculadora-de-embarazo" class="tool-card"><div class="tool-name">Calculadora de Embarazo</div><div class="tool-description">Calcula tu fecha de parto y semanas de embarazo</div></a>
+<a href="https://calcatools.com/salud/calculadora-de-peso-ideal" class="tool-card"><div class="tool-name">Calculadora de Peso Ideal</div><div class="tool-description">Determina tu peso ideal segun tu estatura y complexion</div></a>
+<a href="https://calcatools.com/salud/calculadora-de-masa-muscular" class="tool-card"><div class="tool-name">Calculadora de Masa Muscular</div><div class="tool-description">Estima tu porcentaje de masa muscular corporal</div></a>
+<a href="https://calcatools.com/salud/calculadora-de-tasa-metabolica" class="tool-card"><div class="tool-name">Calculadora de Tasa Metabolica</div><div class="tool-description">Calcula tu metabolismo basal y calorias diarias</div></a>
+<a href="https://calcatools.com/salud/calculadora-de-volumen-cardiaco" class="tool-card"><div class="tool-name">Calculadora de Volumen Cardiaco</div><div class="tool-description">Estima tu gasto cardiaco en reposo y ejercicio</div></a>
+<a href="https://calcatools.com/salud/calculadora-de-oxigeno-maximo" class="tool-card"><div class="tool-name">Calculadora de VO2 Maximo</div><div class="tool-description">Mide tu capacidad aerobica maxima</div></a>
+<a href="https://calcatools.com/salud/calculadora-de-agua" class="tool-card"><div class="tool-name">Calculadora de Consumo de Agua</div><div class="tool-description">Calcula cuanta agua necesitas beber al dia</div></a>
+<a href="https://calcatools.com/salud/calculadora-de-proteinas" class="tool-card"><div class="tool-name">Calculadora de Proteinas</div><div class="tool-description">Determina tu ingesta diaria ideal de proteinas</div></a>
+<a href="https://calcatools.com/salud/calculadora-de-carbohidratos" class="tool-card"><div class="tool-name">Calculadora de Carbohidratos</div><div class="tool-description">Calcula la cantidad optima de carbohidratos diarios</div></a>
+<a href="https://calcatools.com/salud/calculadora-de-grasas" class="tool-card"><div class="tool-name">Calculadora de Grasas</div><div class="tool-description">Planifica tu consumo diario de grasas saludables</div></a>
+<a href="https://calcatools.com/salud/calculadora-de-imc-infantil" class="tool-card"><div class="tool-name">Calculadora de IMC Infantil</div><div class="tool-description">IMC adaptado para ninos y adolescentes en crecimiento</div></a>
+<a href="https://calcatools.com/salud/calculadora-de-calorias-quemadas" class="tool-card"><div class="tool-name">Calculadora de Calorias Quemadas</div><div class="tool-description">Mide las calorias que quemas en diferentes ejercicios</div></a>
+<a href="https://calcatools.com/salud/calculadora-de-talla-infantil" class="tool-card"><div class="tool-name">Calculadora de Talla Infantil</div><div class="tool-description">Predice la estatura adulta de tu hijo</div></a>
+<a href="https://calcatools.com/salud/calculadora-de-glucosa" class="tool-card"><div class="tool-name">Calculadora de Glucosa</div><div class="tool-description">Convierte niveles de glucosa entre mg/dL y mmol/L</div></a>
+<a href="https://calcatools.com/salud/calculadora-de-presion-arterial" class="tool-card"><div class="tool-name">Calculadora de Presion Arterial</div><div class="tool-description">Clasifica tu presion arterial segun las guias medicas</div></a>
+<a href="https://calcatools.com/salud/calculadora-de-indice-cintura-cadera" class="tool-card"><div class="tool-name">Calculadora de Indice Cintura-Cadera</div><div class="tool-description">Mide tu proporcion de grasa abdominal y riesgos</div></a>
+<a href="https://calcatools.com/salud/calculadora-de-indice-cintura-altura" class="tool-card"><div class="tool-name">Calculadora de Indice Cintura-Altura</div><div class="tool-description">Evalua tu riesgo cardiovascular con este indicador</div></a>
+<a href="https://calcatools.com/salud/calculadora-de-hidratacion" class="tool-card"><div class="tool-name">Calculadora de Hidratacion</div><div class="tool-description">Calcula tu nivel de hidratacion segun actividad fisica</div></a>
+<a href="https://calcatools.com/salud/calculadora-de-edad-metabolica" class="tool-card"><div class="tool-name">Calculadora de Edad Metabolica</div><div class="tool-description">Descubre la edad real de tu metabolismo</div></a>
+<a href="https://calcatools.com/salud/calculadora-de-ruffier" class="tool-card"><div class="tool-name">Test de Ruffier</div><div class="tool-description">Evalua tu estado de forma fisica con el test de Ruffier</div></a>
+<a href="https://calcatools.com/salud/calculadora-de-cooper" class="tool-card"><div class="tool-name">Test de Cooper</div><div class="tool-description">Mide tu resistencia cardiaca corriendo 12 minutos</div></a>
+<a href="https://calcatools.com/salud/calculadora-de-sobrepeso" class="tool-card"><div class="tool-name">Calculadora de Sobrepeso</div><div class="tool-description">Determina si tienes peso saludable segun tu complexion</div></a>
+<a href="https://calcatools.com/salud/calculadora-de-cintura" class="tool-card"><div class="tool-name">Calculadora de Perimetro de Cintura</div><div class="tool-description">Evalua tu perimetro de cintura y riesgos de salud</div></a>
+<a href="https://calcatools.com/salud/calculadora-de-fitness" class="tool-card"><div class="tool-name">Calculadora de Fitness General</div><div class="tool-description">Evalua tu condicion fisica general con multiples pruebas</div></a>
+<a href="https://calcatools.com/salud/calculadora-de-densidad-osea" class="tool-card"><div class="tool-name">Calculadora de Densidad Osea</div><div class="tool-description">Estima tu densidad osea y riesgo de osteoporosis</div></a>
+<a href="https://calcatools.com/salud/calculadora-de-tiempo-recuperacion" class="tool-card"><div class="tool-name">Calculadora de Tiempo de Recuperacion</div><div class="tool-description">Calcula cuanto tiempo necesitas entre entrenamientos</div></a>
+<a href="https://calcatools.com/salud/calculadora-de-calorias-menopause" class="tool-card"><div class="tool-name">Calculadora de Calorias Menopausia</div><div class="tool-description">Necesidades caloricas adaptadas a la menopausia</div></a>
+<a href="https://calcatools.com/salud/calculadora-de-vejez" class="tool-card"><div class="tool-name">Calculadora de Esperanza de Vida</div><div class="tool-description">Estima tu esperanza de vida segun habitos y estilo de vida</div></a>
+<a href="https://calcatools.com/salud/calculadora-de-crecimiento" class="tool-card"><div class="tool-name">Calculadora de Crecimiento Infantil</div><div class="tool-description">Sigue el crecimiento de tu hijo con percentiles de la OMS</div></a>
+</div>
+</section>
+
+<section class="category-section" id="matematicas">
+<div class="category-header"><div class="category-icon">&#128208;</div><div><h2 class="category-title">Matematicas</h2><span class="category-count">39 calculadoras</span></div></div>
+<p class="category-description">Porcentajes, fracciones, algebra, estadistica y geometria</p>
+<div class="tools-grid">
+<a href="https://calcatools.com/matematicas/calculadora-de-porcentajes" class="tool-card"><div class="tool-name">Calculadora de Porcentajes</div><div class="tool-description">Calcula porcentajes de forma rapida y sencilla</div></a>
+<a href="https://calcatools.com/matematicas/calculadora-de-fracciones" class="tool-card"><div class="tool-name">Calculadora de Fracciones</div><div class="tool-description">Suma, resta, multiplica y divide fracciones facilmente</div></a>
+<a href="https://calcatools.com/matematicas/calculadora-cientifica" class="tool-card"><div class="tool-name">Calculadora Cientifica</div><div class="tool-description">Funciones trigonometricas, logaritmos y potencias</div></a>
+<a href="https://calcatools.com/matematicas/calculadora-de-raiz-cuadrada" class="tool-card"><div class="tool-name">Calculadora de Raiz Cuadrada</div><div class="tool-description">Calcula raices cuadradas y cubicas con precision</div></a>
+<a href="https://calcatools.com/matematicas/calculadora-de-exponentes" class="tool-card"><div class="tool-name">Calculadora de Exponentes</div><div class="tool-description">Eleva numeros a cualquier potencia rapidamente</div></a>
+<a href="https://calcatools.com/matematicas/calculadora-de-logaritmos" class="tool-card"><div class="tool-name">Calculadora de Logaritmos</div><div class="tool-description">Logaritmos en cualquier base, natural y decimal</div></a>
+<a href="https://calcatools.com/matematicas/calculadora-de-factorial" class="tool-card"><div class="tool-name">Calculadora de Factorial</div><div class="tool-description">Calcula el factorial de numeros grandes al instante</div></a>
+<a href="https://calcatools.com/matematicas/calculadora-combinatoria" class="tool-card"><div class="tool-name">Calculadora Combinatoria</div><div class="tool-description">Permutaciones, combinaciones y variaciones</div></a>
+<a href="https://calcatools.com/matematicas/calculadora-matrices" class="tool-card"><div class="tool-name">Calculadora de Matrices</div><div class="tool-description">Opera con matrices: suma, producto, determinante e inversa</div></a>
+<a href="https://calcatools.com/matematicas/calculadora-ecuaciones" class="tool-card"><div class="tool-name">Calculadora de Ecuaciones</div><div class="tool-description">Resuelve ecuaciones lineales y cuadraticas paso a paso</div></a>
+<a href="https://calcatools.com/matematicas/calculadora-estadistica" class="tool-card"><div class="tool-name">Calculadora Estadistica</div><div class="tool-description">Media, mediana, moda, desviacion estandar y varianza</div></a>
+<a href="https://calcatools.com/matematicas/calculadora-probabilidad" class="tool-card"><div class="tool-name">Calculadora de Probabilidad</div><div class="tool-description">Calcula probabilidades de eventos simples y compuestos</div></a>
+<a href="https://calcatools.com/matematicas/calculadora-trigonometria" class="tool-card"><div class="tool-name">Calculadora de Trigonometria</div><div class="tool-description">Sen, cos, tan y sus inversas en grados y radianes</div></a>
+<a href="https://calcatools.com/matematicas/calculadora-numeros-primos" class="tool-card"><div class="tool-name">Calculadora de Numeros Primos</div><div class="tool-description">Verifica si un numero es primo y encuentra los primos cercanos</div></a>
+<a href="https://calcatools.com/matematicas/calculadora-mcd-mcm" class="tool-card"><div class="tool-name">Calculadora de MCD y MCM</div><div class="tool-description">Maximo comun divisor y minimo comun multiplo</div></a>
+<a href="https://calcatools.com/matematicas/calculadora-de-pi" class="tool-card"><div class="tool-name">Calculadora de Pi</div><div class="tool-description">Explora el numero pi con miles de decimales</div></a>
+<a href="https://calcatools.com/matematicas/calculadora-notas" class="tool-card"><div class="tool-name">Calculadora de Notas</div><div class="tool-description">Calcula tu promedio academico y necesitas para aprobar</div></a>
+<a href="https://calcatools.com/matematicas/calculadora-areas" class="tool-card"><div class="tool-name">Calculadora de Areas</div><div class="tool-description">Areas de figuras geometricas: cuadrado, circulo, triangulo y mas</div></a>
+<a href="https://calcatools.com/matematicas/calculadora-volumenes" class="tool-card"><div class="tool-name">Calculadora de Volumenes</div><div class="tool-description">Volumenes de esferas, cilindros, conos y cubos</div></a>
+<a href="https://calcatools.com/matematicas/calculadora-perimetros" class="tool-card"><div class="tool-name">Calculadora de Perimetros</div><div class="tool-description">Perimetros de todas las figuras geometricas</div></a>
+<a href="https://calcatools.com/matematicas/calculadora-pitagoras" class="tool-card"><div class="tool-name">Calculadora de Pitagoras</div><div class="tool-description">Resuelve triangulos rectangulos con el teorema de Pitagoras</div></a>
+<a href="https://calcatools.com/matematicas/calculadora-vectorial" class="tool-card"><div class="tool-name">Calculadora Vectorial</div><div class="tool-description">Suma, resta y producto de vectores en 2D y 3D</div></a>
+<a href="https://calcatools.com/matematicas/calculadora-derivadas" class="tool-card"><div class="tool-name">Calculadora de Derivadas</div><div class="tool-description">Calcula derivadas de funciones comunes paso a paso</div></a>
+<a href="https://calcatools.com/matematicas/calculadora-integrales" class="tool-card"><div class="tool-name">Calculadora de Integrales</div><div class="tool-description">Resuelve integrales definidas e indefinidas</div></a>
+<a href="https://calcatools.com/matematicas/calculadora-ecuaciones-polinomicas" class="tool-card"><div class="tool-name">Calculadora de Ecuaciones Polinomicas</div><div class="tool-description">Resuelve polinomios de cualquier grado</div></a>
+<a href="https://calcatools.com/matematicas/calculadora-de-romanos" class="tool-card"><div class="tool-name">Calculadora de Numeros Romanos</div><div class="tool-description">Convierte entre numeros romanos y arabigos</div></a>
+<a href="https://calcatools.com/matematicas/calculadora-base-numerica" class="tool-card"><div class="tool-name">Calculadora de Base Numerica</div><div class="tool-description">Convierte entre binario, octal, decimal y hexadecimal</div></a>
+<a href="https://calcatools.com/matematicas/calculadora-cadena" class="tool-card"><div class="tool-name">Calculadora de Sucesion de Fibonacci</div><div class="tool-description">Genera la sucesion de Fibonacci hasta el termino que necesites</div></a>
+<a href="https://calcatools.com/matematicas/calculadora-congruencia" class="tool-card"><div class="tool-name">Calculadora de Congruencia</div><div class="tool-description">Resuelve problemas de congruencia modular</div></a>
+<a href="https://calcatools.com/matematicas/calculadora-sistemas-ecuaciones" class="tool-card"><div class="tool-name">Calculadora de Sistemas de Ecuaciones</div><div class="tool-description">Resuelve sistemas de 2, 3 o mas ecuaciones simultaneas</div></a>
+<a href="https://calcatools.com/matematicas/calculadora-coordenadas" class="tool-card"><div class="tool-name">Calculadora de Coordenadas</div><div class="tool-description">Convierte entre coordenadas polares y cartesianas</div></a>
+<a href="https://calcatools.com/matematicas/calculadora-conversion-unidades" class="tool-card"><div class="tool-name">Calculadora de Conversion de Unidades</div><div class="tool-description">Convierte longitudes, masas, volumenes y mas</div></a>
+<a href="https://calcatools.com/matematicas/calculadora-porcentaje-variacion" class="tool-card"><div class="tool-name">Calculadora de Variacion Porcentual</div><div class="tool-description">Calcula aumentos y disminuciones porcentuales</div></a>
+<a href="https://calcatools.com/matematicas/calculadora-promedio-ponderado" class="tool-card"><div class="tool-name">Calculadora de Promedio Ponderado</div><div class="tool-description">Promedio con diferentes pesos o importancias</div></a>
+<a href="https://calcatools.com/matematicas/calculadora-desviacion-estandar" class="tool-card"><div class="tool-name">Calculadora de Desviacion Estandar</div><div class="tool-description">Mide la dispersion de datos con precision estadistica</div></a>
+<a href="https://calcatools.com/matematicas/calculadora-varianza" class="tool-card"><div class="tool-name">Calculadora de Varianza</div><div class="tool-description">Calcula la varianza poblacional y muestral</div></a>
+<a href="https://calcatools.com/matematicas/calculadora-mediana" class="tool-card"><div class="tool-name">Calculadora de Mediana</div><div class="tool-description">Encuentra el valor central de tu conjunto de datos</div></a>
+<a href="https://calcatools.com/matematicas/calculadora-rango" class="tool-card"><div class="tool-name">Calculadora de Rango Estadistico</div><div class="tool-description">Determina la amplitud de tu conjunto de datos</div></a>
+<a href="https://calcatools.com/matematicas/calculadora-cuartiles" class="tool-card"><div class="tool-name">Calculadora de Cuartiles</div><div class="tool-description">Divide tus datos en cuatro partes iguales</div></a>
+</div>
+</section>
+
+<section class="category-section" id="dia-a-dia">
+<div class="category-header"><div class="category-icon">&#128197;</div><div><h2 class="category-title">Calculadoras del Dia a Dia</h2><span class="category-count">54 calculadoras</span></div></div>
+<p class="category-description">Edad, diferencia de fechas, zonas horarias, propinas</p>
+<div class="tools-grid">
+<a href="https://calcatools.com/dia-a-dia/calculadora-de-edad" class="tool-card"><div class="tool-name">Calculadora de Edad</div><div class="tool-description">Calcula tu edad exacta en anios, meses y dias</div></a>
+<a href="https://calcatools.com/dia-a-dia/calculadora-de-propinas" class="tool-card"><div class="tool-name">Calculadora de Propinas</div><div class="tool-description">Calcula la propina y el total a pagar en el restaurante</div></a>
+<a href="https://calcatools.com/dia-a-dia/calculadora-de-fechas" class="tool-card"><div class="tool-name">Calculadora de Diferencia de Fechas</div><div class="tool-description">Calcula los dias entre dos fechas al instante</div></a>
+<a href="https://calcatools.com/dia-a-dia/calculadora-de-horas" class="tool-card"><div class="tool-name">Calculadora de Horas</div><div class="tool-description">Suma, resta y convierte horas y minutos</div></a>
+<a href="https://calcatools.com/dia-a-dia/calculadora-de-horarios" class="tool-card"><div class="tool-name">Calculadora de Horarios Laborales</div><div class="tool-description">Calcula tus horas trabajadas y horas extra</div></a>
+<a href="https://calcatools.com/dia-a-dia/calculadora-de-vacaciones" class="tool-card"><div class="tool-name">Calculadora de Dias de Vacaciones</div><div class="tool-description">Planifica tus vacaciones y dias libres del anio</div></a>
+<a href="https://calcatools.com/dia-a-dia/calculadora-de-zona-horaria" class="tool-card"><div class="tool-name">Calculadora de Zona Horaria</div><div class="tool-description">Convierte entre diferentes zonas horarias del mundo</div></a>
+<a href="https://calcatools.com/dia-a-dia/calculadora-de-calendario" class="tool-card"><div class="tool-name">Calculadora de Calendario</div><div class="tool-description">Encuentra el dia de la semana de cualquier fecha</div></a>
+<a href="https://calcatools.com/dia-a-dia/calculadora-de-viento" class="tool-card"><div class="tool-name">Calculadora de Viento</div><div class="tool-description">Calcula la velocidad del viento en diferentes unidades</div></a>
+<a href="https://calcatools.com/dia-a-dia/calculadora-de-lluvia" class="tool-card"><div class="tool-name">Calculadora de Probabilidad de Lluvia</div><div class="tool-description">Estima las probabilidades de lluvia segun tu ubicacion</div></a>
+<a href="https://calcatools.com/dia-a-dia/calculadora-de-gorjeta" class="tool-card"><div class="tool-name">Calculadora de Gorjeta</div><div class="tool-description">Calcula la propina ideal segun el servicio recibido</div></a>
+<a href="https://calcatools.com/dia-a-dia/calculadora-de-edad-perro" class="tool-card"><div class="tool-name">Calculadora de Edad del Perro</div><div class="tool-description">Convierte la edad de tu perro a anios humanos</div></a>
+<a href="https://calcatools.com/dia-a-dia/calculadora-de-edad-gato" class="tool-card"><div class="tool-name">Calculadora de Edad del Gato</div><div class="tool-description">Descubre la edad real de tu gato en anios humanos</div></a>
+<a href="https://calcatools.com/dia-a-dia/calculadora-de-tiempo-cocina" class="tool-card"><div class="tool-name">Calculadora de Tiempo de Coccion</div><div class="tool-description">Ajusta los tiempos de coccion segun la porcion</div></a>
+<a href="https://calcatools.com/dia-a-dia/calculadora-de-velocidad" class="tool-card"><div class="tool-name">Calculadora de Velocidad</div><div class="tool-description">Calcula distancia, tiempo y velocidad facilmente</div></a>
+<a href="https://calcatools.com/dia-a-dia/calculadora-de-consumo-combustible" class="tool-card"><div class="tool-name">Calculadora de Consumo de Combustible</div><div class="tool-description">Mide el rendimiento de tu vehiculo en km/l o mpg</div></a>
+<a href="https://calcatools.com/dia-a-dia/calculadora-de-cambio-monedas" class="tool-card"><div class="tool-name">Calculadora de Cambio de Monedas</div><div class="tool-description">Convierte entre monedas de todo el mundo</div></a>
+<a href="https://calcatools.com/dia-a-dia/calculadora-de-pedidos" class="tool-card"><div class="tool-name">Calculadora de Pedidos de Restaurante</div><div class="tool-description">Divide la cuenta justo entre todos los comensales</div></a>
+<a href="https://calcatools.com/dia-a-dia/calculadora-de-impuestos-venta" class="tool-card"><div class="tool-name">Calculadora de Impuestos a la Venta</div><div class="tool-description">Calcula impuestos de ventas segun tu pais o estado</div></a>
+<a href="https://calcatools.com/dia-a-dia/calculadora-de-gastos-viaje" class="tool-card"><div class="tool-name">Calculadora de Gastos de Viaje</div><div class="tool-description">Estima el presupuesto total de tu proximo viaje</div></a>
+<a href="https://calcatools.com/dia-a-dia/calculadora-de-peso-equipaje" class="tool-card"><div class="tool-name">Calculadora de Peso de Equipaje</div><div class="tool-description">Verifica si tu equipaje cumple con los limites de aerolinea</div></a>
+<a href="https://calcatools.com/dia-a-dia/calculadora-de-gorjeta-bar" class="tool-card"><div class="tool-name">Calculadora de Propina de Bar</div><div class="tool-description">Calcula propina para bebidas y snacks en bares</div></a>
+<a href="https://calcatools.com/dia-a-dia/calculadora-de-edad-embarazo" class="tool-card"><div class="tool-name">Calculadora de Semanas de Embarazo</div><div class="tool-description">Calcula las semanas exactas de tu embarazo</div></a>
+<a href="https://calcatools.com/dia-a-dia/calculadora-de-aniversario" class="tool-card"><div class="tool-name">Calculadora de Aniversario</div><div class="tool-description">Cuenta los dias hasta tu proximo aniversario</div></a>
+<a href="https://calcatools.com/dia-a-dia/calculadora-de-cumpleanos" class="tool-card"><div class="tool-name">Calculadora de Proximo Cumpleanos</div><div class="tool-description">Cuenta los dias para el proximo cumpleanos</div></a>
+<a href="https://calcatools.com/dia-a-dia/calculadora-de-fusio-horaria" class="tool-card"><div class="tool-name">Calculadora de Huso Horario</div><div class="tool-description">Convierte entre todos los husos horarios del planeta</div></a>
+<a href="https://calcatools.com/dia-a-dia/calculadora-de-dias-para-navidad" class="tool-card"><div class="tool-name">Calculadora de Dias para Navidad</div><div class="tool-description">Cuenta los dias que faltan para la Navidad</div></a>
+<a href="https://calcatools.com/dia-a-dia/calculadora-de-dias-para-reyes" class="tool-card"><div class="tool-name">Calculadora de Dias para Reyes</div><div class="tool-description">Cuenta los dias hasta el Dia de Reyes Magos</div></a>
+<a href="https://calcatools.com/dia-a-dia/calculadora-de-semana-santa" class="tool-card"><div class="tool-name">Calculadora de Semana Santa</div><div class="tool-description">Calcula la fecha de la Semana Santa para cualquier anio</div></a>
+<a href="https://calcatools.com/dia-a-dia/calculadora-de-hora-solar" class="tool-card"><div class="tool-name">Calculadora de Hora Solar</div><div class="tool-description">Calcula la hora solar verdadera en tu ubicacion</div></a>
+<a href="https://calcatools.com/dia-a-dia/calculadora-de-estacion" class="tool-card"><div class="tool-name">Calculadora de Estaciones del Anio</div><div class="tool-description">Determina la estacion actual y fechas de cambio</div></a>
+<a href="https://calcatools.com/dia-a-dia/calculadora-de-luna" class="tool-card"><div class="tool-name">Calculadora de Fases Lunares</div><div class="tool-description">Consulta las fases de la luna para cualquier fecha</div></a>
+<a href="https://calcatools.com/dia-a-dia/calculadora-de-solsticio" class="tool-card"><div class="tool-name">Calculadora de Solsticios y Equinoccios</div><div class="tool-description">Fechas exactas de solsticios y equinoccios</div></a>
+<a href="https://calcatools.com/dia-a-dia/calculadora-edad-mental" class="tool-card"><div class="tool-name">Calculadora de Edad Mental</div><div class="tool-description">Test para estimar tu edad mental real</div></a>
+<a href="https://calcatools.com/dia-a-dia/calculadora-horas-sueno" class="tool-card"><div class="tool-name">Calculadora de Horas de Sueno</div><div class="tool-description">Calcula cuantas horas de sueno necesitas</div></a>
+<a href="https://calcatools.com/dia-a-dia/calculadora-horas-pantalla" class="tool-card"><div class="tool-name">Calculadora de Tiempo de Pantalla</div><div class="tool-description">Monitorea y calcula tu tiempo frente a pantallas</div></a>
+<a href="https://calcatools.com/dia-a-dia/calculadora-edad-mascota" class="tool-card"><div class="tool-name">Calculadora de Edad de Mascota</div><div class="tool-description">Convierte la edad de cualquier mascota a anios humanos</div></a>
+<a href="https://calcatools.com/dia-a-dia/calculadora-dias-habiles" class="tool-card"><div class="tool-name">Calculadora de Dias Habiles</div><div class="tool-description">Cuenta solo los dias laborables entre dos fechas</div></a>
+<a href="https://calcatools.com/dia-a-dia/calculadora-semanas-ano" class="tool-card"><div class="tool-name">Calculadora de Semanas del Anio</div><div class="tool-description">Determina en que semana del anio estas</div></a>
+<a href="https://calcatools.com/dia-a-dia/calculadora-dias-ano" class="tool-card"><div class="tool-name">Calculadora de Dias del Anio</div><div class="tool-description">Cuenta los dias transcurridos del anio actual</div></a>
+<a href="https://calcatools.com/dia-a-dia/calculadora-horas-ano" class="tool-card"><div class="tool-name">Calculadora de Horas en un Anio</div><div class="tool-description">Convierte anios, meses y dias a horas exactas</div></a>
+<a href="https://calcatools.com/dia-a-dia/calculadora-minutos-vida" class="tool-card"><div class="tool-name">Calculadora de Minutos de Vida</div><div class="tool-description">Calcula cuantos minutos has vivido hasta hoy</div></a>
+<a href="https://calcatools.com/dia-a-dia/calculadora-segundos-vida" class="tool-card"><div class="tool-name">Calculadora de Segundos de Vida</div><div class="tool-description">Descubre cuantos segundos has vivido</div></a>
+<a href="https://calcatools.com/dia-a-dia/calculadora-peso-paquete" class="tool-card"><div class="tool-name">Calculadora de Peso de Paquete</div><div class="tool-description">Estima el costo de envio segun peso y destino</div></a>
+<a href="https://calcatools.com/dia-a-dia/calculadora-gasto-calorico" class="tool-card"><div class="tool-name">Calculadora de Gasto calorico Diario</div><div class="tool-description">Calcula cuantas calorias gastas en un dia normal</div></a>
+<a href="https://calcatools.com/dia-a-dia/calculadora-tiempo-lectura" class="tool-card"><div class="tool-name">Calculadora de Tiempo de Lectura</div><div class="tool-description">Estima cuanto tiempo tardaras en leer un libro</div></a>
+<a href="https://calcatools.com/dia-a-dia/calculadora-tiempo-descarga" class="tool-card"><div class="tool-name">Calculadora de Tiempo de Descarga</div><div class="tool-description">Calcula el tiempo estimado para descargar archivos</div></a>
+<a href="https://calcatools.com/dia-a-dia/calculadora-peso-piedras" class="tool-card"><div class="tool-name">Calculadora de Peso de Piedras</div><div class="tool-description">Calcula el peso de piedras y materiales de construccion</div></a>
+<a href="https://calcatools.com/dia-a-dia/calculadora-caudal" class="tool-card"><div class="tool-name">Calculadora de Caudal</div><div class="tool-description">Calcula el caudal de agua en tuberias y conductos</div></a>
+<a href="https://calcatools.com/dia-a-dia/calculadora-velocidad-sonido" class="tool-card"><div class="tool-name">Calculadora de Velocidad del Sonido</div><div class="tool-description">Calcula la velocidad del sonido segun temperatura</div></a>
+<a href="https://calcatools.com/dia-a-dia/calculadora-intensidad-luz" class="tool-card"><div class="tool-name">Calculadora de Intensidad de Luz</div><div class="tool-description">Calcula lux y foot-candles para iluminacion</div></a>
+</div>
+</section>
+
+<section class="category-section" id="islamicas">
+<div class="category-header"><div class="category-icon">&#128332;</div><div><h2 class="category-title">Calculadoras Islamicas</h2><span class="category-count">37 calculadoras</span></div></div>
+<p class="category-description">Zakat, horarios de oracion, fecha Hijri, direccion Qibla</p>
+<div class="tools-grid">
+<a href="https://calcatools.com/islamicas/calculadora-de-zakat" class="tool-card"><div class="tool-name">Calculadora de Zakat</div><div class="tool-description">Calcula tu zakat sobre dinero, oro, plata y negocios</div></a>
+<a href="https://calcatools.com/islamicas/horarios-de-oracion" class="tool-card"><div class="tool-name">Horarios de Oracion</div><div class="tool-description">Encuentra los horarios de oracion exactos para tu ubicacion</div></a>
+<a href="https://calcatools.com/islamicas/calculadora-hijri" class="tool-card"><div class="tool-name">Calculadora de Fecha Hijri</div><div class="tool-description">Convierte entre calendario gregoriano e Hijri</div></a>
+<a href="https://calcatools.com/islamicas/direccion-qibla" class="tool-card"><div class="tool-name">Direccion Qibla</div><div class="tool-description">Encuentra la direccion exacta de la Kaaba desde tu ciudad</div></a>
+<a href="https://calcatools.com/islamicas/calculadora-zakat-oro" class="tool-card"><div class="tool-name">Calculadora de Zakat del Oro</div><div class="tool-description">Calcula zakat especifico para tus lingotes y joyas de oro</div></a>
+<a href="https://calcatools.com/islamicas/calculadora-zakat-silver" class="tool-card"><div class="tool-name">Calculadora de Zakat de la Plata</div><div class="tool-description">Zakat exacto para tus inversiones en plata</div></a>
+<a href="https://calcatools.com/islamicas/calculadora-zakat-business" class="tool-card"><div class="tool-name">Calculadora de Zakat Empresarial</div><div class="tool-description">Calcula zakat para tu negocio y existencias</div></a>
+<a href="https://calcatools.com/islamicas/calculadora-ramadan" class="tool-card"><div class="tool-name">Calculadora de Ramadan</div><div class="tool-description">Calcula horas de ayuno durante el mes de Ramadan</div></a>
+<a href="https://calcatools.com/islamicas/calculadora-azaque" class="tool-card"><div class="tool-name">Calculadora de Azaque</div><div class="tool-description">Calcula tu azaque sobre ganancias e inversiones</div></a>
+<a href="https://calcatools.com/islamicas/calculadora-nisab" class="tool-card"><div class="tool-name">Calculadora de Nisab</div><div class="tool-description">Determina si alcanzas el umbral minimo para zakat</div></a>
+<a href="https://calcatools.com/islamicas/calculadora-luna-nueva" class="tool-card"><div class="tool-name">Calculadora de Luna Nueva</div><div class="tool-description">Encuentra las fechas de luna nueva del calendario islamico</div></a>
+<a href="https://calcatools.com/islamicas/calculadora-shawwal" class="tool-card"><div class="tool-name">Calculadora de Shawwal</div><div class="tool-description">Calcula la fecha del Eid al-Fitr para cualquier anio</div></a>
+<a href="https://calcatools.com/islamicas/calculadora-adha" class="tool-card"><div class="tool-name">Calculadora de Eid al-Adha</div><div class="tool-description">Determina la fecha exacta del Eid al-Adha</div></a>
+<a href="https://calcatools.com/islamicas/calculadora-muharram" class="tool-card"><div class="tool-name">Calculadora de Anio Nuevo Islamico</div><div class="tool-description">Encuentra la fecha de inicio del nuevo anio Hijri</div></a>
+<a href="https://calcatools.com/islamicas/calculadora-mawlid" class="tool-card"><div class="tool-name">Calculadora de Mawlid an-Nabi</div><div class="tool-description">Calcula la fecha del nacimiento del Profeta</div></a>
+<a href="https://calcatools.com/islamicas/calculadora-laylat-al-qadr" class="tool-card"><div class="tool-name">Calculadora de Laylat al-Qadr</div><div class="tool-description">Estima la fecha de la Noche del Poder</div></a>
+<a href="https://calcatools.com/islamicas/calculadora-isra-miraj" class="tool-card"><div class="tool-name">Calculadora de Isra y Mi'raj</div><div class="tool-description">Calcula la fecha del viaje nocturno del Profeta</div></a>
+<a href="https://calcatools.com/islamicas/calculadora-ashura" class="tool-card"><div class="tool-name">Calculadora de Ashura</div><div class="tool-description">Determina la fecha del dia de Ashura</div></a>
+<a href="https://calcatools.com/islamicas/calculadora-zakat-fitr" class="tool-card"><div class="tool-name">Calculadora de Zakat al-Fitr</div><div class="tool-description">Calcula el zakat obligatory antes del Eid al-Fitr</div></a>
+<a href="https://calcatools.com/islamicas/calculadora-sadaqah" class="tool-card"><div class="tool-name">Calculadora de Sadaqah</div><div class="tool-description">Calcula cuanto donar en sadaqah segun tus posibilidades</div></a>
+<a href="https://calcatools.com/islamicas/calculadora-waqf" class="tool-card"><div class="tool-name">Calculadora de Waqf</div><div class="tool-description">Calcula el valor de donaciones waqf para obras beneficas</div></a>
+<a href="https://calcatools.com/islamicas/calculadora-veinte-por-ciento" class="tool-card"><div class="tool-name">Calculadora del 20% de Zakat</div><div class="tool-description">Calcula el 20% para ganancias y negocios</div></a>
+<a href="https://calcatools.com/islamicas/calculadora-diez-por-ciento" class="tool-card"><div class="tool-name">Calculadora del 10% de Zakat</div><div class="tool-description">Calcula el 10% para ganancias agricolas</div></a>
+<a href="https://calcatools.com/islamicas/calculadora-tres-por-ciento" class="tool-card"><div class="tool-name">Calculadora del 2.5% de Zakat</div><div class="tool-description">El porcentaje estandar para dinero y ahorros</div></a>
+<a href="https://calcatools.com/islamicas/calculadora-herencia-islamica" class="tool-card"><div class="tool-name">Calculadora de Herencia Islamica</div><div class="tool-description">Calcula la distribucion de herencia segun la Sharia</div></a>
+<a href="https://calcatools.com/islamicas/calculadora-dowry" class="tool-card"><div class="tool-name">Calculadora de Mahr (Dote)</div><div class="tool-description">Calcula el mahr acorde con tus posibilidades</div></a>
+<a href="https://calcatools.com/islamicas/calculadora-tawaf" class="tool-card"><div class="tool-name">Calculadora de Tawaf</div><div class="tool-description">Calcula vueltas y distancias alrededor de la Kaaba</div></a>
+<a href="https://calcatools.com/islamicas/calculadora-saee" class="tool-card"><div class="tool-name">Calculadora de Sa'ee</div><div class="tool-description">Calcula la distancia entre Safa y Marwa</div></a>
+<a href="https://calcatools.com/islamicas/calculadora-hajj" class="tool-card"><div class="tool-name">Calculadora de Hajj</div><div class="tool-description">Planifica tu peregrinacion con estimacion de costos</div></a>
+<a href="https://calcatools.com/islamicas/calculadora-umrah" class="tool-card"><div class="tool-name">Calculadora de Umrah</div><div class="tool-description">Estima costos y tiempos para la Umrah</div></a>
+<a href="https://calcatools.com/islamicas/calculadora-mihrab" class="tool-card"><div class="tool-name">Calculadora de Mihrab</div><div class="tool-description">Determina la posicion del mihrab en tu mezquita</div></a>
+<a href="https://calcatools.com/islamicas/calculadora-azan" class="tool-card"><div class="tool-name">Calculadora de Adhan</div><div class="tool-description">Calcula la hora exacta del llamado a la oracion</div></a>
+<a href="https://calcatools.com/islamicas/calculadora-wudu" class="tool-card"><div class="tool-name">Calculadora de Wudu</div><div class="tool-description">Recuerda los pasos del ablucion ritual</div></a>
+<a href="https://calcatools.com/islamicas/calculadora-tayammum" class="tool-card"><div class="tool-name">Calculadora de Tayammum</div><div class="tool-description">Guia para la purificacion con arena o tierra</div></a>
+<a href="https://calcatools.com/islamicas/calculadora-siyam" class="tool-card"><div class="tool-name">Calculadora de Siyam Voluntario</div><div class="tool-description">Planifica tus dias de ayuno voluntario del anio</div></a>
+<a href="https://calcatools.com/islamicas/calculadora-tahajjud" class="tool-card"><div class="tool-name">Calculadora de Tahajjud</div><div class="tool-description">Calcula el horario optimo para la oracion nocturna</div></a>
+<a href="https://calcatools.com/islamicas/calculadora-duha" class="tool-card"><div class="tool-name">Calculadora de Oracion Duha</div><div class="tool-description">Encuentra el horario de la oracion de la manana</div></a>
+</div>
+</section>
+
+<section class="category-section" id="hindues">
+<div class="category-header"><div class="category-icon">&#128335;</div><div><h2 class="category-title">Calculadoras Hindues</h2><span class="category-count">74 calculadoras</span></div></div>
+<p class="category-description">Kundali, Panchang, Nakshatra, Tithi y astrologia vedica</p>
+<div class="tools-grid">
+<a href="https://calcatools.com/hindues/calculadora-kundali" class="tool-card"><div class="tool-name">Calculadora de Kundali</div><div class="tool-description">Genera tu mapa estatal natal (Kundli) al instante</div></a>
+<a href="https://calcatools.com/hindues/calculadora-panchang" class="tool-card"><div class="tool-name">Calculadora de Panchang</div><div class="tool-description">Consulta el Panchang completo para hoy y manana</div></a>
+<a href="https://calcatools.com/hindues/calculadora-nakshatra" class="tool-card"><div class="tool-name">Calculadora de Nakshatra</div><div class="tool-description">Encuentra tu Nakshatra (estrella natal) y su significado</div></a>
+<a href="https://calcatools.com/hindues/calculadora-tithi" class="tool-card"><div class="tool-name">Calculadora de Tithi</div><div class="tool-description">Determina el Tithi (dia lunar) actual y sus rituales</div></a>
+<a href="https://calcatools.com/hindues/calculadora-rashi" class="tool-card"><div class="tool-name">Calculadora de Rashi</div><div class="tool-description">Descubre tu signo zodiacal vedico (Rashi)</div></a>
+<a href="https://calcatools.com/hindues/calculadora-karana" class="tool-card"><div class="tool-name">Calculadora de Karana</div><div class="tool-description">Determina el Karana actual y su influencia</div></a>
+<a href="https://calcatools.com/hindues/calculadora-yoga" class="tool-card"><div class="tool-name">Calculadora de Yoga</div><div class="tool-description">Calcula el Yoga auspicioso actual del dia</div></a>
+<a href="https://calcatools.com/hindues/calculadora-vara" class="tool-card"><div class="tool-name">Calculadora de Vara</div><div class="tool-description">Determina el dia de la semana planetaria</div></a>
+<a href="https://calcatools.com/hindues/calculadora-muhurta" class="tool-card"><div class="tool-name">Calculadora de Muhurta</div><div class="tool-description">Encuentra el mejor momento para eventos importantes</div></a>
+<a href="https://calcatools.com/hindues/calculadora-dasha" class="tool-card"><div class="tool-name">Calculadora de Dasha</div><div class="tool-description">Calcula tu periodo planetario Dasha actual</div></a>
+<a href="https://calcatools.com/hindues/calculadora-guna-milan" class="tool-card"><div class="tool-name">Calculadora de Guna Milan</div><div class="tool-description">Calcula la compatibilidad de matrimonio vedica</div></a>
+<a href="https://calcatools.com/hindues/calculadora-mangal-dosh" class="tool-card"><div class="tool-name">Calculadora de Mangal Dosh</div><div class="tool-description">Verifica si tienes Mangal Dosh en tu carta natal</div></a>
+<a href="https://calcatools.com/hindues/calculadora-kaal-sarp" class="tool-card"><div class="tool-name">Calculadora de Kaal Sarp Dosh</div><div class="tool-description">Detecta la presencia de Kaal Sarp Dosh</div></a>
+<a href="https://calcatools.com/hindues/calculadora-sade-sati" class="tool-card"><div class="tool-name">Calculadora de Sade Sati</div><div class="tool-description">Calcula el periodo de Sade Sati de Saturno</div></a>
+<a href="https://calcatools.com/hindues/calculadora-ashtakavarga" class="tool-card"><div class="tool-name">Calculadora de Ashtakavarga</div><div class="tool-description">Puntos de Ashtakavarga para predicciones astrologicas</div></a>
+<a href="https://calcatools.com/hindues/calculadora-lagna" class="tool-card"><div class="tool-name">Calculadora de Lagna (Ascendente)</div><div class="tool-description">Determina tu signo ascendente vedico</div></a>
+<a href="https://calcatools.com/hindues/calculadora-planetas" class="tool-card"><div class="tool-name">Calculadora de Posiciones Planetarias</div><div class="tool-description">Posiciones actuales de los planetas en el zodiaco</div></a>
+<a href="https://calcatools.com/hindues/calculadora-transitos" class="tool-card"><div class="tool-name">Calculadora de Transitos Planetarios</div><div class="tool-description">Consulta los transitos actuales y su influencia</div></a>
+<a href="https://calcatools.com/hindues/calculadora-chandrashtama" class="tool-card"><div class="tool-name">Calculadora de Chandrashtama</div><div class="tool-description">Calcula los dias de Chandrashtama para tu Nakshatra</div></a>
+<a href="https://calcatools.com/hindues/calculadora-ekadashi" class="tool-card"><div class="tool-name">Calculadora de Ekadashi</div><div class="tool-description">Fechas de Ekadashi para ayuno y oracion</div></a>
+<a href="https://calcatools.com/hindues/calculadora-amavasya" class="tool-card"><div class="tool-name">Calculadora de Amavasya</div><div class="tool-description">Calcula la luna nueva hindu y sus rituales</div></a>
+<a href="https://calcatools.com/hindues/calculadora-purnima" class="tool-card"><div class="tool-name">Calculadora de Purnima</div><div class="tool-description">Calcula la luna llena y sus festividades</div></a>
+<a href="https://calcatools.com/hindues/calculadora-sankashti" class="tool-card"><div class="tool-name">Calculadora de Sankashti</div><div class="tool-description">Fechas de Sankashti Chaturthi para Ganesh</div></a>
+<a href="https://calcatools.com/hindues/calculadora-pradosh" class="tool-card"><div class="tool-name">Calculadora de Pradosh</div><div class="tool-description">Calcula el dia de Pradosh para la oracion a Shiva</div></a>
+<a href="https://calcatools.com/hindues/calculadora-chaturthi" class="tool-card"><div class="tool-name">Calculadora de Chaturthi</div><div class="tool-description">Fechas de Chaturthi para adoracion a Ganesh</div></a>
+<a href="https://calcatools.com/hindues/calculadora-ashtami" class="tool-card"><div class="tool-name">Calculadora de Ashtami</div><div class="tool-description">Calcula el Durga Ashtami y festivales asociados</div></a>
+<a href="https://calcatools.com/hindues/calculadora-navami" class="tool-card"><div class="tool-name">Calculadora de Navami</div><div class="tool-description">Fechas de Navami para rituales hindues</div></a>
+<a href="https://calcatools.com/hindues/calculadora-durga-puja" class="tool-card"><div class="tool-name">Calculadora de Durga Puja</div><div class="tool-description">Calcula las fechas del festival Durga Puja</div></a>
+<a href="https://calcatools.com/hindues/calculadora-navratri" class="tool-card"><div class="tool-name">Calculadora de Navratri</div><div class="tool-description">Fechas exactas de los nueve dias de Navratri</div></a>
+<a href="https://calcatools.com/hindues/calculadora-diwali" class="tool-card"><div class="tool-name">Calculadora de Diwali</div><div class="tool-description">Calcula la fecha de Diwali, el festival de las luces</div></a>
+<a href="https://calcatools.com/hindues/calculadora-holi" class="tool-card"><div class="tool-name">Calculadora de Holi</div><div class="tool-description">Calcula la fecha del festival de los colores</div></a>
+<a href="https://calcatools.com/hindues/calculadora-ganesh-chaturthi" class="tool-card"><div class="tool-name">Calculadora de Ganesh Chaturthi</div><div class="tool-description">Fechas del festival de nacimiento de Ganesh</div></a>
+<a href="https://calcatools.com/hindues/calculadora-makar-sankranti" class="tool-card"><div class="tool-name">Calculadora de Makar Sankranti</div><div class="tool-description">Calcula la fecha del solsticio de invierno hindu</div></a>
+<a href="https://calcatools.com/hindues/calculadora-maha-shivaratri" class="tool-card"><div class="tool-name">Calculadora de Maha Shivaratri</div><div class="tool-description">Calcula la Gran Noche de Shiva</div></a>
+<a href="https://calcatools.com/hindues/calculadora-raksha-bandhan" class="tool-card"><div class="tool-name">Calculadora de Raksha Bandhan</div><div class="tool-description">Calcula el dia del lazo entre hermanos</div></a>
+<a href="https://calcatools.com/hindues/calculadora-karva-chauth" class="tool-card"><div class="tool-name">Calculadora de Karva Chauth</div><div class="tool-description">Calcula el dia de ayuno de las esposas</div></a>
+<a href="https://calcatools.com/hindues/calculadora-janeu" class="tool-card"><div class="tool-name">Calculadora de Janeu (Upanayana)</div><div class="tool-description">Determina la fecha ideal para la ceremonia Upanayana</div></a>
+<a href="https://calcatools.com/hindues/calculadora-vivaha-muhurta" class="tool-card"><div class="tool-name">Calculadora de Muhurta de Bodas</div><div class="tool-description">Encuentra la mejor fecha y hora para tu boda hindu</div></a>
+<a href="https://calcatools.com/hindues/calculadora-namakarana" class="tool-card"><div class="tool-name">Calculadora de Namakarana</div><div class="tool-description">Calcula la fecha ideal para la ceremonia de nombres</div></a>
+<a href="https://calcatools.com/hindues/calculadora-annaprashana" class="tool-card"><div class="tool-name">Calculadora de Annaprashana</div><div class="tool-description">Calcula la fecha para la ceremonia de primer alimento</div></a>
+<a href="https://calcatools.com/hindues/calculadora-griha-pravesh" class="tool-card"><div class="tool-name">Calculadora de Griha Pravesh</div><div class="tool-description">Calcula el mejor dia para mudarte a tu nueva casa</div></a>
+<a href="https://calcatools.com/hindues/calculadora-vehicle-pooja" class="tool-card"><div class="tool-name">Calculadora de Puja de Vehiculo</div><div class="tool-description">Calcula la fecha ideal para la bendicion de tu vehiculo</div></a>
+<a href="https://calcatools.com/hindues/calculadora-dhanteras" class="tool-card"><div class="tool-name">Calculadora de Dhanteras</div><div class="tool-description">Calcula el dia de Dhanteras para comprar oro</div></a>
+<a href="https://calcatools.com/hindues/calculadora-chhath-puja" class="tool-card"><div class="tool-name">Calculadora de Chhath Puja</div><div class="tool-description">Calcula las fechas del festival del sol</div></a>
+<a href="https://calcatools.com/hindues/calculadora-kumbh-mela" class="tool-card"><div class="tool-name">Calculadora de Kumbh Mela</div><div class="tool-description">Calcula las fechas del festival de peregrinacion</div></a>
+<a href="https://calcatools.com/hindues/calculadora-ayudha-puja" class="tool-card"><div class="tool-name">Calculadora de Ayudha Puja</div><div class="tool-description">Calcula el dia de adoracion de herramientas y equipos</div></a>
+<a href="https://calcatools.com/hindues/calculadora-bathukamma" class="tool-card"><div class="tool-name">Calculadora de Bathukamma</div><div class="tool-description">Calcula las fechas del festival floral de Telangana</div></a>
+<a href="https://calcatools.com/hindues/calculadora-onam" class="tool-card"><div class="tool-name">Calculadora de Onam</div><div class="tool-description">Calcula la fecha del festival de cosecha de Kerala</div></a>
+<a href="https://calcatools.com/hindues/calculadora-pongal" class="tool-card"><div class="tool-name">Calculadora de Pongal</div><div class="tool-description">Calcula las fechas del festival de la cosecha tamil</div></a>
+<a href="https://calcatools.com/hindues/calculadora-baisakhi" class="tool-card"><div class="tool-name">Calculadora de Baisakhi</div><div class="tool-description">Calcula el Anio Nuevo Sikh y Punjab</div></a>
+<a href="https://calcatools.com/hindues/calculadora-karva-chauth-timer" class="tool-card"><div class="tool-name">Calculadora de Tiempo de Karva Chauth</div><div class="tool-description">Calcula las horas exactas de ayuno de Karva Chauth</div></a>
+<a href="https://calcatools.com/hindues/calculadora-sol-eclipse" class="tool-card"><div class="tool-name">Calculadora de Eclipse Solar</div><div class="tool-description">Predice la visibilidad de eclipses solares en tu zona</div></a>
+<a href="https://calcatools.com/hindues/calculadora-luna-eclipse" class="tool-card"><div class="tool-name">Calculadora de Eclipse Lunar</div><div class="tool-description">Calcula eclipses lunares visibles desde tu ubicacion</div></a>
+<a href="https://calcatools.com/hindues/calculadora-planetary-hours" class="tool-card"><div class="tool-name">Calculadora de Horas Planetarias</div><div class="tool-description">Calcula las horas planetarias del dia para cada planeta</div></a>
+<a href="https://calcatools.com/hindues/calculadora-numerologia" class="tool-card"><div class="tool-name">Calculadora de Numerologia Vedica</div><div class="tool-description">Calcula tu numero de destino segun la numerologia vedica</div></a>
+<a href="https://calcatools.com/hindues/calculadora-nombre-numerologia" class="tool-card"><div class="tool-name">Calculadora de Nombre y Numerologia</div><div class="tool-description">Analiza el valor numerologico de tu nombre</div></a>
+<a href="https://calcatools.com/hindues/calculadora-surya-siddhanta" class="tool-card"><div class="tool-name">Calculadora de Surya Siddhanta</div><div class="tool-description">Calcula posiciones solares con la astronomia vedica</div></a>
+<a href="https://calcatools.com/hindues/calculadora-vastu" class="tool-card"><div class="tool-name">Calculadora de Vastu</div><div class="tool-description">Calcula las direcciones ideales segun Vastu Shastra</div></a>
+<a href="https://calcatools.com/hindues/calculadora-elementos" class="tool-card"><div class="tool-name">Calculadora de Elementos (Pancha Bhuta)</div><div class="tool-description">Calcula el equilibrio de los 5 elementos en tu vida</div></a>
+<a href="https://calcatools.com/hindues/calculadora-doshas" class="tool-card"><div class="tool-name">Calculadora de Dosh</div><div class="tool-description">Verifica todos los Dosh en tu carta natal vedica</div></a>
+<a href="https://calcatools.com/hindues/calculadora-remedios" class="tool-card"><div class="tool-name">Calculadora de Remedios Vedicos</div><div class="tool-description">Obten remedios personalizados segun tu carta natal</div></a>
+<a href="https://calcatools.com/hindues/calculadora-horario-diario" class="tool-card"><div class="tool-name">Calculadora de Horario Vedico Diario</div><div class="tool-description">Calcula tu horario astrologico personalizado del dia</div></a>
+<a href="https://calcatools.com/hindues/calculadora-amrit-siddhi" class="tool-card"><div class="tool-name">Calculadora de Amrit Siddhi</div><div class="tool-description">Determina los dias auspiciosos de Amrit Siddhi</div></a>
+<a href="https://calcatools.com/hindues/calculadora-vasant-panchami" class="tool-card"><div class="tool-name">Calculadora de Vasant Panchami</div><div class="tool-description">Calcula la fecha del festival de Saraswati</div></a>
+<a href="https://calcatools.com/hindues/calculadora-shivratri" class="tool-card"><div class="tool-name">Calculadora de Maha Shivratri</div><div class="tool-description">Calcula la noche mas sagrada de Shiva</div></a>
+<a href="https://calcatools.com/hindues/calculadora-hanuman-jayanti" class="tool-card"><div class="tool-name">Calculadora de Hanuman Jayanti</div><div class="tool-description">Calcula el cumpleanos de Hanuman</div></a>
+<a href="https://calcatools.com/hindues/calculadora-ram-navami" class="tool-card"><div class="tool-name">Calculadora de Ram Navami</div><div class="tool-description">Calcula el nacimiento del Senor Rama</div></a>
+<a href="https://calcatools.com/hindues/calculadora-krishna-jayanti" class="tool-card"><div class="tool-name">Calculadora de Krishna Jayanti</div><div class="tool-description">Calcula el Janmashtami, nacimiento de Krishna</div></a>
+<a href="https://calcatools.com/hindues/calculadora-guru-purnima" class="tool-card"><div class="tool-name">Calculadora de Guru Purnima</div><div class="tool-description">Calcula el dia de honor a los maestros espirituales</div></a>
+<a href="https://calcatools.com/hindues/calculadora-gaya-pind-daan" class="tool-card"><div class="tool-name">Calculadora de Pind Daan</div><div class="tool-description">Calcula fechas auspiciosas para Pind Daan en Gaya</div></a>
+</div>
+</section>
+
+<section class="category-section" id="navidad">
+<div class="category-header"><div class="category-icon">&#127876;</div><div><h2 class="category-title">Calculadoras de Navidad</h2><span class="category-count">35 calculadoras</span></div></div>
+<p class="category-description">Dias hasta Navidad, presupuesto de regalos y planificacion</p>
+<div class="tools-grid">
+<a href="https://calcatools.com/navidad/calculadora-dias-navidad" class="tool-card"><div class="tool-name">Calculadora de Dias para Navidad</div><div class="tool-description">Cuenta los dias, horas y minutos para la Navidad</div></a>
+<a href="https://calcatools.com/navidad/calculadora-presupuesto-navidad" class="tool-card"><div class="tool-name">Calculadora de Presupuesto de Navidad</div><div class="tool-description">Planifica tu presupuesto para regalos y celebraciones</div></a>
+<a href="https://calcatools.com/navidad/calculadora-regalos-navidad" class="tool-card"><div class="tool-name">Calculadora de Regalos de Navidad</div><div class="tool-description">Distribuye tu presupuesto entre todos los regalos</div></a>
+<a href="https://calcatools.com/navidad/calculadora-cuenta-atras-navidad" class="tool-card"><div class="tool-name">Cuenta Atras de Navidad</div><div class="tool-description">Cuenta regresiva en tiempo real hasta Nochebuena</div></a>
+<a href="https://calcatools.com/navidad/calculadora-pavo-navidad" class="tool-card"><div class="tool-name">Calculadora de Pavo de Navidad</div><div class="tool-description">Calcula el tamano del pavo segun el numero de comensales</div></a>
+<a href="https://calcatools.com/navidad/calculadora-tiempo-horneado-pavo" class="tool-card"><div class="tool-name">Calculadora de Tiempo de Horneado</div><div class="tool-description">Calcula el tiempo exacto para cocinar tu pavo</div></a>
+<a href="https://calcatools.com/navidad/calculadora-arbol-navidad" class="tool-card"><div class="tool-name">Calculadora de Tamano de Arbol</div><div class="tool-description">Encuentra el arbol de Navidad perfecto para tu espacio</div></a>
+<a href="https://calcatools.com/navidad/calculadora-luces-navidad" class="tool-card"><div class="tool-name">Calculadora de Luces de Navidad</div><div class="tool-description">Calcula cuantas luces necesitas para decorar tu casa</div></a>
+<a href="https://calcatools.com/navidad/calculadora-costo-navidad" class="tool-card"><div class="tool-name">Calculadora de Costo Total de Navidad</div><div class="tool-description">Estima el gasto total incluyendo regalos, comida y decoracion</div></a>
+<a href="https://calcatools.com/navidad/calculadora-galletas-navidad" class="tool-card"><div class="tool-name">Calculadora de Galletas de Navidad</div><div class="tool-description">Calcula ingredientes para galletas segun el numero de personas</div></a>
+<a href="https://calcatools.com/navidad/calculadora-ponche-navidad" class="tool-card"><div class="tool-name">Calculadora de Ponche Navideno</div><div class="tool-description">Calcula ingredientes para ponche segun invitados</div></a>
+<a href="https://calcatools.com/navidad/calculadora-envoltura-regalos" class="tool-card"><div class="tool-name">Calculadora de Papel de Regalo</div><div class="tool-description">Calcula cuanto papel de regalo necesitas</div></a>
+<a href="https://calcatools.com/navidad/calculadora-tarjetas-navidad" class="tool-card"><div class="tool-name">Calculadora de Tarjetas de Navidad</div><div class="tool-description">Calcula el costo de enviar tarjetas de Navidad</div></a>
+<a href="https://calcatools.com/navidad/calculadora-stockings" class="tool-card"><div class="tool-name">Calculadora de Calcetines Navidenos</div><div class="tool-description">Calcula el contenido ideal para cada calcetin</div></a>
+<a href="https://calcatools.com/navidad/calculadora-garlanda" class="tool-card"><div class="tool-name">Calculadora de Guirnaldas</div><div class="tool-description">Calcula la longitud de guirnaldas para decorar tu hogar</div></a>
+<a href="https://calcatools.com/navidad/calculadora-cesta-navidad" class="tool-card"><div class="tool-name">Calculadora de Cestas de Navidad</div><div class="tool-description">Calcula el presupuesto para cestas de regalo</div></a>
+<a href="https://calcatools.com/navidad/calculadora-precio-regalo" class="tool-card"><div class="tool-name">Calculadora de Precio por Regalo</div><div class="tool-description">Divide tu presupuesto equitativamente entre regalos</div></a>
+<a href="https://calcatools.com/navidad/calculadora-pastel-navidad" class="tool-card"><div class="tool-name">Calculadora de Pastel de Navidad</div><div class="tool-description">Calcula ingredientes para el pastel de Nochebuena</div></a>
+<a href="https://calcatools.com/navidad/calculadora-cena-navidad" class="tool-card"><div class="tool-name">Calculadora de Cena de Navidad</div><div class="tool-description">Planifica el menu y costos de la cena navidena</div></a>
+<a href="https://calcatools.com/navidad/calculadora-vino-navidad" class="tool-card"><div class="tool-name">Calculadora de Vino de Navidad</div><div class="tool-description">Calcula cuantas botellas de vino necesitas para la cena</div></a>
+<a href="https://calcatools.com/navidad/calculadora-chocolate-navidad" class="tool-card"><div class="tool-name">Calculadora de Chocolate de Navidad</div><div class="tool-description">Calcula cuanto chocolate necesitas para la temporada</div></a>
+<a href="https://calcatools.com/navidad/calculadora-cena-empleados" class="tool-card"><div class="tool-name">Calculadora de Cena de Empresa</div><div class="tool-description">Planifica la cena de Navidad de la empresa con presupuesto</div></a>
+<a href="https://calcatools.com/navidad/calculadora-solidaria" class="tool-card"><div class="tool-name">Calculadora de Donaciones Navidenas</div><div class="tool-description">Planifica tus donaciones beneficas de fin de anio</div></a>
+<a href="https://calcatools.com/navidad/calculadora-stocking-fillers" class="tool-card"><div class="tool-name">Calculadora de Rellenos de Calcetin</div><div class="tool-description">Ideas y presupuesto para pequenos regalos</div></a>
+<a href="https://calcatools.com/navidad/calculadora-ornamentos" class="tool-card"><div class="tool-name">Calculadora de Ornamentos</div><div class="tool-description">Calcula cuantos ornamentos necesitas para tu arbol</div></a>
+<a href="https://calcatools.com/navidad/calculadora-seguro-navidad" class="tool-card"><div class="tool-name">Calculadora de Seguro Navideno</div><div class="tool-description">Calcula el costo de seguro para regalos y viajes</div></a>
+<a href="https://calcatools.com/navidad/calculadora-envios-navidad" class="tool-card"><div class="tool-name">Calculadora de Envios Navidenos</div><div class="tool-description">Estima costos y tiempos de envio de regalos</div></a>
+<a href="https://calcatools.com/navidad/calculadora-decoracion-exterior" class="tool-card"><div class="tool-name">Calculadora de Decoracion Exterior</div><div class="tool-description">Calcula el costo de decorar el exterior de tu casa</div></a>
+<a href="https://calcatools.com/navidad/calculadora-cena-reyes" class="tool-card"><div class="tool-name">Calculadora de Cena de Reyes</div><div class="tool-description">Planifica la cena de Reyes Magos con presupuesto</div></a>
+<a href="https://calcatools.com/navidad/calculadora-turrón" class="tool-card"><div class="tool-name">Calculadora de Turron</div><div class="tool-description">Calcula ingredientes para hacer turron artesanal</div></a>
+</div>
+</section>
+
+<section class="category-section" id="herramientas">
+<div class="category-header"><div class="category-icon">&#128295;</div><div><h2 class="category-title">Herramientas Digitales</h2><span class="category-count">Herramientas en linea</span></div></div>
+<p class="category-description">Texto, imagen, PDF, desarrolladores, color, generadores y convertidores</p>
+<h3 style="font-size:1.3rem;font-weight:700;color:var(--primary);margin:30px 0 20px;padding-left:10px;border-left:4px solid var(--primary)">Herramientas de Texto</h3>
+<div class="tools-grid">
+<a href="https://calcatools.com/herramientas/contador-de-palabras" class="tool-card"><div class="tool-name">Contador de Palabras</div><div class="tool-description">Cuenta palabras, caracteres, lineas y parrafos</div></a>
+<a href="https://calcatools.com/herramientas/generador-de-texto" class="tool-card"><div class="tool-name">Generador de Texto</div><div class="tool-description">Genera texto de ejemplo para pruebas y disenio</div></a>
+<a href="https://calcatools.com/herramientas/convertidor-mayusculas" class="tool-card"><div class="tool-name">Convertidor de Mayusculas y Minusculas</div><div class="tool-description">Convierte texto entre mayusculas, minusculas y titulo</div></a>
+<a href="https://calcatools.com/herramientas/eliminador-de-espacios" class="tool-card"><div class="tool-name">Eliminador de Espacios</div><div class="tool-description">Elimina espacios extras y caracteres innecesarios</div></a>
+<a href="https://calcatools.com/herramientas/contenedor-de-caracteres" class="tool-card"><div class="tool-name">Contador de Caracteres</div><div class="tool-description">Cuenta caracteres con y sin espacios en tiempo real</div></a>
+<a href="https://calcatools.com/herramientas/remover-duplicados" class="tool-card"><div class="tool-name">Remover Lineas Duplicadas</div><div class="tool-description">Elimina lineas duplicadas de una lista o texto</div></a>
+<a href="https://calcatools.com/herramientas/ordenar-texto" class="tool-card"><div class="tool-name">Ordenar Texto</div><div class="tool-description">Ordena lineas de texto alfabeticamente o por longitud</div></a>
+<a href="https://calcatools.com/herramientas/contar-palabras-clave" class="tool-card"><div class="tool-name">Contador de Palabras Clave</div><div class="tool-description">Analiza la frecuencia de palabras en tu texto</div></a>
+<a href="https://calcatools.com/herramientas/convertidor-ascii" class="tool-card"><div class="tool-name">Convertidor ASCII</div><div class="tool-description">Convierte texto a codigo ASCII y viceversa</div></a>
+<a href="https://calcatools.com/herramientas/contar-palabras-repetidas" class="tool-card"><div class="tool-name">Contar Palabras Repetidas</div><div class="tool-description">Identifica y cuenta las palabras que mas se repiten</div></a>
+</div>
+
+<h3 style="font-size:1.3rem;font-weight:700;color:var(--primary);margin:30px 0 20px;padding-left:10px;border-left:4px solid var(--primary)">Herramientas de Imagen</h3>
+<div class="tools-grid">
+<a href="https://calcatools.com/herramientas/generador-qr" class="tool-card"><div class="tool-name">Generador de Codigo QR</div><div class="tool-description">Crea codigos QR para URLs, texto, contactos y mas</div></a>
+<a href="https://calcatools.com/herramientas/compresor-de-imagenes" class="tool-card"><div class="tool-name">Compresor de Imagenes</div><div class="tool-description">Reduce el tamano de imagenes sin perder calidad</div></a>
+<a href="https://calcatools.com/herramientas/fondo-transparente" class="tool-card"><div class="tool-name">Fondo Transparente</div><div class="tool-description">Elimina el fondo de imagenes automaticamente</div></a>
+<a href="https://calcatools.com/herramientas/redimensionar-imagen" class="tool-card"><div class="tool-name">Redimensionar Imagen</div><div class="tool-description">Cambia el tamano de imagenes manteniendo la proporcion</div></a>
+<a href="https://calcatools.com/herramientas/convertidor-imagen" class="tool-card"><div class="tool-name">Convertidor de Formato de Imagen</div><div class="tool-description">Convierte entre PNG, JPG, GIF, WebP y mas</div></a>
+<a href="https://calcatools.com/herramientas/recortar-imagen" class="tool-card"><div class="tool-name">Recortar Imagen</div><div class="tool-description">Recorta imagenes con dimensiones personalizadas</div></a>
+<a href="https://calcatools.com/herramientas/rotar-imagen" class="tool-card"><div class="tool-name">Rotar Imagen</div><div class="tool-description">Gira imagenes 90, 180 o 270 grados</div></a>
+<a href="https://calcatools.com/herramientas/filtro-imagen" class="tool-card"><div class="tool-name">Filtros de Imagen</div><div class="tool-description">Aplica filtros artisticos a tus fotos en linea</div></a>
+<a href="https://calcatools.com/herramientas/convertidor-webp" class="tool-card"><div class="tool-name">Convertidor a WebP</div><div class="tool-description">Convierte imagenes al formato WebP optimizado para web</div></a>
+<a href="https://calcatools.com/herramientas/agregar-marca-agua" class="tool-card"><div class="tool-name">Agregar Marca de Agua</div><div class="tool-description">Agrega texto o imagenes como marca de agua</div></a>
+<a href="https://calcatools.com/herramientas/cambiar-color-fondo" class="tool-card"><div class="tool-name">Cambiar Color de Fondo</div><div class="tool-description">Reemplaza el color de fondo de una imagen</div></a>
+<a href="https://calcatools.com/herramientas/optimizador-imagen" class="tool-card"><div class="tool-name">Optimizador de Imagen SEO</div><div class="tool-description">Optimiza imagenes para mejores resultados en busqueda</div></a>
+</div>
+
+<h3 style="font-size:1.3rem;font-weight:700;color:var(--primary);margin:30px 0 20px;padding-left:10px;border-left:4px solid var(--primary)">Herramientas PDF</h3>
+<div class="tools-grid">
+<a href="https://calcatools.com/herramientas/comprimir-pdf" class="tool-card"><div class="tool-name">Comprimir PDF</div><div class="tool-description">Reduce el tamano de archivos PDF sin perder calidad</div></a>
+<a href="https://calcatools.com/herramientas/convertir-pdf-word" class="tool-card"><div class="tool-name">Convertir PDF a Word</div><div class="tool-description">Convierte PDF a documentos editables de Word</div></a>
+<a href="https://calcatools.com/herramientas/convertir-pdf-imagen" class="tool-card"><div class="tool-name">Convertir PDF a Imagen</div><div class="tool-description">Convierte paginas de PDF a imagenes PNG o JPG</div></a>
+<a href="https://calcatools.com/herramientas/fusionar-pdf" class="tool-card"><div class="tool-name">Fusionar PDF</div><div class="tool-description">Combina multiples archivos PDF en uno solo</div></a>
+<a href="https://calcatools.com/herramientas/dividir-pdf" class="tool-card"><div class="tool-name">Dividir PDF</div><div class="tool-description">Separa un PDF en varios archivos individuales</div></a>
+<a href="https://calcatools.com/herramientas/rotar-pdf" class="tool-card"><div class="tool-name">Rotar PDF</div><div class="tool-description">Gira paginas de PDF a la orientacion correcta</div></a>
+<a href="https://calcatools.com/herramientas/eliminar-paginas-pdf" class="tool-card"><div class="tool-name">Eliminar Paginas de PDF</div><div class="tool-description">Quita paginas no deseadas de tu archivo PDF</div></a>
+<a href="https://calcatools.com/herramientas/agregar-paginas-pdf" class="tool-card"><div class="tool-name">Agregar Paginas a PDF</div><div class="tool-description">Inserta nuevas paginas en tu documento PDF</div></a>
+<a href="https://calcatools.com/herramientas/word-a-pdf" class="tool-card"><div class="tool-name">Convertir Word a PDF</div><div class="tool-description">Convierte documentos Word a formato PDF</div></a>
+<a href="https://calcatools.com/herramientas/imagen-a-pdf" class="tool-card"><div class="tool-name">Convertir Imagen a PDF</div><div class="tool-description">Crea PDFs a partir de imagenes PNG, JPG y mas</div></a>
+<a href="https://calcatools.com/herramientas/desbloquear-pdf" class="tool-card"><div class="tool-name">Desbloquear PDF</div><div class="tool-description">Elimina proteccion de edicion de archivos PDF</div></a>
+<a href="https://calcatools.com/herramientas/numerar-paginas-pdf" class="tool-card"><div class="tool-name">Numerar Paginas de PDF</div><div class="tool-description">Agrega numeros de pagina automaticamente</div></a>
+<a href="https://calcatools.com/herramientas/agregar-marca-agua-pdf" class="tool-card"><div class="tool-name">Agregar Marca de Agua a PDF</div><div class="tool-description">Inserta texto o imagenes como marca de agua</div></a>
+</div>
+
+<h3 style="font-size:1.3rem;font-weight:700;color:var(--primary);margin:30px 0 20px;padding-left:10px;border-left:4px solid var(--primary)">Herramientas para Desarrolladores</h3>
+<div class="tools-grid">
+<a href="https://calcatools.com/herramientas/formateador-json" class="tool-card"><div class="tool-name">Formateador JSON</div><div class="tool-description">Formatea y valida codigos JSON con indentacion</div></a>
+<a href="https://calcatools.com/herramientas/validador-json" class="tool-card"><div class="tool-name">Validador JSON</div><div class="tool-description">Verifica que tu codigo JSON sea valido</div></a>
+<a href="https://calcatools.com/herramientas/generador-regex" class="tool-card"><div class="tool-name">Generador de Regex</div><div class="tool-description">Crea expresiones regulares con interfaz visual</div></a>
+<a href="https://calcatools.com/herramientas/probador-regex" class="tool-card"><div class="tool-name">Probador de Regex</div><div class="tool-description">Prueba tus expresiones regulares en tiempo real</div></a>
+<a href="https://calcatools.com/herramientas/codificador-base64" class="tool-card"><div class="tool-name">Codificador Base64</div><div class="tool-description">Codifica y decodifica texto en formato Base64</div></a>
+<a href="https://calcatools.com/herramientas/hasheador" class="tool-card"><div class="tool-name">Generador de Hash</div><div class="tool-description">Genera hashes MD5, SHA1, SHA256 y mas</div></a>
+<a href="https://calcatools.com/herramientas/codificador-url" class="tool-card"><div class="tool-name">Codificador URL</div><div class="tool-description">Codifica y decodifica URLs para peticiones HTTP</div></a>
+<a href="https://calcatools.com/herramientas/verificador-http" class="tool-card"><div class="tool-name">Verificador de Codigos HTTP</div><div class="tool-description">Consulta el estado de codigos de respuesta HTTP</div></a>
+<a href="https://calcatools.com/herramientas/generador-uuid" class="tool-card"><div class="tool-name">Generador de UUID</div><div class="tool-description">Genera identificadores unicos universales UUID</div></a>
+<a href="https://calcatools.com/herramientas/temporizador-codigo" class="tool-card"><div class="tool-name">Temporizador de Ejecucion de Codigo</div><div class="tool-description">Mide el tiempo de ejecucion de fragmentos de codigo</div></a>
+<a href="https://calcatools.com/herramientas/desificador-html" class="tool-card"><div class="tool-name">Desificador de HTML</div><div class="tool-description">Escapa y desescapa caracteres HTML</div></a>
+<a href="https://calcatools.com/herramientas/verificador-api" class="tool-card"><div class="tool-name">Probador de API</div><div class="tool-description">Realiza peticiones GET, POST, PUT y DELETE</div></a>
+</div>
+
+<h3 style="font-size:1.3rem;font-weight:700;color:var(--primary);margin:30px 0 20px;padding-left:10px;border-left:4px solid var(--primary)">Color y CSS</h3>
+<div class="tools-grid">
+<a href="https://calcatools.com/herramientas/selector-de-color" class="tool-card"><div class="tool-name">Selector de Color</div><div class="tool-description">Selecciona colores con paleta visual y codigos hex, RGB, HSL</div></a>
+<a href="https://calcatools.com/herramientas/generador-degradado" class="tool-card"><div class="tool-name">Generador de Degradados CSS</div><div class="tool-description">Crea degradados lineales y radiales con vista previa</div></a>
+<a href="https://calcatools.com/herramientas/generador-sombras" class="tool-card"><div class="tool-name">Generador de Sombras CSS</div><div class="tool-description">Crea sombras text y box con editor visual</div></a>
+<a href="https://calcatools.com/herramientas/convertidor-color" class="tool-card"><div class="tool-name">Convertidor de Colores</div><div class="tool-description">Convierte entre HEX, RGB, HSL y CMYK</div></a>
+<a href="https://calcatools.com/herramientas/paleta-colores" class="tool-card"><div class="tool-name">Generador de Paleta de Colores</div><div class="tool-description">Genera paletas armoniosas para tus proyectos</div></a>
+<a href="https://calcatools.com/herramientas/contraste-color" class="tool-card"><div class="tool-name">Verificador de Contraste</div><div class="tool-description">Verifica la accesibilidad del contraste de colores</div></a>
+<a href="https://calcatools.com/herramientas/generador-border-radius" class="tool-card"><div class="tool-name">Generador Border Radius</div><div class="tool-description">Genera codigos CSS para bordes redondeados</div></a>
+<a href="https://calcatools.com/herramientas/generador-flexbox" class="tool-card"><div class="tool-name">Generador Flexbox CSS</div><div class="tool-description">Genera layouts flexbox con editor visual</div></a>
+<a href="https://calcatools.com/herramientas/convertidor-css" class="tool-card"><div class="tool-name">Convertidor de Unidades CSS</div><div class="tool-description">Convierte entre px, rem, em, vw y porcentajes</div></a>
+</div>
+
+<h3 style="font-size:1.3rem;font-weight:700;color:var(--primary);margin:30px 0 20px;padding-left:10px;border-left:4px solid var(--primary)">Generadores</h3>
+<div class="tools-grid">
+<a href="https://calcatools.com/herramientas/generador-contrasenas" class="tool-card"><div class="tool-name">Generador de Contrasenas</div><div class="tool-description">Crea contrasenas seguras y aleatorias</div></a>
+<a href="https://calcatools.com/herramientas/generador-numeros-aleatorios" class="tool-card"><div class="tool-name">Generador de Numeros Aleatorios</div><div class="tool-description">Genera numeros aleatorios en rangos personalizados</div></a>
+<a href="https://calcatools.com/herramientas/generador-moneda" class="tool-card"><div class="tool-name">Simulador de Moneda</div><div class="tool-description">Simula lanzamientos de moneda y dados</div></a>
+<a href="https://calcatools.com/herramientas/generador-dados" class="tool-card"><div class="tool-name">Generador de Dados</div><div class="tool-description">Lanza dados virtuales con diferentes caras</div></a>
+<a href="https://calcatools.com/herramientas/generador-nombres" class="tool-card"><div class="tool-name">Generador de Nombres</div><div class="tool-description">Genera nombres aleatorios para proyectos y personajes</div></a>
+<a href="https://calcatools.com/herramientas/generador-lore-ipsum" class="tool-card"><div class="tool-name">Generador de Lorem Ipsum</div><div class="tool-description">Genera texto de relleno para disenio web</div></a>
+<a href="https://calcatools.com/herramientas/generador-qr-wifi" class="tool-card"><div class="tool-name">Generador de QR WiFi</div><div class="tool-description">Crea codigos QR para conectar a redes WiFi</div></a>
+<a href="https://calcatools.com/herramientas/generador-color-aleatorio" class="tool-card"><div class="tool-name">Generador de Color Aleatorio</div><div class="tool-description">Genera colores aleatorios para inspiracion</div></a>
+<a href="https://calcatools.com/herramientas/generador-slugs" class="tool-card"><div class="tool-name">Generador de Slugs URL</div><div class="tool-description">Convierte titulos a URLs amigables para SEO</div></a>
+<a href="https://calcatools.com/herramientas/generador-titulos" class="tool-card"><div class="tool-name">Generador de Titulos SEO</div><div class="tool-description">Crea titulos optimizados para motores de busqueda</div></a>
+<a href="https://calcatools.com/herramientas/generador-meta-descripcion" class="tool-card"><div class="tool-name">Generador de Meta Descripciones</div><div class="tool-description">Genera meta descripciones optimizadas</div></a>
+<a href="https://calcatools.com/herramientas/generador-contrasena-frase" class="tool-card"><div class="tool-name">Generador de Frase Secreta</div><div class="tool-description">Crea frases de contrasena seguras y memorables</div></a>
+</div>
+
+<h3 style="font-size:1.3rem;font-weight:700;color:var(--primary);margin:30px 0 20px;padding-left:10px;border-left:4px solid var(--primary)">Convertidores</h3>
+<div class="tools-grid">
+<a href="https://calcatools.com/herramientas/convertidor-temperatura" class="tool-card"><div class="tool-name">Convertidor de Temperatura</div><div class="tool-description">Convierte entre Celsius, Fahrenheit y Kelvin</div></a>
+<a href="https://calcatools.com/herramientas/convertidor-zona-horaria" class="tool-card"><div class="tool-name">Convertidor de Zona Horaria</div><div class="tool-description">Convierte horas entre diferentes zonas horarias</div></a>
+<a href="https://calcatools.com/herramientas/convertidor-longitud" class="tool-card"><div class="tool-name">Convertidor de Longitud</div><div class="tool-description">Convierte metros, kilometros, millas, pies y pulgadas</div></a>
+<a href="https://calcatools.com/herramientas/convertidor-peso" class="tool-card"><div class="tool-name">Convertidor de Peso</div><div class="tool-description">Convierte kilogramos, libras, onzas y gramos</div></a>
+<a href="https://calcatools.com/herramientas/convertidor-volumen" class="tool-card"><div class="tool-name">Convertidor de Volumen</div><div class="tool-description">Convierte litros, galones, mililitros y tazas</div></a>
+<a href="https://calcatools.com/herramientas/convertidor-velocidad" class="tool-card"><div class="tool-name">Convertidor de Velocidad</div><div class="tool-description">Convierte km/h, mph, m/s y nudos</div></a>
+<a href="https://calcatools.com/herramientas/convertidor-energia" class="tool-card"><div class="tool-name">Convertidor de Energia</div><div class="tool-description">Convierte joules, calorias, kilovatios-hora</div></a>
+<a href="https://calcatools.com/herramientas/convertidor-presion" class="tool-card"><div class="tool-name">Convertidor de Presion</div><div class="tool-description">Convierte pascales, bar, atm y psi</div></a>
+<a href="https://calcatools.com/herramientas/convertidor-digital" class="tool-card"><div class="tool-name">Convertidor de Almacenamiento Digital</div><div class="tool-description">Convierte bytes, kilobytes, megabytes y gigabytes</div></a>
+<a href="https://calcatools.com/herramientas/convertidor-tiempo" class="tool-card"><div class="tool-name">Convertidor de Tiempo</div><div class="tool-description">Convierte horas, minutos, segundos, dias y semanas</div></a>
+<a href="https://calcatools.com/herramientas/convertidor-angulos" class="tool-card"><div class="tool-name">Convertidor de Angulos</div><div class="tool-description">Convierte entre grados y radianes</div></a>
+<a href="https://calcatools.com/herramientas/convertidor-numeros" class="tool-card"><div class="tool-name">Convertidor de Numeros Romanos</div><div class="tool-description">Convierte entre numeros romanos y arabigos</div></a>
+</div>
+</section>
+
+</main>
+
+<aside class="sidebar">
+<div class="sidebar-ad">
+<div class="ad-label">Publicidad</div>
+<ins class="adsbygoogle" style="display:inline-block;width:160px;height:600px" data-ad-client="ca-pub-6528943535760514" data-ad-slot="25eb4901efc2164b83d7ac1f9dd303a6"></ins>
+</div>
+<div class="sidebar-ad">
+<div class="ad-label">Publicidad</div>
+<ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-6528943535760514" data-ad-slot="875ee96ad5bb1c8e8b6ffdbbc2d9f35d"></ins>
+</div>
+</aside>
+</div>
+
+<div class="ad-container"><div class="ad-label">Publicidad</div><ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-6528943535760514" data-ad-slot="421bcca51c5cfb9f98ed5f3f69cf2938"></ins></div>
+
+<section class="faq-section">
+<div class="container">
+<div class="section-header">
+<h2 class="section-title">Preguntas Frecuentes</h2>
+<p class="section-subtitle">Resolvemos tus dudas sobre nuestras calculadoras online</p>
+</div>
+<div class="faq-container">
+<div class="faq-item active">
+<div class="faq-question" onclick="toggleFaq(this)">Las calculadoras son realmente gratuitas?</div>
+<div class="faq-answer"><p>Si, todas nuestras calculadoras son 100% gratuitas. No hay costos ocultos, no se requiere registro y puedes usarlas todas las veces que necesites. Nuestro objetivo es ofrecer herramientas utiles y accesibles para todos.</p></div>
+</div>
+<div class="faq-item">
+<div class="faq-question" onclick="toggleFaq(this)">Mis datos estan seguros cuando uso la calculadora?</div>
+<div class="faq-answer"><p>Absolutamente. Todas las calculaciones se realizan directamente en tu navegador. Tus datos nunca salen de tu dispositivo y no almacenamos ninguna informacion personal. Tu privacidad es nuestra prioridad.</p></div>
+</div>
+<div class="faq-item">
+<div class="faq-question" onclick="toggleFaq(this)">Necesito crear una cuenta para usar las calculadoras?</div>
+<div class="faq-answer"><p>No, no necesitas crear cuenta ni proporcionar ningun dato personal. Simplemente elige la calculadora que necesitas, ingresa los datos y obtienes tu resultado al instante. Sin formularios, sin registros, sin complicaciones.</p></div>
+</div>
+<div class="faq-item">
+<div class="faq-question" onclick="toggleFaq(this)">Las calculadoras de hipoteca e intereses son precisas?</div>
+<div class="faq-answer"><p>Nuestras calculadoras financieras utilizan formulas estandar de la industria bancaria y financiera. Los resultados son altamente precisos y confiables para estimaciones personales. Sin embargo, te recomendamos consultar con un profesional para decisiones financieras importantes.</p></div>
+</div>
+<div class="faq-item">
+<div class="faq-question" onclick="toggleFaq(this)">Puedo usar estas calculadoras desde mi celular?</div>
+<div class="faq-answer"><p>Si, todas nuestras calculadoras estan optimizadas para funcionar en dispositivos moviles, tablets y ordenadores de escritorio. No necesitas descargar ninguna aplicacion. Solo abre tu navegador, ve a calcatools.com y usa la calculadora que necesites.</p></div>
+</div>
+</div>
+</div>
+</section>
+
+<div id="container-db0d7c1d307c749c41eaebd49cb30ea0" class="ad-container" style="padding:30px 0;text-align:center">
+<div class="ad-label">Publicidad</div>
+<ins class="adsbygoogle" data-ad-client="ca-pub-6528943535760514" data-ad-slot="container-db0d7c1d307c749c41eaebd49cb30ea0" data-ad-format="auto" data-full-width-responsive="true"></ins>
+</div>
+
+<section class="trust-section">
+<div class="container">
+<div class="section-header">
+<h2 class="section-title">Por que confiar en CalcaTools?</h2>
+<p class="section-subtitle">Millones de personas en todo el mundo usan nuestras calculadoras a diario</p>
+</div>
+<div class="trust-grid">
+<div class="trust-item">
+<div class="trust-icon">&#128274;</div>
+<div class="trust-title">100% Privado</div>
+<div class="trust-text">Tus datos nunca salen de tu navegador. No rastreamos, no almacenamos y no compartimos tu informacion.</div>
+</div>
+<div class="trust-item">
+<div class="trust-icon">&#9889;</div>
+<div class="trust-title">Instantaneo</div>
+<div class="trust-text">Resultados al instante sin esperas. Nuestras calculadoras son rapidas y eficientes.</div>
+</div>
+<div class="trust-item">
+<div class="trust-icon">&#127760;</div>
+<div class="trust-title">Multiidioma</div>
+<div class="trust-text">Disponible en 12 idiomas para servir a usuarios de todo el mundo.</div>
+</div>
+<div class="trust-item">
+<div class="trust-icon">&#128241;</div>
+<div class="trust-title">Responsive</div>
+<div class="trust-text">Funciona perfectamente en movil, tablet y escritorio. Sin descargas necesarias.</div>
+</div>
+</div>
+</div>
+</section>
+
+<div class="ad-container" style="padding:10px 0"><div class="ad-label">Publicidad</div><ins class="adsbygoogle" style="display:inline-block;width:320px;height:50px" data-ad-client="ca-pub-6528943535760514" data-ad-slot="cde7c6801c0d32225588aa3a501d7ca8"></ins></div>
+
+<footer class="footer">
+<div class="container">
+<div class="footer-grid">
+<div>
+<div class="footer-title">CalcaTools</div>
+<p style="color:rgba(255,255,255,.7);font-size:.9rem;line-height:1.6">Calculadoras online gratuitas para finanzas, salud, matematicas y mas. Herramientas profesionales accesibles para todos, directamente en tu navegador.</p>
+</div>
+<div>
+<div class="footer-title">Categorias</div>
+<ul class="footer-links">
+<li><a href="https://calcatools.com/es.html#finanzas">Finanzas</a></li>
+<li><a href="https://calcatools.com/es.html#salud">Salud y Fitness</a></li>
+<li><a href="https://calcatools.com/es.html#matematicas">Matematicas</a></li>
+<li><a href="https://calcatools.com/es.html#dia-a-dia">Dia a Dia</a></li>
+<li><a href="https://calcatools.com/es.html#islamicas">Calculadoras Islamicas</a></li>
+<li><a href="https://calcatools.com/es.html#hindues">Calculadoras Hindues</a></li>
+<li><a href="https://calcatools.com/es.html#navidad">Navidad</a></li>
+<li><a href="https://calcatools.com/es.html#herramientas">Herramientas</a></li>
+</ul>
+</div>
+<div>
+<div class="footer-title">Herramientas Populares</div>
+<ul class="footer-links">
+<li><a href="https://calcatools.com/finanzas/calculadora-de-hipoteca">Calculadora de Hipoteca</a></li>
+<li><a href="https://calcatools.com/salud/calculadora-de-imc">Calculadora de IMC</a></li>
+<li><a href="https://calcatools.com/matematicas/calculadora-de-porcentajes">Calculadora de Porcentajes</a></li>
+<li><a href="https://calcatools.com/finanzas/calculadora-de-intereses">Calculadora de Intereses</a></li>
+<li><a href="https://calcatools.com/dia-a-dia/calculadora-de-edad">Calculadora de Edad</a></li>
+<li><a href="https://calcatools.com/salud/calculadora-de-calorias">Calculadora de Calorias</a></li>
+<li><a href="https://calcatools.com/herramientas/generador-qr">Generador de QR</a></li>
+<li><a href="https://calcatools.com/herramientas/comprimir-pdf">Comprimir PDF</a></li>
+</ul>
+</div>
+<div>
+<div class="footer-title">Idiomas</div>
+<div class="footer-lang-grid">
+<a href="https://calcatools.com/">English</a>
+<a href="https://calcatools.com/es.html" class="current-lang">Espanol</a>
+<a href="https://calcatools.com/pt.html">Portugues</a>
+<a href="https://calcatools.com/fr.html">Francais</a>
+<a href="https://calcatools.com/de.html">Deutsch</a>
+<a href="https://calcatools.com/it.html">Italiano</a>
+<a href="https://calcatools.com/ja.html">&#26085;&#26412;&#35486;</a>
+<a href="https://calcatools.com/ko.html">&#54620;&#44397;&#50612;</a>
+<a href="https://calcatools.com/zh.html">&#20013;&#25991;</a>
+<a href="https://calcatools.com/ar.html">&#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1577;</a>
+<a href="https://calcatools.com/hi.html">&#2361;&#2367;&#2306;&#2342;&#2368;</a>
+<a href="https://calcatools.com/tr.html">Turkce</a>
+</div>
+</div>
+</div>
+<div class="footer-bottom">
+<p>&copy; 2024 CalcaTools. Todas las calculadoras son gratuitas y no requieren registro.</p>
+<p style="margin-top:8px">Calculadoras online para finanzas, salud, matematicas y herramientas digitales.</p>
+</div>
+</div>
+</footer>
+
+<script>
+function toggleLangMenu(){document.getElementById("langMenu").classList.toggle("active")}
+function toggleMobileMenu(){document.getElementById("mobileMenu").classList.toggle("active")}
+function toggleFaq(el){var item=el.parentElement;var isActive=item.classList.contains("active");document.querySelectorAll(".faq-item").forEach(function(f){f.classList.remove("active")});if(!isActive){item.classList.add("active")}}
+document.addEventListener("click",function(e){if(!e.target.closest(".lang-dropdown")){document.getElementById("langMenu").classList.remove("active")}});
+</script>
+</body>
+</html>
