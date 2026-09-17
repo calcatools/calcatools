@@ -1,0 +1,859 @@
+﻿<!DOCTYPE html>
+<html lang="ja" data-theme="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="無料オンライン計算ツール - 300以上のプロフェッショナル計算機。金融、健康、数学などすべてブラウザで動作。登録不要、完全プライベート。">
+    <meta name="keywords" content="無料 オンライン 電卓, BMI 計算機, 住宅ローン 計算, 利息 計算機, 計算ツール, 電卓, オンライン計算機">
+    <meta name="author" content="CalcaTools">
+    <meta property="og:title" content="無料オンライン計算ツール | CalcaTools">
+    <meta property="og:description" content="300以上のプロフェッショナル計算機 - 金融、健康、数学などすべてブラウザで動作">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://calcatools.com/ja">
+    <title>無料オンライン計算ツール | CalcaTools - 300以上の計算機</title>
+    <link rel="canonical" href="https://calcatools.com/ja">
+    <link rel="alternate" hreflang="ja" href="https://calcatools.com/ja">
+    <link rel="alternate" hreflang="en" href="https://calcatools.com/">
+    <style>
+        :root {
+            --primary: #dc2626;
+            --primary-dark: #b91c1c;
+            --primary-light: #fecaca;
+            --bg: #ffffff;
+            --bg-secondary: #f9fafb;
+            --text: #111827;
+            --text-secondary: #6b7280;
+            --border: #e5e7eb;
+            --card-bg: #ffffff;
+            --shadow: 0 1px 3px rgba(0,0,0,0.1);
+            --radius: 8px;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", "Noto Sans JP", "Meiryo", sans-serif; background: var(--bg); color: var(--text); line-height: 1.8; }
+        .layout-ja .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .layout-ja .hero { background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%); color: white; padding: 60px 20px; text-align: center; }
+        .layout-ja .hero h1 { font-size: 2.5rem; font-weight: 800; margin-bottom: 16px; }
+        .layout-ja .hero .subtitle { font-size: 1.1rem; opacity: 0.95; margin-bottom: 32px; max-width: 700px; margin-left: auto; margin-right: auto; }
+        .layout-ja .stats { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; margin-bottom: 32px; }
+        .layout-ja .stat { text-align: center; }
+        .layout-ja .stat-value { font-size: 2rem; font-weight: 700; display: block; }
+        .layout-ja .stat-label { font-size: 0.9rem; opacity: 0.9; }
+        .layout-ja .cta-button { display: inline-block; background: white; color: #dc2626; padding: 14px 36px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1.1rem; transition: transform 0.2s, box-shadow 0.2s; }
+        .layout-ja .cta-button:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
+        .layout-ja .ad-container { text-align: center; padding: 20px 0; }
+        .ad-label { font-size: 0.7rem; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+        .layout-ja .ad-728x90 { display: inline-block; width: 728px; max-width: 100%; height: 90px; background: #f3f4f6; border: 1px dashed #d1d5db; display: flex; align-items: center; justify-content: center; margin: 0 auto; }
+        .layout-ja .ad-300x250 { display: inline-block; width: 300px; height: 250px; background: #f3f4f6; border: 1px dashed #d1d5db; display: flex; align-items: center; justify-content: center; }
+        .layout-ja .ad-160x600 { display: inline-block; width: 160px; height: 600px; background: #f3f4f6; border: 1px dashed #d1d5db; display: flex; align-items: center; justify-content: center; }
+        .layout-ja .ad-320x50 { display: inline-block; width: 320px; max-width: 100%; height: 50px; background: #f3f4f6; border: 1px dashed #d1d5db; display: flex; align-items: center; justify-content: center; margin: 0 auto; }
+        .layout-ja .main-content { display: grid; grid-template-columns: 1fr 200px; gap: 30px; padding: 40px 20px; max-width: 1200px; margin: 0 auto; }
+        @media (max-width: 900px) { .layout-ja .main-content { grid-template-columns: 1fr; } .layout-ja .sidebar { display: none; } }
+        .layout-ja .category-section { background: var(--card-bg); border: 1px solid var(--border); border-left: 4px solid var(--primary); border-radius: var(--radius); padding: 24px; margin-bottom: 24px; }
+        .layout-ja .category-title { font-size: 1.3rem; font-weight: 700; color: var(--primary); margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+        .layout-ja .category-count { background: var(--primary); color: white; padding: 2px 10px; border-radius: 12px; font-size: 0.85rem; }
+        .layout-ja .tools-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; }
+        .layout-ja .tool-link { display: block; padding: 10px 14px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 6px; text-decoration: none; color: var(--text); font-size: 0.95rem; transition: all 0.2s; border-left: 3px solid transparent; }
+        .layout-ja .tool-link:hover { border-left-color: var(--primary); background: white; box-shadow: var(--shadow); }
+        .layout-ja .sidebar { position: sticky; top: 20px; align-self: start; }
+        .layout-ja .sidebar-ad { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; text-align: center; margin-bottom: 20px; }
+        .layout-ja .faq-section { background: var(--bg-secondary); padding: 60px 20px; }
+        .layout-ja .faq-container { max-width: 800px; margin: 0 auto; }
+        .layout-ja .faq-title { font-size: 1.8rem; font-weight: 700; text-align: center; margin-bottom: 40px; color: var(--text); }
+        .layout-ja .faq-item { background: white; border: 1px solid var(--border); border-left: 4px solid var(--primary); border-radius: var(--radius); padding: 20px 24px; margin-bottom: 16px; }
+        .layout-ja .faq-question { font-weight: 700; font-size: 1.05rem; margin-bottom: 10px; color: var(--text); }
+        .layout-ja .faq-answer { color: var(--text-secondary); line-height: 1.7; }
+        .layout-ja .trust-section { padding: 60px 20px; text-align: center; }
+        .layout-ja .trust-title { font-size: 1.8rem; font-weight: 700; margin-bottom: 40px; }
+        .layout-ja .trust-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; max-width: 1000px; margin: 0 auto; }
+        .layout-ja .trust-item { background: var(--card-bg); border: 1px solid var(--border); border-left: 4px solid var(--primary); border-radius: var(--radius); padding: 24px; text-align: left; }
+        .layout-ja .trust-item h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 8px; color: var(--primary); }
+        .layout-ja .trust-item p { color: var(--text-secondary); font-size: 0.95rem; }
+        .layout-ja footer { background: #111827; color: white; padding: 60px 20px 30px; }
+        .layout-ja .footer-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; }
+        .layout-ja .footer-section h4 { font-size: 1.1rem; margin-bottom: 16px; color: #f9fafb; }
+        .layout-ja .footer-section a { display: block; color: #9ca3af; text-decoration: none; padding: 4px 0; font-size: 0.9rem; transition: color 0.2s; }
+        .layout-ja .footer-section a:hover { color: white; }
+        .layout-ja .footer-bottom { text-align: center; padding-top: 30px; margin-top: 30px; border-top: 1px solid #374151; color: #9ca3af; font-size: 0.85rem; }
+        .layout-ja .lang-links { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 12px; }
+        .layout-ja .lang-links a { display: inline-block; padding: 6px 14px; background: #374151; color: #d1d5db; border-radius: 6px; text-decoration: none; font-size: 0.85rem; transition: background 0.2s; }
+        .layout-ja .lang-links a:hover { background: #4b5563; }
+        .layout-ja .mobile-ad { display: none; text-align: center; padding: 10px 0; }
+        @media (max-width: 600px) { .layout-ja .hero h1 { font-size: 1.8rem; } .layout-ja .hero .subtitle { font-size: 0.95rem; } .layout-ja .stats { gap: 20px; } .layout-ja .stat-value { font-size: 1.5rem; } .layout-ja .ad-728x90 { display: none; } .layout-ja .mobile-ad { display: block; } .layout-ja .tools-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body class="layout-ja">
+
+    <!-- Navigation -->
+    <nav style="position:sticky;top:0;z-index:1000;background:rgba(255,255,255,0.95);backdrop-filter:blur(20px);border-bottom:1px solid #e5e7eb;padding:12px 20px;">
+        <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
+            <a href="ja.html"><img src="https://calcatools.com/wp-content/themes/toolexpert/assets/img/calcatools-logo.png" alt="CalcaTools" width="180" height="36"></a>
+            <div style="display:flex;gap:8px;flex-wrap:wrap;">
+                <a href="de.html" style="padding:6px 12px;border-radius:6px;font-size:0.85rem;text-decoration:none;color:#4a5568;">Deutsch</a>
+                <a href="es.html" style="padding:6px 12px;border-radius:6px;font-size:0.85rem;text-decoration:none;color:#4a5568;">Espa&ntilde;ol</a>
+                <a href="fr.html" style="padding:6px 12px;border-radius:6px;font-size:0.85rem;text-decoration:none;color:#4a5568;">Fran&ccedil;ais</a>
+                <a href="it.html" style="padding:6px 12px;border-radius:6px;font-size:0.85rem;text-decoration:none;color:#4a5568;">Italiano</a>
+                <a href="ja.html" style="padding:6px 12px;border-radius:6px;font-size:0.85rem;text-decoration:none;background:#c53030;color:#fff;">&#26085;&#26412;&#35486;</a>
+                <a href="ko.html" style="padding:6px 12px;border-radius:6px;font-size:0.85rem;text-decoration:none;color:#4a5568;">&#54620;&#44397;&#50612;</a>
+                <a href="nl.html" style="padding:6px 12px;border-radius:6px;font-size:0.85rem;text-decoration:none;color:#4a5568;">Nederlands</a>
+                <a href="no.html" style="padding:6px 12px;border-radius:6px;font-size:0.85rem;text-decoration:none;color:#4a5568;">Norsk</a>
+                <a href="sv.html" style="padding:6px 12px;border-radius:6px;font-size:0.85rem;text-decoration:none;color:#4a5568;">Svenska</a>
+                <a href="fi.html" style="padding:6px 12px;border-radius:6px;font-size:0.85rem;text-decoration:none;color:#4a5568;">Suomi</a>
+                <a href="da.html" style="padding:6px 12px;border-radius:6px;font-size:0.85rem;text-decoration:none;color:#4a5568;">Dansk</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>無料オンライン計算ツール</h1>
+            <p class="subtitle">300以上のプロフェッショナル計算機 — 金融、健康、数学などすべてブラウザで動作</p>
+            <div class="stats">
+                <div class="stat"><span class="stat-value">300+</span><span class="stat-label">ツール</span></div>
+                <div class="stat"><span class="stat-value">100%</span><span class="stat-label">プライベート</span></div>
+                <div class="stat"><span class="stat-value">0</span><span class="stat-label">登録</span></div>
+                <div class="stat"><span class="stat-value">7+</span><span class="stat-label">カテゴリ</span></div>
+            </div>
+            <a href="#tools" class="cta-button">すべてのツールを見る</a>
+        </div>
+    </section>
+
+    <!-- Ad: After Hero 728x90 -->
+    <div class="ad-container">
+        <div class="ad-728x90">
+            <div><div class="ad-label">広告</div>
+            <script type="text/javascript">atOptions = { 'key' : '9fd41bf6e337845059cb614a371eaf97', 'format' : 'iframe', 'height' : 90, 'width' : 728, 'params' : {} };</script>
+            <script type="text/javascript" src="//www.topcreativeformat.com/9fd41bf6e337845059cb614a371eaf97/invoke.js"></script>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Ad -->
+    <div class="mobile-ad">
+        <div class="ad-320x50">
+            <div><div class="ad-label">広告</div>
+            <script type="text/javascript">atOptions = { 'key' : 'd6335d7cf37d8d45400c743d073acbc9', 'format' : 'iframe', 'height' : 50, 'width' : 320, 'params' : {} };</script>
+            <script type="text/javascript" src="//www.topcreativeformat.com/d6335d7cf37d8d45400c743d073acbc9/invoke.js"></script>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content" id="tools">
+        <div class="tools-content">
+
+            <!-- 金融計算機 -->
+            <div class="category-section">
+                <h2 class="category-title">💰 金融計算機 <span class="category-count">24</span></h2>
+                <div class="tools-grid">
+                    <a href="https://calcatools.com/financial/mortgage-calculator" class="tool-link">住宅ローン計算機</a>
+                    <a href="https://calcatools.com/financial/auto-loan-calculator" class="tool-link">自動車ローン計算機</a>
+                    <a href="https://calcatools.com/financial/loan-calculator" class="tool-link">ローン計算機</a>
+                    <a href="https://calcatools.com/financial/compound-interest-calculator" class="tool-link">複利計算機</a>
+                    <a href="https://calcatools.com/financial/simple-interest-calculator" class="tool-link">単利計算機</a>
+                    <a href="https://calcatools.com/financial/investment-calculator" class="tool-link">投資計算機</a>
+                    <a href="https://calcatools.com/financial/retirement-calculator" class="tool-link">リタイアメント計算機</a>
+                    <a href="https://calcatools.com/financial/savings-calculator" class="tool-link">貯蓄計算機</a>
+                    <a href="https://calcatools.com/financial/budget-calculator" class="tool-link">予算計算機</a>
+                    <a href="https://calcatools.com/financial/debt-payoff-calculator" class="tool-link">債務返済計算機</a>
+                    <a href="https://calcatools.com/financial/credit-card-calculator" class="tool-link">クレジットカード計算機</a>
+                    <a href="https://calcatools.com/financial/inflation-calculator" class="tool-link">インフレーション計算機</a>
+                    <a href="https://calcatools.com/financial/currency-converter" class="tool-link">通貨換算機</a>
+                    <a href="https://calcatools.com/financial/tip-calculator" class="tool-link">チップ計算機</a>
+                    <a href="https://calcatools.com/financial/sales-tax-calculator" class="tool-link">消費税計算機</a>
+                    <a href="https://calcatools.com/financial/discount-calculator" class="tool-link">割引計算機</a>
+                    <a href="https://calcatools.com/financial/roi-calculator" class="tool-link">ROI計算機</a>
+                    <a href="https://calcatools.com/financial/interest-rate-calculator" class="tool-link">金利計算機</a>
+                    <a href="https://calcatools.com/financial/bond-calculator" class="tool-link">債券計算機</a>
+                    <a href="https://calcatools.com/financial/stock-calculator" class="tool-link">株式計算機</a>
+                    <a href="https://calcatools.com/financial/crypto-calculator" class="tool-link">仮想通貨計算機</a>
+                    <a href="https://calcatools.com/financial/net-worth-calculator" class="tool-link">純資産計算機</a>
+                    <a href="https://calcatools.com/financial/debt-to-income-calculator" class="tool-link">負債収入比率計算機</a>
+                    <a href="https://calcatools.com/financial/rent-vs-buy-calculator" class="tool-link">賃貸 vs 購入計算機</a>
+                </div>
+            </div>
+
+            <!-- 健康・フィットネス -->
+            <div class="category-section">
+                <h2 class="category-title">💪 健康・フィットネス <span class="category-count">32</span></h2>
+                <div class="tools-grid">
+                    <a href="https://calcatools.com/health/bmi-calculator" class="tool-link">BMI計算機</a>
+                    <a href="https://calcatools.com/health/calorie-calculator" class="tool-link">カロリー計算機</a>
+                    <a href="https://calcatools.com/health/ideal-weight-calculator" class="tool-link">理想体重計算機</a>
+                    <a href="https://calcatools.com/health/body-fat-calculator" class="tool-link">体脂肪率計算機</a>
+                    <a href="https://calcatools.com/health/tdee-calculator" class="tool-link">TDEE計算機</a>
+                    <a href="https://calcatools.com/health/macros-calculator" class="tool-link">マクロ栄養素計算機</a>
+                    <a href="https://calcatools.com/health/water-intake-calculator" class="tool-link">水分摂取量計算機</a>
+                    <a href="https://calcatools.com/health/heart-rate-calculator" class="tool-link">心拍数計算機</a>
+                    <a href="https://calcatools.com/health/blood-pressure-calculator" class="tool-link">血圧計算機</a>
+                    <a href="https://calcatools.com/health/pregnancy-due-date-calculator" class="tool-link">出産予定日計算機</a>
+                    <a href="https://calcatools.com/health/ovulation-calculator" class="tool-link">排卵日計算機</a>
+                    <a href="https://calcatools.com/health/period-calculator" class="tool-link">生理周期計算機</a>
+                    <a href="https://calcatools.com/health/age-calculator" class="tool-link">年齢計算機</a>
+                    <a href="https://calcatools.com/health/exercise-calculator" class="tool-link">運動計算機</a>
+                    <a href="https://calcatools.com/health/lean-body-mass-calculator" class="tool-link">除脂肪体重計算機</a>
+                    <a href="https://calcatools.com/health/whr-calculator" class="tool-link">ウエストヒップ比計算機</a>
+                    <a href="https://calcatools.com/health/bmr-calculator" class="tool-link">基礎代謝率計算機</a>
+                    <a href="https://calcatools.com/health/protein-calculator" class="tool-link">タンパク質計算機</a>
+                    <a href="https://calcatools.com/health/body-surface-area-calculator" class="tool-link">体表面積計算機</a>
+                    <a href="https://calcatools.com/health/gfr-calculator" class="tool-link">GFR計算機</a>
+                    <a href="https://calcatools.com/health/cholesterol-calculator" class="tool-link">コレステロール計算機</a>
+                    <a href="https://calcatools.com/health/diabetes-risk-calculator" class="tool-link">糖尿病リスク計算機</a>
+                    <a href="https://calcatools.com/health/stress-calculator" class="tool-link">ストレス計算機</a>
+                    <a href="https://calcatools.com/health/sleep-calculator" class="tool-link">睡眠計算機</a>
+                    <a href="https://calcatools.com/health/calorie-deficit-calculator" class="tool-link">カロリー不足計算機</a>
+                    <a href="https://calcatools.com/health/body-type-calculator" class="tool-link">体型計算機</a>
+                    <a href="https://calcatools.com/health/visceral-fat-calculator" class="tool-link">内臓脂肪計算機</a>
+                    <a href="https://calcatools.com/health/metabolic-age-calculator" class="tool-link">代謝年齢計算機</a>
+                    <a href="https://calcatools.com/health/muscle-mass-calculator" class="tool-link">筋肉量計算機</a>
+                    <a href="https://calcatools.com/health/waist-to-height-ratio-calculator" class="tool-link">ウエスト身長比計算機</a>
+                    <a href="https://calcatools.com/health/body-composition-calculator" class="tool-link">体組成計算機</a>
+                    <a href="https://calcatools.com/health/health-risk-calculator" class="tool-link">健康リスク計算機</a>
+                </div>
+            </div>
+
+            <!-- 数学 -->
+            <div class="category-section">
+                <h2 class="category-title">📐 数学 <span class="category-count">39</span></h2>
+                <div class="tools-grid">
+                    <a href="https://calcatools.com/math/percentage-calculator" class="tool-link">パーセンテージ計算機</a>
+                    <a href="https://calcatools.com/math/fraction-calculator" class="tool-link">分数計算機</a>
+                    <a href="https://calcatools.com/math/scientific-calculator" class="tool-link">関数電卓</a>
+                    <a href="https://calcatools.com/math/standard-deviation-calculator" class="tool-link">標準偏差計算機</a>
+                    <a href="https://calcatools.com/math/probability-calculator" class="tool-link">確率計算機</a>
+                    <a href="https://calcatools.com/math/combinatorics-calculator" class="tool-link">組合せ計算機</a>
+                    <a href="https://calcatools.com/math/matrix-calculator" class="tool-link">行列計算機</a>
+                    <a href="https://calcatools.com/math/quadratic-equation-calculator" class="tool-link">二次方程式計算機</a>
+                    <a href="https://calcatools.com/math/cubic-equation-calculator" class="tool-link">三次方程式計算機</a>
+                    <a href="https://calcatools.com/math/logarithm-calculator" class="tool-link">対数計算機</a>
+                    <a href="https://calcatools.com/math/exponent-calculator" class="tool-link">指数計算機</a>
+                    <a href="https://calcatools.com/math/root-calculator" class="tool-link">平方根計算機</a>
+                    <a href="https://calcatools.com/math/factorial-calculator" class="tool-link">階乗計算機</a>
+                    <a href="https://calcatools.com/math/gcd-lcm-calculator" class="tool-link">最大公約数・最小公倍数計算機</a>
+                    <a href="https://calcatools.com/math/prime-number-calculator" class="tool-link">素数計算機</a>
+                    <a href="https://calcatools.com/math/rounding-calculator" class="tool-link">四捨五入計算機</a>
+                    <a href="https://calcatools.com/math/average-calculator" class="tool-link">平均値計算機</a>
+                    <a href="https://calcatools.com/math/median-calculator" class="tool-link">中央値計算機</a>
+                    <a href="https://calcatools.com/math/mode-calculator" class="tool-link">最頻値計算機</a>
+                    <a href="https://calcatools.com/math/range-calculator" class="tool-link">レンジ計算機</a>
+                    <a href="https://calcatools.com/math/variance-calculator" class="tool-link">分散計算機</a>
+                    <a href="https://calcatools.com/math/number-base-converter" class="tool-link">進数変換機</a>
+                    <a href="https://calcatools.com/math/roman-numeral-converter" class="tool-link">ローマ数字変換機</a>
+                    <a href="https://calcatools.com/math/unit-converter" class="tool-link">単位変換機</a>
+                    <a href="https://calcatools.com/math/length-converter" class="tool-link">長さ変換機</a>
+                    <a href="https://calcatools.com/math/weight-converter" class="tool-link">重量変換機</a>
+                    <a href="https://calcatools.com/math/temperature-converter" class="tool-link">温度変換機</a>
+                    <a href="https://calcatools.com/math/volume-converter" class="tool-link">体積変換機</a>
+                    <a href="https://calcatools.com/math/area-converter" class="tool-link">面積変換機</a>
+                    <a href="https://calcatools.com/math/speed-converter" class="tool-link">速度変換機</a>
+                    <a href="https://calcatools.com/math/time-converter" class="tool-link">時間変換機</a>
+                    <a href="https://calcatools.com/math/distance-calculator" class="tool-link">距離計算機</a>
+                    <a href="https://calcatools.com/math/pythagorean-theorem-calculator" class="tool-link">ピタゴラスの定理計算機</a>
+                    <a href="https://calcatools.com/math/trigonometry-calculator" class="tool-link">三角関数計算機</a>
+                    <a href="https://calcatools.com/math/calculus-calculator" class="tool-link">微積分計算機</a>
+                    <a href="https://calcatools.com/math/linear-equation-calculator" class="tool-link">連立方程式計算機</a>
+                    <a href="https://calcatools.com/math/slope-calculator" class="tool-link">傾き計算機</a>
+                    <a href="https://calcatools.com/math/midpoint-calculator" class="tool-link">中点計算機</a>
+                    <a href="https://calcatools.com/math/distance-formula-calculator" class="tool-link">距離公式計算機</a>
+                </div>
+            </div>
+
+            <!-- 日常用 -->
+            <div class="category-section">
+                <h2 class="category-title">🏠 日常用 <span class="category-count">54</span></h2>
+                <div class="tools-grid">
+                    <a href="https://calcatools.com/daily/time-calculator" class="tool-link">時間計算機</a>
+                    <a href="https://calcatools.com/daily/date-calculator" class="tool-link">日付計算機</a>
+                    <a href="https://calcatools.com/daily/age-calculator" class="tool-link">年齢計算機</a>
+                    <a href="https://calcatools.com/daily/countdown-timer" class="tool-link">カウントダウンタイマー</a>
+                    <a href="https://calcatools.com/daily/stopwatch" class="tool-link">ストップウォッチ</a>
+                    <a href="https://calcatools.com/daily/world-clock" class="tool-link">世界時計</a>
+                    <a href="https://calcatools.com/daily/cooking-converter" class="tool-link">料理変換機</a>
+                    <a href="https://calcatools.com/daily/tip-calculator" class="tool-link">チップ計算機</a>
+                    <a href="https://calcatools.com/daily/split-bill-calculator" class="tool-link">割り勘計算機</a>
+                    <a href="https://calcatools.com/daily/tax-calculator" class="tool-link">税金計算機</a>
+                    <a href="https://calcatools.com/daily/shipping-calculator" class="tool-link">配送費計算機</a>
+                    <a href="https://calcatools.com/daily/fuel-efficiency-calculator" class="tool-link">燃費計算機</a>
+                    <a href="https://calcatools.com/daily/gas-mileage-calculator" class="tool-link">ガソリン燃費計算機</a>
+                    <a href="https://calcatools.com/daily/parking-calculator" class="tool-link">駐車場計算機</a>
+                    <a href="https://calcatools.com/daily/travel-time-calculator" class="tool-link">旅行時間計算機</a>
+                    <a href="https://calcatools.com/daily/distance-calculator" class="tool-link">距離計算機</a>
+                    <a href="https://calcatools.com/daily/clothing-size-converter" class="tool-link">衣類サイズ変換機</a>
+                    <a href="https://calcatools.com/daily/shoe-size-converter" class="tool-link">靴サイズ変換機</a>
+                    <a href="https://calcatools.com/daily/paper-size-converter" class="tool-link">用紙サイズ変換機</a>
+                    <a href="https://calcatools.com/daily/resume-builder" class="tool-link">履歴書作成機</a>
+                    <a href="https://calcatools.com/daily/word-counter" class="tool-link">文字数カウント機</a>
+                    <a href="https://calcatools.com/daily/reading-time-calculator" class="tool-link">読了時間計算機</a>
+                    <a href="https://calcatools.com/daily/password-generator" class="tool-link">パスワード生成機</a>
+                    <a href="https://calcatools.com/daily/qr-code-generator" class="tool-link">QRコード生成機</a>
+                    <a href="https://calcatools.com/daily/barcode-generator" class="tool-link">バーコード生成機</a>
+                    <a href="https://calcatools.com/daily/uuid-generator" class="tool-link">UUID生成機</a>
+                    <a href="https://calcatools.com/daily/json-formatter" class="tool-link">JSONフォーマッター</a>
+                    <a href="https://calcatools.com/daily/xml-formatter" class="tool-link">XMLフォーマッター</a>
+                    <a href="https://calcatools.com/daily/csv-converter" class="tool-link">CSV変換機</a>
+                    <a href="https://calcatools.com/daily/text-diff-checker" class="tool-link">テキスト差分チェッカー</a>
+                    <a href="https://calcatools.com/daily/markdown-preview" class="tool-link">Markdownプレビュー</a>
+                    <a href="https://calcatools.com/daily/html-preview" class="tool-link">HTMLプレビュー</a>
+                    <a href="https://calcatools.com/daily/regex-tester" class="tool-link">正規表現テスター</a>
+                    <a href="https://calcatools.com/daily/color-picker" class="tool-link">カラーピッカー</a>
+                    <a href="https://calcatools.com/daily/gradient-generator" class="tool-link">グラデーション生成機</a>
+                    <a href="https://calcatools.com/daily/icon-generator" class="tool-link">アイコン生成機</a>
+                    <a href="https://calcatools.com/daily/logo-maker" class="tool-link">ロゴメーカー</a>
+                    <a href="https://calcatools.com/daily/banner-maker" class="tool-link">バナーメーカー</a>
+                    <a href="https://calcatools.com/daily/thumbnail-maker" class="tool-link">サムネイル作成機</a>
+                    <a href="https://calcatools.com/daily/image-resizer" class="tool-link">画像リサイザー</a>
+                    <a href="https://calcatools.com/daily/image-compressor" class="tool-link">画像圧縮機</a>
+                    <a href="https://calcatools.com/daily/image-converter" class="tool-link">画像変換機</a>
+                    <a href="https://calcatools.com/daily/image-cropper" class="tool-link">画像クロッパー</a>
+                    <a href="https://calcatools.com/daily/background-remover" class="tool-link">背景除去機</a>
+                    <a href="https://calcatools.com/daily/photo-editor" class="tool-link">写真エディター</a>
+                    <a href="https://calcatools.com/daily/screenshot-tool" class="tool-link">スクリーンショットツール</a>
+                    <a href="https://calcatools.com/daily/pdf-converter" class="tool-link">PDF変換機</a>
+                    <a href="https://calcatools.com/daily/pdf-merger" class="tool-link">PDFマージャー</a>
+                    <a href="https://calcatools.com/daily/pdf-splitter" class="tool-link">PDFスプリッター</a>
+                    <a href="https://calcatools.com/daily/pdf-compressor" class="tool-link">PDF圧縮機</a>
+                    <a href="https://calcatools.com/daily/pdf-editor" class="tool-link">PDFエディター</a>
+                    <a href="https://calcatools.com/daily/ebook-converter" class="tool-link">電子書籍変換機</a>
+                    <a href="https://calcatools.com/daily/unit-price-calculator" class="tool-link">単価計算機</a>
+                    <a href="https://calcatools.com/daily/price-per-square-meter" class="tool-link">平米単価計算機</a>
+                </div>
+            </div>
+
+            <!-- イスラム教 -->
+            <div class="category-section">
+                <h2 class="category-title">☪️ イスラム教 <span class="category-count">37</span></h2>
+                <div class="tools-grid">
+                    <a href="https://calcatools.com/islamic/zakat-calculator" class="tool-link">ザカート計算機</a>
+                    <a href="https://calcatools.com/islamic/zakat-on-gold-calculator" class="tool-link">金のザカート計算機</a>
+                    <a href="https://calcatools.com/islamic/zakat-on-silver-calculator" class="tool-link">銀のザカート計算機</a>
+                    <a href="https://calcatools.com/islamic/zakat-on-cash-calculator" class="tool-link">現金のザカート計算機</a>
+                    <a href="https://calcatools.com/islamic/zakat-on-investments-calculator" class="tool-link">投資のザカート計算機</a>
+                    <a href="https://calcatools.com/islamic/zakat-on-business-calculator" class="tool-link">事業のザカート計算機</a>
+                    <a href="https://calcatools.com/islamic/zakat-on-agriculture-calculator" class="tool-link">農業のザカート計算機</a>
+                    <a href="https://calcatools.com/islamic/zakat-on-livestock-calculator" class="tool-link">家畜のザカート計算機</a>
+                    <a href="https://calcatools.com/islamic/prayer-time-calculator" class="tool-link">礼拝時間計算機</a>
+                    <a href="https://calcatools.com/islamic/fajr-time-calculator" class="tool-link">ファジュル時間計算機</a>
+                    <a href="https://calcatools.com/islamic/dhuhr-time-calculator" class="tool-link">ズフル時間計算機</a>
+                    <a href="https://calcatools.com/islamic/asr-time-calculator" class="tool-link">アスル時間計算機</a>
+                    <a href="https://calcatools.com/islamic/maghrib-time-calculator" class="tool-link">マグリブ時間計算機</a>
+                    <a href="https://calcatools.com/islamic/isha-time-calculator" class="tool-link">イシャー時間計算機</a>
+                    <a href="https://calcatools.com/islamic/qibla-direction-calculator" class="tool-link">キブラ方向計算機</a>
+                    <a href="https://calcatools.com/islamic/hijri-date-converter" class="tool-link">ヒジュラ暦変換機</a>
+                    <a href="https://calcatools.com/islamic/islamic-calendar-2024" class="tool-link">イスラム暦2024年</a>
+                    <a href="https://calcatools.com/islamic/ramadan-calendar" class="tool-link">ラマダンカレンダー</a>
+                    <a href="https://calcatools.com/islamic/ramadan-timer" class="tool-link">ラマダントイマー</a>
+                    <a href="https://calcatools.com/islamic/iftar-time-calculator" class="tool-link">イフタル時間計算機</a>
+                    <a href="https://calcatools.com/islamic/suhoor-time-calculator" class="tool-link">スフール時間計算機</a>
+                    <a href="https://calcatools.com/islamic/fasting-duration-calculator" class="tool-link">断食期間計算機</a>
+                    <a href="https://calcatools.com/islamic/ramadan-dua-counter" class="tool-link">ラマダン dua カウンター</a>
+                    <a href="https://calcatools.com/islamic/tasbih-counter" class="tool-link">タスビフカウンター</a>
+                    <a href="https://calcatools.com/islamic/dhikr-counter" class="tool-link">ズィクルカウンター</a>
+                    <a href="https://calcatools.com/islamic/sadaqah-calculator" class="tool-link">サダカ計算機</a>
+                    <a href="https://calcatools.com/islamic/fidyah-calculator" class="tool-link">フィディヤ計算機</a>
+                    <a href="https://calcatools.com/islamic/kaffarah-calculator" class="tool-link">カッファラ計算機</a>
+                    <a href="https://calcatools.com/islamic/mahr-calculator" class="tool-link">マフル計算機</a>
+                    <a href="https://calcatools.com/islamic/inheritance-calculator" class="tool-link">相続計算機</a>
+                    <a href="https://calcatools.com/islamic/islamic-loan-calculator" class="tool-link">イスラムローン計算機</a>
+                    <a href="https://calcatools.com/islamic/murabaha-calculator" class="tool-link">ムラバハ計算機</a>
+                    <a href="https://calcatools.com/islamic/ijarah-calculator" class="tool-link">イジャラ計算機</a>
+                    <a href="https://calcatools.com/islamic/musharaka-calculator" class="tool-link">ムシャラカ計算機</a>
+                    <a href="https://calcatools.com/islamic/islamic-mortgage-calculator" class="tool-link">イスラム住宅ローン計算機</a>
+                    <a href="https://calcatools.com/islamic/halal-investment-calculator" class="tool-link">ハラール投資計算機</a>
+                    <a href="https://calcatools.com/islamic/hajj-savings-calculator" class="tool-link">ハッジ貯蓄計算機</a>
+                </div>
+            </div>
+
+            <!-- ヒンドゥー教 -->
+            <div class="category-section">
+                <h2 class="category-title">🕉️ ヒンドゥー教 <span class="category-count">74</span></h2>
+                <div class="tools-grid">
+                    <a href="https://calcatools.com/hindu/hindu-calendar" class="tool-link">ヒンドゥーカレンダー</a>
+                    <a href="https://calcatools.com/hindu/hindu-festival-calendar" class="tool-link">ヒンドゥー祭日カレンダー</a>
+                    <a href="https://calcatools.com/hindu/diwali-date-calculator" class="tool-link">ディワーリー日計算機</a>
+                    <a href="https://calcatools.com/hindu/holi-date-calculator" class="tool-link">ホーリー日計算機</a>
+                    <a href="https://calcatools.com/hindu/navratri-date-calculator" class="tool-link">ナヴラートリ日計算機</a>
+                    <a href="https://calcatools.com/hindu/ganesh-chaturthi-calculator" class="tool-link">ガネーシュ・チャトゥルティ計算機</a>
+                    <a href="https://calcatools.com/hindu/makar-sankranti-calculator" class="tool-link">マカル・サンクランティ計算機</a>
+                    <a href="https://calcatools.com/hindu/kumbh-mela-calculator" class="tool-link">クンブ・メラ計算機</a>
+                    <a href="https://calcatools.com/hindu/panchang-calculator" class="tool-link">パンチャンク計算機</a>
+                    <a href="https://calcatools.com/hindu/tithi-calculator" class="tool-link">ティティ計算機</a>
+                    <a href="https://calcatools.com/hindu/nakshatra-calculator" class="tool-link">ナクシャトラ計算機</a>
+                    <a href="https://calcatools.com/hindu/rahu-kalam-calculator" class="tool-link">ラフ・カラム計算機</a>
+                    <a href="https://calcatools.com/hindu/gulika-kalam-calculator" class="tool-link">グリカ・カラム計算機</a>
+                    <a href="https://calcatools.com/hindu/yoga-calculator" class="tool-link">ヨーガ計算機</a>
+                    <a href="https://calcatools.com/hindu/karana-calculator" class="tool-link">カラナ計算機</a>
+                    <a href="https://calcatools.com/hindu/hindu-zodiac-calculator" class="tool-link">ヒンドゥー占星術計算機</a>
+                    <a href="https://calcatools.com/hindu/rashi-calculator" class="tool-link">ラーシ計算機</a>
+                    <a href="https://calcatools.com/hindu/ascendant-calculator" class="tool-link">ASC計算機</a>
+                    <a href="https://calcatools.com/hindu/hindu-birth-chart-calculator" class="tool-link">ヒンドゥー出生図計算機</a>
+                    <a href="https://calcatools.com/hindu/hindu-name-calculator" class="tool-link">ヒンドゥー名前計算機</a>
+                    <a href="https://calcatools.com/hindu/numerology-calculator" class="tool-link">数秘術計算機</a>
+                    <a href="https://calcatools.com/hindu/chaldean-numerology-calculator" class="tool-link">カルデア数秘術計算機</a>
+                    <a href="https://calcatools.com/hindu/pythagorean-numerology-calculator" class="tool-link">ピタゴラス数秘術計算機</a>
+                    <a href="https://calcatools.com/hindu/life-path-number-calculator" class="tool-link">ライフパスナンバー計算機</a>
+                    <a href="https://calcatools.com/hindu/destiny-number-calculator" class="tool-link">デスティニーナンバー計算機</a>
+                    <a href="https://calcatools.com/hindu/soul-urge-number-calculator" class="tool-link">ソウルアージナンバー計算機</a>
+                    <a href="https://calcatools.com/hindu/personality-number-calculator" class="tool-link">パーソナリティナンバー計算機</a>
+                    <a href="https://calcatools.com/hindu/birthday-number-calculator" class="tool-link">バースデーナンバー計算機</a>
+                    <a href="https://calcatools.com/hindu/hindu-calendar-2024" class="tool-link">ヒンドゥー暦2024年</a>
+                    <a href="https://calcatools.com/hindu/amavasya-calculator" class="tool-link">アマヴァスヤ計算機</a>
+                    <a href="https://calcatools.com/hindu/purnima-calculator" class="tool-link">プルニマ計算機</a>
+                    <a href="https://calcatools.com/hindu/sankashti-chaturthi-calculator" class="tool-link">サンカスティ・チャトゥルティ計算機</a>
+                    <a href="https://calcatools.com/hindu/pradosham-calculator" class="tool-link">プラドーシャム計算機</a>
+                    <a href="https://calcatools.com/hindu/ekadashi-calculator" class="tool-link">エカダーシー計算機</a>
+                    <a href="https://calcatools.com/hindu/shivratri-calculator" class="tool-link">シヴラートリー計算機</a>
+                    <a href="https://calcatools.com/hindu/karva-chauth-calculator" class="tool-link">カルヴァ・チャウス計算機</a>
+                    <a href="https://calcatools.com/hindu/hartalika-teej-calculator" class="tool-link">ハルタリカ・ティージュ計算機</a>
+                    <a href="https://calcatools.com/hindu/sinhala-hindu-calendar" class="tool-link">シンハラヒンドゥーカレンダー</a>
+                    <a href="https://calcatools.com/hindu/tamil-hindu-calendar" class="tool-link">タミルヒンドゥーカレンダー</a>
+                    <a href="https://calcatools.com/hindu/telugu-hindu-calendar" class="tool-link">テルグヒンドゥーカレンダー</a>
+                    <a href="https://calcatools.com/hindu/kannada-hindu-calendar" class="tool-link">カンナダヒンドゥーカレンダー</a>
+                    <a href="https://calcatools.com/hindu/malayalam-hindu-calendar" class="tool-link">マラヤーラムヒンドゥーカレンダー</a>
+                    <a href="https://calcatools.com/hindu/bengali-hindu-calendar" class="tool-link">ベンガルヒンドゥーカレンダー</a>
+                    <a href="https://calcatools.com/hindu/marathi-hindu-calendar" class="tool-link">マラーティヒンドゥーカレンダー</a>
+                    <a href="https://calcatools.com/hindu/gujarati-hindu-calendar" class="tool-link">グジャラートヒンドゥーカレンダー</a>
+                    <a href="https://calcatools.com/hindu/punjabi-hindu-calendar" class="tool-link">パンジャブヒンドゥーカレンダー</a>
+                    <a href="https://calcatools.com/hindu/odia-hindu-calendar" class="tool-link">オリヤヒンドゥーカレンダー</a>
+                    <a href="https://calcatools.com/hindu/assamese-hindu-calendar" class="tool-link">アサムヒンドゥーカレンダー</a>
+                    <a href="https://calcatools.com/hindu/maithili-hindu-calendar" class="tool-link">マイティリーヒンドゥーカレンダー</a>
+                    <a href="https://calcatools.com/hindu/sindhi-hindu-calendar" class="tool-link">シンドヒンドゥーカレンダー</a>
+                    <a href="https://calcatools.com/hindu/konkani-hindu-calendar" class="tool-link">コンカニヒンドゥーカレンダー</a>
+                    <a href="https://calcatools.com/hindu/urdu-hindu-calendar" class="tool-link">ウルドゥーヒンドゥーカレンダー</a>
+                    <a href="https://calcatools.com/hindu/kashmiri-hindu-calendar" class="tool-link">カシュミーヒンドゥーカレンダー</a>
+                    <a href="https://calcatools.com/hindu/dogri-hindu-calendar" class="tool-link">ドグリヒンドゥーカレンダー</a>
+                    <a href="https://calcatools.com/hindu/bodo-hindu-calendar" class="tool-link">ボードヒンドゥーカレンダー</a>
+                    <a href="https://calcatools.com/hindu/santhali-hindu-calendar" class="tool-link">サンタルヒンドゥーカレンダー</a>
+                    <a href="https://calcatools.com/hindu/kashmiri-pandit-calendar" class="tool-link">カシュミールパンディットカレンダー</a>
+                    <a href="https://calcatools.com/hindu/hindu-wedding-date-calculator" class="tool-link">ヒンドゥー結婚日計算機</a>
+                    <a href="https://calcatools.com/hindu/hindu-name-generator" class="tool-link">ヒンドゥー名前生成機</a>
+                    <a href="https://calcatools.com/hindu/rashi-calculator-by-name" class="tool-link">名前によるラーシ計算機</a>
+                    <a href="https://calcatools.com/hindu/nakshatra-calculator-by-date" class="tool-link">日付によるナクシャトラ計算機</a>
+                    <a href="https://calcatools.com/hindu/hindu-baby-name-generator" class="tool-link">ヒンドゥー赤ちゃん名前生成機</a>
+                    <a href="https://calcatools.com/hindu/hindu-boy-names" class="tool-link">ヒンドゥー男子の名前</a>
+                    <a href="https://calcatools.com/hindu/hindu-girl-names" class="tool-link">ヒンドゥー女子の名前</a>
+                    <a href="https://calcatools.com/hindu/hindu-surname-list" class="tool-link">ヒンドゥー姓リスト</a>
+                    <a href="https://calcatools.com/hindu/hindu-gotra-list" class="tool-link">ヒンドゥーGotraリスト</a>
+                    <a href="https://calcatools.com/hindu/hindu-caste-list" class="tool-link">ヒンドゥー種姓リスト</a>
+                    <a href="https://calcatools.com/hindu/hindu-community-list" class="tool-link">ヒンドゥーコミュニティリスト</a>
+                    <a href="https://calcatools.com/hindu/hindu-festival-dates-2024" class="tool-link">ヒンドゥー祭日2024年</a>
+                    <a href="https://calcatools.com/hindu/hindu-festival-dates-2025" class="tool-link">ヒンドゥー祭日2025年</a>
+                    <a href="https://calcatools.com/hindu/hindu-calendar-2025" class="tool-link">ヒンドゥー暦2025年</a>
+                    <a href="https://calcatools.com/hindu/hindu-calendar-2026" class="tool-link">ヒンドゥー暦2026年</a>
+                    <a href="https://calcatools.com/hindu/hindu-auspicious-dates" class="tool-link">ヒンドゥー吉日</a>
+                </div>
+            </div>
+
+            <!-- クリスマス -->
+            <div class="category-section">
+                <h2 class="category-title">🎄 クリスマス <span class="category-count">35</span></h2>
+                <div class="tools-grid">
+                    <a href="https://calcatools.com/christmas/christmas-countdown" class="tool-link">クリスマスカウントダウン</a>
+                    <a href="https://calcatools.com/christmas/santa-countdown" class="tool-link">サンタカウントダウン</a>
+                    <a href="https://calcatools.com/christmas/christmas-date-calculator" class="tool-link">クリスマス日計算機</a>
+                    <a href="https://calcatools.com/christmas/advent-calendar" class="tool-link">アドベントカレンダー</a>
+                    <a href="https://calcatools.com/christmas/advent-countdown" class="tool-link">アドベントカウントダウン</a>
+                    <a href="https://calcatools.com/christmas/christmas-gift-budget-calculator" class="tool-link">クリスマスギフト予算計算機</a>
+                    <a href="https://calcatools.com/christmas/gift-splitting-calculator" class="tool-link">ギフト分割計算機</a>
+                    <a href="https://calcatools.com/christmas/christmas-dinner-planner" class="tool-link">クリスマスディナープランナー</a>
+                    <a href="https://calcatools.com/christmas/cookie-recipe-calculator" class="tool-link">クッキーレシピ計算機</a>
+                    <a href="https://calcatools.com/christmas/gingerbread-house-calculator" class="tool-link">ジンジャーブレッドハウス計算機</a>
+                    <a href="https://calcatools.com/christmas/christmas-light-calculator" class="tool-link">クリスマスライト計算機</a>
+                    <a href="https://calcatools.com/christmas/christmas-tree-size-calculator" class="tool-link">クリスマスツリーサイズ計算機</a>
+                    <a href="https://calcatools.com/christmas/christmas-decorating-budget" class="tool-link">クリスマス装飾予算</a>
+                    <a href="https://calcatools.com/christmas/christmas-party-planner" class="tool-link">クリスマスパーティープランナー</a>
+                    <a href="https://calcatools.com/christmas/santa-greeting-generator" class="tool-link">サンタの挨拶生成機</a>
+                    <a href="https://calcatools.com/christmas/christmas-card-maker" class="tool-link">クリスマスカードメーカー</a>
+                    <a href="https://calcatools.com/christmas/christmas-wish-generator" class="tool-link">クリスマス願望生成機</a>
+                    <a href="https://calcatools.com/christmas/christmas-joke-generator" class="tool-link">クリスマスジョーク生成機</a>
+                    <a href="https://calcatools.com/christmas/christmas-trivia" class="tool-link">クリスマストリビア</a>
+                    <a href="https://calcatools.com/christmas/christmas-quiz" class="tool-link">クリスマスクイズ</a>
+                    <a href="https://calcatools.com/christmas/reindeer-name-generator" class="tool-link">トナカイ名前生成機</a>
+                    <a href="https://calcatools.com/christmas/elf-name-generator" class="tool-link">エルフ名前生成機</a>
+                    <a href="https://calcatools.com/christmas/snowflake-generator" class="tool-link">結晶生成機</a>
+                    <a href="https://calcatools.com/christmas/snowman-builder" class="tool-link">雪だるまビルダー</a>
+                    <a href="https://calcatools.com/christmas/christmas-music-playlist" class="tool-link">クリスマス音楽プレイリスト</a>
+                    <a href="https://calcatools.com/christmas/christmas-movie-list" class="tool-link">クリスマス映画リスト</a>
+                    <a href="https://calcatools.com/christmas/christmas-book-list" class="tool-link">クリスマス本リスト</a>
+                    <a href="https://calcatools.com/christmas/santa-route-tracker" class="tool-link">サンタ経路トラッカー</a>
+                    <a href="https://calcatools.com/christmas/christmas-weather-forecast" class="tool-link">クリスマス天気予報</a>
+                    <a href="https://calcatools.com/christmas/christmas-travel-planner" class="tool-link">クリスマス旅行プランナー</a>
+                    <a href="https://calcatools.com/christmas/christmas-gift-ideas" class="tool-link">クリスマスギフトアイデア</a>
+                    <a href="https://calcatools.com/christmas/christmas-coupon-generator" class="tool-link">クリスマスクーポン生成機</a>
+                    <a href="https://calcatools.com/christmas/christmas-bingo" class="tool-link">クリスマスビンゴ</a>
+                    <a href="https://calcatools.com/christmas/christmas-word-search" class="tool-link">クリスマスワードサーチ</a>
+                    <a href="https://calcatools.com/christmas/christmas-coloring-pages" class="tool-link">クリスマス塗り絵</a>
+                </div>
+            </div>
+
+            <!-- テキストツール -->
+            <div class="category-section">
+                <h2 class="category-title">📝 テキストツール <span class="category-count">28</span></h2>
+                <div class="tools-grid">
+                    <a href="https://calcatools.com/text/word-counter" class="tool-link">文字数カウント機</a>
+                    <a href="https://calcatools.com/text/character-counter" class="tool-link">文字カウント機</a>
+                    <a href="https://calcatools.com/text/sentence-counter" class="tool-link">文カウント機</a>
+                    <a href="https://calcatools.com/text/paragraph-counter" class="tool-link">段落カウント機</a>
+                    <a href="https://calcatools.com/text/reading-time-calculator" class="tool-link">読了時間計算機</a>
+                    <a href="https://calcatools.com/text/speaking-time-calculator" class="tool-link">発表時間計算機</a>
+                    <a href="https://calcatools.com/text/typing-speed-test" class="tool-link">タイピングスピードテスト</a>
+                    <a href="https://calcatools.com/text/text-case-converter" class="tool-link">テキストケース変換機</a>
+                    <a href="https://calcatools.com/text/upper-case-converter" class="tool-link">大文字変換機</a>
+                    <a href="https://calcatools.com/text/lower-case-converter" class="tool-link">小文字変換機</a>
+                    <a href="https://calcatools.com/text/title-case-converter" class="tool-link">タイトルケース変換機</a>
+                    <a href="https://calcatools.com/text/sentence-case-converter" class="tool-link">文ケース変換機</a>
+                    <a href="https://calcatools.com/text/text-reverser" class="tool-link">テキスト反転機</a>
+                    <a href="https://calcatools.com/text/duplicate-text-remover" class="tool-link">重複テキスト除去機</a>
+                    <a href="https://calcatools.com/text/sort-lines" class="tool-link">行ソート</a>
+                    <a href="https://calcatools.com/text/remove-line-breaks" class="tool-link">改行除去機</a>
+                    <a href="https://calcatools.com/text/add-line-numbers" class="tool-link">行番号追加機</a>
+                    <a href="https://calcatools.com/text/lorem-ipsum-generator" class="tool-link">ローレム Ipsum 生成機</a>
+                    <a href="https://calcatools.com/text/text-diff-checker" class="tool-link">テキスト差分チェッカー</a>
+                    <a href="https://calcatools.com/text/plagiarism-checker" class="tool-link">盗作チェッカー</a>
+                    <a href="https://calcatools.com/text/grammar-checker" class="tool-link">文法チェッカー</a>
+                    <a href="https://calcatools.com/text/spell-checker" class="tool-link">スペルチェッカー</a>
+                    <a href="https://calcatools.com/text/translation-tool" class="tool-link">翻訳ツール</a>
+                    <a href="https://calcatools.com/text/text-to-speech" class="tool-link">テキスト読み上げ</a>
+                    <a href="https://calcatools.com/text/speech-to-text" class="tool-link">音声テキスト変換</a>
+                    <a href="https://calcatools.com/text/markdown-to-html" class="tool-link">Markdown → HTML変換</a>
+                    <a href="https://calcatools.com/text/html-to-text" class="tool-link">HTML → テキスト変換</a>
+                    <a href="https://calcatools.com/text/json-formatter" class="tool-link">JSONフォーマッター</a>
+                </div>
+            </div>
+
+            <!-- 画像ツール -->
+            <div class="category-section">
+                <h2 class="category-title">🖼️ 画像ツール <span class="category-count">22</span></h2>
+                <div class="tools-grid">
+                    <a href="https://calcatools.com/image/image-resizer" class="tool-link">画像リサイザー</a>
+                    <a href="https://calcatools.com/image/image-compressor" class="tool-link">画像圧縮機</a>
+                    <a href="https://calcatools.com/image/image-converter" class="tool-link">画像変換機</a>
+                    <a href="https://calcatools.com/image/image-cropper" class="tool-link">画像クロッパー</a>
+                    <a href="https://calcatools.com/image/image-rotator" class="tool-link">画像回転機</a>
+                    <a href="https://calcatools.com/image/image-flipper" class="tool-link">画像反転機</a>
+                    <a href="https://calcatools.com/image/background-remover" class="tool-link">背景除去機</a>
+                    <a href="https://calcatools.com/image/watermark-remover" class="tool-link">ウォーターマーク除去機</a>
+                    <a href="https://calcatools.com/image/watermark-adder" class="tool-link">ウォーターマーク追加機</a>
+                    <a href="https://calcatools.com/image/image-filter" class="tool-link">画像フィルター</a>
+                    <a href="https://calcatools.com/image/image-brightness" class="tool-link">画像明るさ調整</a>
+                    <a href="https://calcatools.com/image/image-contrast" class="tool-link">画像コントラスト調整</a>
+                    <a href="https://calcatools.com/image/image-sharpness" class="tool-link">画像シャープネス調整</a>
+                    <a href="https://calcatools.com/image/image-blur" class="tool-link">画像ブラー</a>
+                    <a href="https://calcatools.com/image/image-border" class="tool-link">画像枠線追加</a>
+                    <a href="https://calcatools.com/image/image-text" class="tool-link">画像テキスト追加</a>
+                    <a href="https://calcatools.com/image/image-collage" class="tool-link">画像コラージュ</a>
+                    <a href="https://calcatools.com/image/screenshot-tool" class="tool-link">スクリーンショットツール</a>
+                    <a href="https://calcatools.com/image/favicon-generator" class="tool-link">ファビコン生成機</a>
+                    <a href="https://calcatools.com/image/icon-generator" class="tool-link">アイコン生成機</a>
+                    <a href="https://calcatools.com/image/thumbnail-maker" class="tool-link">サムネイル作成機</a>
+                    <a href="https://calcatools.com/image/photo-editor" class="tool-link">写真エディター</a>
+                </div>
+            </div>
+
+            <!-- PDFツール -->
+            <div class="category-section">
+                <h2 class="category-title">📄 PDFツール <span class="category-count">18</span></h2>
+                <div class="tools-grid">
+                    <a href="https://calcatools.com/pdf/pdf-converter" class="tool-link">PDF変換機</a>
+                    <a href="https://calcatools.com/pdf/pdf-merger" class="tool-link">PDFマージャー</a>
+                    <a href="https://calcatools.com/pdf/pdf-splitter" class="tool-link">PDFスプリッター</a>
+                    <a href="https://calcatools.com/pdf/pdf-compressor" class="tool-link">PDF圧縮機</a>
+                    <a href="https://calcatools.com/pdf/pdf-editor" class="tool-link">PDFエディター</a>
+                    <a href="https://calcatools.com/pdf/pdf-to-word" class="tool-link">PDF → Word変換</a>
+                    <a href="https://calcatools.com/pdf/pdf-to-excel" class="tool-link">PDF → Excel変換</a>
+                    <a href="https://calcatools.com/pdf/pdf-to-powerpoint" class="tool-link">PDF → PowerPoint変換</a>
+                    <a href="https://calcatools.com/pdf/pdf-to-jpg" class="tool-link">PDF → JPG変換</a>
+                    <a href="https://calcatools.com/pdf/word-to-pdf" class="tool-link">Word → PDF変換</a>
+                    <a href="https://calcatools.com/pdf/excel-to-pdf" class="tool-link">Excel → PDF変換</a>
+                    <a href="https://calcatools.com/pdf/powerpoint-to-pdf" class="tool-link">PowerPoint → PDF変換</a>
+                    <a href="https://calcatools.com/pdf/jpg-to-pdf" class="tool-link">JPG → PDF変換</a>
+                    <a href="https://calcatools.com/pdf/png-to-pdf" class="tool-link">PNG → PDF変換</a>
+                    <a href="https://calcatools.com/pdf/html-to-pdf" class="tool-link">HTML → PDF変換</a>
+                    <a href="https://calcatools.com/pdf/pdf-rotator" class="tool-link">PDF回転機</a>
+                    <a href="https://calcatools.com/pdf/pdf-watermark" class="tool-link">PDFウォーターマーク</a>
+                    <a href="https://calcatools.com/pdf/pdf-password-protector" class="tool-link">PDFパスワード保護</a>
+                </div>
+            </div>
+
+            <!-- 開発者ツール -->
+            <div class="category-section">
+                <h2 class="category-title">💻 開発者ツール <span class="category-count">24</span></h2>
+                <div class="tools-grid">
+                    <a href="https://calcatools.com/developer/json-formatter" class="tool-link">JSONフォーマッター</a>
+                    <a href="https://calcatools.com/developer/xml-formatter" class="tool-link">XMLフォーマッター</a>
+                    <a href="https://calcatools.com/developer/html-formatter" class="tool-link">HTMLフォーマッター</a>
+                    <a href="https://calcatools.com/developer/css-formatter" class="tool-link">CSSフォーマッター</a>
+                    <a href="https://calcatools.com/developer/javascript-formatter" class="tool-link">JavaScriptフォーマッター</a>
+                    <a href="https://calcatools.com/developer/sql-formatter" class="tool-link">SQLフォーマッター</a>
+                    <a href="https://calcatools.com/developer/yaml-formatter" class="tool-link">YAMLフォーマッター</a>
+                    <a href="https://calcatools.com/developer/csv-viewer" class="tool-link">CSVビューア</a>
+                    <a href="https://calcatools.com/developer/regex-tester" class="tool-link">正規表現テスター</a>
+                    <a href="https://calcatools.com/developer/regex-explanation" class="tool-link">正規表現説明</a>
+                    <a href="https://calcatools.com/developer/base64-encoder" class="tool-link">Base64エンコーダー</a>
+                    <a href="https://calcatools.com/developer/base64-decoder" class="tool-link">Base64デコーダー</a>
+                    <a href="https://calcatools.com/developer/url-encoder" class="tool-link">URLエンコーダー</a>
+                    <a href="https://calcatools.com/developer/url-decoder" class="tool-link">URLデコーダー</a>
+                    <a href="https://calcatools.com/developer/html-encoder" class="tool-link">HTMLエンコーダー</a>
+                    <a href="https://calcatools.com/developer/html-decoder" class="tool-link">HTMLデコーダー</a>
+                    <a href="https://calcatools.com/developer/hash-generator" class="tool-link">ハッシュ生成機</a>
+                    <a href="https://calcatools.com/developer/uuid-generator" class="tool-link">UUID生成機</a>
+                    <a href="https://calcatools.com/developer/lorem-ipsum-generator" class="tool-link">ローレム Ipsum 生成機</a>
+                    <a href="https://calcatools.com/developer/color-converter" class="tool-link">カラーコンバーター</a>
+                    <a href="https://calcatools.com/developer/json-to-csv" class="tool-link">JSON → CSV変換</a>
+                    <a href="https://calcatools.com/developer/csv-to-json" class="tool-link">CSV → JSON変換</a>
+                    <a href="https://calcatools.com/developer/json-to-yaml" class="tool-link">JSON → YAML変換</a>
+                    <a href="https://calcatools.com/developer/yaml-to-json" class="tool-link">YAML → JSON変換</a>
+                </div>
+            </div>
+
+            <!-- カラーツール -->
+            <div class="category-section">
+                <h2 class="category-title">🎨 カラーツール <span class="category-count">16</span></h2>
+                <div class="tools-grid">
+                    <a href="https://calcatools.com/color/color-picker" class="tool-link">カラーピッカー</a>
+                    <a href="https://calcatools.com/color/color-converter" class="tool-link">カラーコンバーター</a>
+                    <a href="https://calcatools.com/color/color-wheel" class="tool-link">カラーホイール</a>
+                    <a href="https://calcatools.com/color/color-palette-generator" class="tool-link">カラーパレット生成機</a>
+                    <a href="https://calcatools.com/color/color-harmony" class="tool-link">カラーハーモニー</a>
+                    <a href="https://calcatools.com/color/complementary-colors" class="tool-link">補色計算機</a>
+                    <a href="https://calcatools.com/color/analogous-colors" class="tool-link">類似色計算機</a>
+                    <a href="https://calcatools.com/color/triadic-colors" class="tool-link">三色組計算機</a>
+                    <a href="https://calcatools.com/color/split-complementary-colors" class="tool-link">分裂補色計算機</a>
+                    <a href="https://calcatools.com/color/gradient-generator" class="tool-link">グラデーション生成機</a>
+                    <a href="https://calcatools.com/color/gradient-maker" class="tool-link">グラデーションメーカー</a>
+                    <a href="https://calcatools.com/color/color-blindness-simulator" class="tool-link">色覚シミュレーター</a>
+                    <a href="https://calcatools.com/color/color-contrast-checker" class="tool-link">コントラストチェッカー</a>
+                    <a href="https://calcatools.com/color/color-namer" class="tool-link">カラーネーマー</a>
+                    <a href="https://calcatools.com/color/material-color-generator" class="tool-link">マテリアルカラー生成機</a>
+                    <a href="https://calcatools.com/color/tailwind-color-generator" class="tool-link">Tailwindカラー生成機</a>
+                </div>
+            </div>
+
+            <!-- 生成ツール -->
+            <div class="category-section">
+                <h2 class="category-title">🔧 生成ツール <span class="category-count">20</span></h2>
+                <div class="tools-grid">
+                    <a href="https://calcatools.com/generator/password-generator" class="tool-link">パスワード生成機</a>
+                    <a href="https://calcatools.com/generator/username-generator" class="tool-link">ユーザー名生成機</a>
+                    <a href="https://calcatools.com/generator/email-generator" class="tool-link">メールアドレス生成機</a>
+                    <a href="https://calcatools.com/generator/phone-number-generator" class="tool-link">電話番号生成機</a>
+                    <a href="https://calcatools.com/generator/address-generator" class="tool-link">住所生成機</a>
+                    <a href="https://calcatools.com/generator/name-generator" class="tool-link">名前生成機</a>
+                    <a href="https://calcatools.com/generator/business-name-generator" class="tool-link">ビジネス名生成機</a>
+                    <a href="https://calcatools.com/generator/domain-name-generator" class="tool-link">ドメイン名生成機</a>
+                    <a href="https://calcatools.com/generator/qr-code-generator" class="tool-link">QRコード生成機</a>
+                    <a href="https://calcatools.com/generator/barcode-generator" class="tool-link">バーコード生成機</a>
+                    <a href="https://calcatools.com/generator/uuid-generator" class="tool-link">UUID生成機</a>
+                    <a href="https://calcatools.com/generator/lorem-ipsum-generator" class="tool-link">ローレム Ipsum 生成機</a>
+                    <a href="https://calcatools.com/generator/random-number-generator" class="tool-link">乱数生成機</a>
+                    <a href="https://calcatools.com/generator/random-password-generator" class="tool-link">ランダムパスワード生成機</a>
+                    <a href="https://calcatools.com/generator/random-string-generator" class="tool-link">ランダム文字列生成機</a>
+                    <a href="https://calcatools.com/generator/coupon-code-generator" class="tool-link">クーポンコード生成機</a>
+                    <a href="https://calcatools.com/generator/invoice-generator" class="tool-link">請求書生成機</a>
+                    <a href="https://calcatools.com/generator/receipt-generator" class="tool-link">領収書生成機</a>
+                    <a href="https://calcatools.com/generator/resume-generator" class="tool-link">履歴書生成機</a>
+                    <a href="https://calcatools.com/generator/certificate-generator" class="tool-link">証明書生成機</a>
+                </div>
+            </div>
+
+            <!-- 変換ツール -->
+            <div class="category-section">
+                <h2 class="category-title">🔄 変換ツール <span class="category-count">26</span></h2>
+                <div class="tools-grid">
+                    <a href="https://calcatools.com/converter/unit-converter" class="tool-link">単位変換機</a>
+                    <a href="https://calcatools.com/converter/currency-converter" class="tool-link">通貨換算機</a>
+                    <a href="https://calcatools.com/converter/length-converter" class="tool-link">長さ変換機</a>
+                    <a href="https://calcatools.com/converter/weight-converter" class="tool-link">重量変換機</a>
+                    <a href="https://calcatools.com/converter/temperature-converter" class="tool-link">温度変換機</a>
+                    <a href="https://calcatools.com/converter/volume-converter" class="tool-link">体積変換機</a>
+                    <a href="https://calcatools.com/converter/area-converter" class="tool-link">面積変換機</a>
+                    <a href="https://calcatools.com/converter/speed-converter" class="tool-link">速度変換機</a>
+                    <a href="https://calcatools.com/converter/time-converter" class="tool-link">時間変換機</a>
+                    <a href="https://calcatools.com/converter/data-storage-converter" class="tool-link">データ容量変換機</a>
+                    <a href="https://calcatools.com/converter/data-transfer-rate-converter" class="tool-link">データ転送速度変換機</a>
+                    <a href="https://calcatools.com/converter/energy-converter" class="tool-link">エネルギー変換機</a>
+                    <a href="https://calcatools.com/converter/pressure-converter" class="tool-link">圧力変換機</a>
+                    <a href="https://calcatools.com/converter/power-converter" class="tool-link">電力変換機</a>
+                    <a href="https://calcatools.com/converter/electric-current-converter" class="tool-link">電流変換機</a>
+                    <a href="https://calcatools.com/converter/voltage-converter" class="tool-link">電圧変換機</a>
+                    <a href="https://calcatools.com/converter/frequency-converter" class="tool-link">周波数変換機</a>
+                    <a href="https://calcatools.com/converter/angle-converter" class="tool-link">角度変換機</a>
+                    <a href="https://calcatools.com/converter/number-base-converter" class="tool-link">進数変換機</a>
+                    <a href="https://calcatools.com/converter/color-converter" class="tool-link">カラーコンバーター</a>
+                    <a href="https://calcatools.com/converter/roman-numeral-converter" class="tool-link">ローマ数字変換機</a>
+                    <a href="https://calcatools.com/converter/text-case-converter" class="tool-link">テキストケース変換機</a>
+                    <a href="https://calcatools.com/converter/image-format-converter" class="tool-link">画像形式変換機</a>
+                    <a href="https://calcatools.com/converter/audio-format-converter" class="tool-link">音声形式変換機</a>
+                    <a href="https://calcatools.com/converter/video-format-converter" class="tool-link">動画形式変換機</a>
+                    <a href="https://calcatools.com/converter/clothing-size-converter" class="tool-link">衣類サイズ変換機</a>
+                </div>
+            </div>
+
+            <!-- Mid Ad 300x250 -->
+            <div class="ad-container" style="text-align:center; padding: 30px 0;">
+                <div class="ad-label">広告</div>
+                <div class="ad-300x250" style="margin: 0 auto;">
+                    <script type="text/javascript">atOptions = { 'key' : 'd6335d7cf37d8d45400c743d073acbc9', 'format' : 'iframe', 'height' : 250, 'width' : 300, 'params' : {} };</script>
+                    <script type="text/javascript" src="//www.topcreativeformat.com/d6335d7cf37d8d45400c743d073acbc9/invoke.js"></script>
+                </div>
+            </div>
+
+            <!-- Native Ad Container -->
+            <div class="ad-container" style="padding: 20px 0;">
+                <div id="container-ca2fbf9275e2748adb1f1b5e4e0c853e"></div>
+            </div>
+
+        </div>
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-ad">
+                <div class="ad-label">広告</div>
+                <div class="ad-160x600">
+                    <script type="text/javascript">atOptions = { 'key' : 'e9aac226b881b48935b0bb4bfe690efd', 'format' : 'iframe', 'height' : 600, 'width' : 160, 'params' : {} };</script>
+                    <script type="text/javascript" src="//www.topcreativeformat.com/e9aac226b881b48935b0bb4bfe690efd/invoke.js"></script>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="faq-container">
+            <h2 class="faq-title">よくある質問</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">これらの計算ツールは本当に無料ですか？</div>
+                <div class="faq-answer">はい、CalcaToolsのすべての計算ツールは完全に無料でご利用いただけます。ユーザー登録やログインも不要です。ブラウザを開いてすぐに計算を始められます。</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">私のデータは安全ですか？</div>
+                <div class="faq-answer">はい、すべての計算はブラウザ上で行われ、サーバーにデータが送信されることはありません。お客様のプライバシーを最優先に考えており、入力されたデータは一切保存されません。100%プライベートにご利用いただけます。</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">スマートフォンでも使えますか？</div>
+                <div class="faq-answer">もちろんです。すべての計算ツールはスマートフォン、タブレット、パソコンなどあらゆるデバイスに対応しています。専用アプリのダウンロードも不要で、ブラウザから直接お使いいただけます。</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">計算結果の精度はどの程度ですか？</div>
+                <div class="faq-answer">各計算ツールは専門家によって設計・検証されており、高い精度を保っています。金融計算機では最新の金利データを、健康計算機では医学的に正しい式を使用しています。ただし、重要な意思決定の際は専門家にもご確認ください。</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">新しい計算ツールのリクエストはできますか？</div>
+                <div class="faq-answer">はい、可能です。新しい計算ツールのリクエストやご要望がございましたら、お気軽にお問い合わせください。ユーザーの皆様からのフィードバックを大切にしており、定期的に新しいツールを追加しています。</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- After Tools Ad 728x90 -->
+    <div class="ad-container">
+        <div class="ad-728x90">
+            <div><div class="ad-label">広告</div>
+            <script type="text/javascript">atOptions = { 'key' : '9fd41bf6e337845059cb614a371eaf97', 'format' : 'iframe', 'height' : 90, 'width' : 728, 'params' : {} };</script>
+            <script type="text/javascript" src="//www.topcreativeformat.com/9fd41bf6e337845059cb614a371eaf97/invoke.js"></script>
+            </div>
+        </div>
+    </div>
+
+    <!-- Trust Section -->
+    <section class="trust-section">
+        <h2 class="trust-title">なぜCalcaToolsが信頼されるのか</h2>
+        <div class="trust-grid">
+            <div class="trust-item">
+                <h3>完全無料</h3>
+                <p>すべての計算ツールを永久に無料でお使いいただけます。隠れたコストやサブスクリプションは一切ありません。</p>
+            </div>
+            <div class="trust-item">
+                <h3>プライバシー重視</h3>
+                <p>すべての計算はブラウザ上で完結。入力データはサーバーに送信されず、完全にプライベートにご利用いただけます。</p>
+            </div>
+            <div class="trust-item">
+                <h3>高精度計算</h3>
+                <p>専門家が設計・検証したアルゴリズムを使用。金融、健康、数学など、あらゆる分野で正確な計算結果を提供します。</p>
+            </div>
+            <div class="trust-item">
+                <h3>使いやすさ</h3>
+                <p>直感的なインターフェースで、誰でも簡単に操作できます。技術的な知識は一切不要です。</p>
+            </div>
+            <div class="trust-item">
+                <h3>マルチデバイス対応</h3>
+                <p>パソコン、スマートフォン、タブレットなど、あらゆるデバイスで快適にご利用いただけます。</p>
+            </div>
+            <div class="trust-item">
+                <h3>常時アクセス可能</h3>
+                <p>24時間365日、いつでもどこからでもご利用いただけます。ダウンタイムは几乎ありません。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>金融計算機</h4>
+                <a href="https://calcatools.com/financial/mortgage-calculator">住宅ローン計算機</a>
+                <a href="https://calcatools.com/financial/auto-loan-calculator">自動車ローン計算機</a>
+                <a href="https://calcatools.com/financial/loan-calculator">ローン計算機</a>
+                <a href="https://calcatools.com/financial/compound-interest-calculator">複利計算機</a>
+                <a href="https://calcatools.com/financial/investment-calculator">投資計算機</a>
+            </div>
+            <div class="footer-section">
+                <h4>健康・フィットネス</h4>
+                <a href="https://calcatools.com/health/bmi-calculator">BMI計算機</a>
+                <a href="https://calcatools.com/health/calorie-calculator">カロリー計算機</a>
+                <a href="https://calcatools.com/health/ideal-weight-calculator">理想体重計算機</a>
+                <a href="https://calcatools.com/health/tdee-calculator">TDEE計算機</a>
+                <a href="https://calcatools.com/health/bmr-calculator">基礎代謝率計算機</a>
+            </div>
+            <div class="footer-section">
+                <h4>数学・変換</h4>
+                <a href="https://calcatools.com/math/percentage-calculator">パーセンテージ計算機</a>
+                <a href="https://calcatools.com/math/fraction-calculator">分数計算機</a>
+                <a href="https://calcatools.com/math/scientific-calculator">関数電卓</a>
+                <a href="https://calcatools.com/converter/unit-converter">単位変換機</a>
+                <a href="https://calcatools.com/converter/currency-converter">通貨換算機</a>
+            </div>
+            <div class="footer-section">
+                <h4>ツール</h4>
+                <a href="https://calcatools.com/text/word-counter">文字数カウント機</a>
+                <a href="https://calcatools.com/image/image-resizer">画像リサイザー</a>
+                <a href="https://calcatools.com/pdf/pdf-converter">PDF変換機</a>
+                <a href="https://calcatools.com/developer/json-formatter">JSONフォーマッター</a>
+                <a href="https://calcatools.com/color/color-picker">カラーピッカー</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 CalcaTools. All rights reserved.</p>
+            <p style="margin-top: 8px;">言語で選択:</p>
+            <div class="lang-links">
+                <a href="https://calcatools.com/">English</a>
+                <a href="https://calcatools.com/es">Español</a>
+                <a href="https://calcatools.com/fr">Français</a>
+                <a href="https://calcatools.com/de">Deutsch</a>
+                <a href="https://calcatools.com/pt">Português</a>
+                <a href="https://calcatools.com/ru">Русский</a>
+                <a href="https://calcatools.com/zh">中文</a>
+                <a href="https://calcatools.com/ar">العربية</a>
+                <a href="https://calcatools.com/hi">हिन्दी</a>
+                <a href="https://calcatools.com/ko">한국어</a>
+                <a href="https://calcatools.com/ja">日本語</a>
+                <a href="https://calcatools.com/id">Bahasa Indonesia</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Bottom Ad -->
+    <div class="mobile-ad" style="position:fixed; bottom:0; left:0; right:0; background:white; z-index:100; padding:10px; border-top:1px solid #e5e7eb;">
+        <div class="ad-320x50" style="width:320px; max-width:100%; margin:0 auto;">
+            <div><div class="ad-label">広告</div>
+            <script type="text/javascript">atOptions = { 'key' : 'd6335d7cf37d8d45400c743d073acbc9', 'format' : 'iframe', 'height' : 50, 'width' : 320, 'params' : {} };</script>
+            <script type="text/javascript" src="//www.topcreativeformat.com/d6335d7cf37d8d45400c743d073acbc9/invoke.js"></script>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
